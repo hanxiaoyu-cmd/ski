@@ -52,6 +52,14 @@ pnpm --filter @ski/api build && pnpm --filter @ski/api start:worker
 - `data/seeds/resorts.json`：18 家首批雪场（崇礼 6、东北 4、新疆 3、北京 4、四川 1）。**坐标/海拔为初稿近似值**，Phase 1 需逐一核实。
 - `data/seeds/tickets-manual.json`：初始票价，人工整理后放入即可被 `pnpm db:seed` 读取（文件不存在则跳过）。格式见 `packages/db/prisma/seed.ts` 的 `TicketSeed`。
 
+## 部署
+
+家用电脑自托管（xiaoyuu.me + Cloudflare Tunnel）：见 [docs/deploy-home.md](docs/deploy-home.md)。
+
+```powershell
+docker compose -f docker-compose.prod.yml --profile tunnel up -d --build
+```
+
 ## 路线图
 
 Phase 0 脚手架（当前）→ 1 天气+核心 API → 2 Web → 3 小程序 → 4 票价/住宿采集 → 5 人流+用户。详见 `docs/`。

@@ -1,0 +1,108 @@
+# 生产栈（家用电脑自托管 + Cloudflare Tunnel）
+# 启动：docker compose -f docker-compose.prod.yml up -d --build
+# 需要根目录 .env 提供：QWEATHER_API_KEY / QWEATHER_API_HOST / CLOUDFLARE_TUNNEL_TOKEN / POSTGRES_PROD_PASSWORD
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ski-prod-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ski
+      POSTGRES_PASSWORD: ${POSTGRES_PROD_PASSWORD:-ski_prod_password}
+      POSTGRES_DB: ski
+    # 不映射端口到宿主机，避免与开发库(5432)冲突，也不对外暴露
+    volumes:
+      - ski-prod-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ski"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: ski-prod-redis
+    restart: unless-stopped
+    volumes:
+      - ski-prod-redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: .
+    image: ski-app
+    container_name: ski-prod-api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment: &app-env
+      DATABASE_URL: postgresql://ski:${POSTGRES_PROD_PASSWORD:-ski_prod_password}@postgres:5432/ski?schema=public
+      REDIS_URL: redis://redis:6379
+      QWEATHER_API_KEY: ${QWEATHER_API_KEY}
+      QWEATHER_API_HOST: ${QWEATHER_API_HOST}
+      API_PORT: "3000"
+    # 每次启动先跑 migration 和种子（均幂等），再起 API
+    command: >
+      sh -c "pnpm --filter @ski/db exec prisma migrate deploy
+      && pnpm --filter @ski/db exec prisma db seed
+      && node apps/api/dist/main.api.js"
+    ports:
+      - "127.0.0.1:8300:3000" # 仅本机调试用
+    healthcheck:
+      # 用 127.0.0.1 而非 localhost：alpine 里 localhost 优先解析 ::1，而应用只绑 IPv4
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:3000/api/v1/health || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  worker:
+    image: ski-app
+    container_name: ski-prod-worker
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+    environment: *app-env
+    command: node apps/api/dist/main.worker.js
+
+  web:
+    image: ski-app
+    container_name: ski-prod-web
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+    environment:
+      API_URL: http://api:3000
+      SITE_URL: https://xiaoyuu.me
+      PORT: "3001"
+      HOSTNAME: 0.0.0.0
+    command: node apps/web/.next/standalone/apps/web/server.js
+    ports:
+      - "127.0.0.1:8301:3001" # 仅本机调试用
+
+  # Cloudflare Tunnel：把 xiaoyuu.me 的流量安全地引到本机，无需公网 IP / 开端口。
+  # 在 Cloudflare Zero Trust 控制台创建 Tunnel 后，把 token 填入 .env，
+  # 并在控制台给 Tunnel 配置 Public Hostname：xiaoyuu.me -> http://web:3001
+  # 用 profile 隔离：拿到 token 前先只起应用（up -d），
+  # 配好 token 后用 docker compose -f docker-compose.prod.yml --profile tunnel up -d
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: ski-prod-tunnel
+    restart: unless-stopped
+    profiles: ["tunnel"]
+    depends_on:
+      - web
+    command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}
+
+volumes:
+  ski-prod-pgdata:
+  ski-prod-redisdata:
