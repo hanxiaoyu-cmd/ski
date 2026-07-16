@@ -1,0 +1,399 @@
+// 中国滑雪资讯聚合平台 — 数据模型 v1
+//
+// 三类数据分离：
+//   1. 静态基础数据（人工种子维护）：Resort / Trail / Lift / Lodging
+//   2. 时序快照数据（自动采集，只增不改，带 source + fetchedAt，原始响应存 JSONB）
+//   3. 采集元数据：DataSource / CrawlTask / CrawlRun
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------- 枚举 ----------
+
+enum ResortStatus {
+  ACTIVE
+  CLOSED
+
+  @@map("resort_status")
+}
+
+enum TrailDifficulty {
+  GREEN
+  BLUE
+  RED
+  BLACK
+
+  @@map("trail_difficulty")
+}
+
+enum LiftType {
+  GONDOLA
+  CHAIR
+  MAGIC_CARPET
+
+  @@map("lift_type")
+}
+
+enum TicketType {
+  DAY
+  HALF_DAY
+  NIGHT
+  MULTI_DAY
+  SEASON
+  HOURLY
+
+  @@map("ticket_type")
+}
+
+enum DayType {
+  WEEKDAY
+  WEEKEND
+  HOLIDAY
+  ALL
+
+  @@map("day_type")
+}
+
+enum Channel {
+  OFFICIAL
+  MEITUAN
+  CTRIP
+  QUNAR
+  DOUYIN
+  OTHER
+
+  @@map("channel")
+}
+
+enum SnowType {
+  POWDER
+  GROOMED
+  ICY
+  SLUSH
+
+  @@map("snow_type")
+}
+
+// 时序上报类数据的来源（雪况 / 人流共用）
+enum ReportSource {
+  OFFICIAL
+  MANUAL
+  CROWDSOURCE
+  ESTIMATED
+
+  @@map("report_source")
+}
+
+enum LodgingType {
+  HOTEL
+  HOMESTAY
+  APARTMENT
+
+  @@map("lodging_type")
+}
+
+enum DataSourceType {
+  API
+  CRAWLER
+  MANUAL
+
+  @@map("data_source_type")
+}
+
+enum CrawlTargetKind {
+  WEATHER
+  TICKET
+  LODGING
+  CROWD
+  SNOW
+
+  @@map("crawl_target_kind")
+}
+
+enum CrawlRunStatus {
+  SUCCESS
+  PARTIAL
+  FAILED
+
+  @@map("crawl_run_status")
+}
+
+// ---------- 静态基础数据 ----------
+
+model Resort {
+  id                 Int          @id @default(autoincrement())
+  slug               String       @unique
+  name               String
+  province           String
+  city               String
+  lat                Float
+  lng                Float
+  altitudeBaseM      Int?         @map("altitude_base_m")
+  altitudeTopM       Int?         @map("altitude_top_m")
+  totalTrailKm       Float?       @map("total_trail_km")
+  // 雪季起止，"MM-DD" 格式（跨年由 open > close 判断）
+  seasonOpen         String?      @map("season_open")
+  seasonClose        String?      @map("season_close")
+  officialWebsite    String?      @map("official_website")
+  officialWechatName String?      @map("official_wechat_name")
+  phone              String?
+  intro              String?
+  coverImageUrl      String?      @map("cover_image_url")
+  status             ResortStatus @default(ACTIVE)
+  createdAt          DateTime     @default(now()) @map("created_at")
+  updatedAt          DateTime     @updatedAt @map("updated_at")
+
+  trails           Trail[]
+  lifts            Lift[]
+  weatherSnapshots WeatherSnapshot[]
+  weatherForecasts WeatherForecastDaily[]
+  snowConditions   SnowCondition[]
+  ticketProducts   TicketProduct[]
+  lodgings         Lodging[]
+  crowdReports     CrowdReport[]
+  crawlTasks       CrawlTask[]
+
+  @@index([province])
+  @@map("resort")
+}
+
+model Trail {
+  id         Int             @id @default(autoincrement())
+  resortId   Int             @map("resort_id")
+  name       String
+  difficulty TrailDifficulty
+  lengthM    Int?            @map("length_m")
+  verticalM  Int?            @map("vertical_m")
+  isNight    Boolean         @default(false) @map("is_night")
+
+  resort Resort @relation(fields: [resortId], references: [id], onDelete: Cascade)
+
+  @@index([resortId])
+  @@map("trail")
+}
+
+model Lift {
+  id              Int      @id @default(autoincrement())
+  resortId        Int      @map("resort_id")
+  name            String
+  type            LiftType
+  capacityPerHour Int?     @map("capacity_per_hour")
+
+  resort Resort @relation(fields: [resortId], references: [id], onDelete: Cascade)
+
+  @@index([resortId])
+  @@map("lift")
+}
+
+model Lodging {
+  id                Int         @id @default(autoincrement())
+  resortId          Int         @map("resort_id")
+  name              String
+  type              LodgingType
+  distanceToResortM Int?        @map("distance_to_resort_m")
+  isSkiInOut        Boolean     @default(false) @map("is_ski_in_out")
+  address           String?
+  lat               Float?
+  lng               Float?
+  // 各外部平台 ID：{ "meituan": "...", "ctrip": "..." }
+  externalRefs      Json?       @map("external_refs")
+  status            ResortStatus @default(ACTIVE)
+  createdAt         DateTime    @default(now()) @map("created_at")
+  updatedAt         DateTime    @updatedAt @map("updated_at")
+
+  resort Resort         @relation(fields: [resortId], references: [id], onDelete: Cascade)
+  prices LodgingPrice[]
+
+  @@index([resortId])
+  @@map("lodging")
+}
+
+// ---------- 时序快照数据 ----------
+
+model WeatherSnapshot {
+  id            Int      @id @default(autoincrement())
+  resortId      Int      @map("resort_id")
+  source        String
+  observedAt    DateTime @map("observed_at")
+  fetchedAt     DateTime @default(now()) @map("fetched_at")
+  tempC         Float?   @map("temp_c")
+  feelsLikeC    Float?   @map("feels_like_c")
+  windSpeedKmh  Float?   @map("wind_speed_kmh")
+  windDir       String?  @map("wind_dir")
+  humidityPct   Int?     @map("humidity_pct")
+  conditionCode String?  @map("condition_code")
+  conditionText String?  @map("condition_text")
+  visibilityKm  Float?   @map("visibility_km")
+  precipMm      Float?   @map("precip_mm")
+  raw           Json?
+
+  resort Resort @relation(fields: [resortId], references: [id], onDelete: Cascade)
+
+  @@index([resortId, observedAt(sort: Desc)])
+  @@map("weather_snapshot")
+}
+
+model WeatherForecastDaily {
+  id             Int      @id @default(autoincrement())
+  resortId       Int      @map("resort_id")
+  source         String
+  forecastDate   DateTime @map("forecast_date") @db.Date
+  fetchedAt      DateTime @default(now()) @map("fetched_at")
+  tempMinC       Float?   @map("temp_min_c")
+  tempMaxC       Float?   @map("temp_max_c")
+  conditionDay   String?  @map("condition_day")
+  conditionNight String?  @map("condition_night")
+  snowfallMm     Float?   @map("snowfall_mm")
+  precipProbPct  Int?     @map("precip_prob_pct")
+  windScale      String?  @map("wind_scale")
+  raw            Json?
+
+  resort Resort @relation(fields: [resortId], references: [id], onDelete: Cascade)
+
+  @@unique([resortId, forecastDate, source])
+  @@map("weather_forecast_daily")
+}
+
+model SnowCondition {
+  id             Int          @id @default(autoincrement())
+  resortId       Int          @map("resort_id")
+  reportedAt     DateTime     @map("reported_at")
+  source         ReportSource
+  snowDepthCm    Int?         @map("snow_depth_cm")
+  newSnowCm      Int?         @map("new_snow_cm")
+  snowType       SnowType?    @map("snow_type")
+  openTrailCount Int?         @map("open_trail_count")
+  openLiftCount  Int?         @map("open_lift_count")
+  note           String?
+  createdAt      DateTime     @default(now()) @map("created_at")
+
+  resort Resort @relation(fields: [resortId], references: [id], onDelete: Cascade)
+
+  @@index([resortId, reportedAt(sort: Desc)])
+  @@map("snow_condition")
+}
+
+model TicketProduct {
+  id                 Int        @id @default(autoincrement())
+  resortId           Int        @map("resort_id")
+  name               String
+  ticketType         TicketType @map("ticket_type")
+  dayType            DayType    @default(ALL) @map("day_type")
+  channel            Channel    @default(OFFICIAL)
+  priceCents         Int        @map("price_cents")
+  originalPriceCents Int?       @map("original_price_cents")
+  currency           String     @default("CNY")
+  validFrom          DateTime?  @map("valid_from") @db.Date
+  validTo            DateTime?  @map("valid_to") @db.Date
+  purchaseUrl        String?    @map("purchase_url")
+  isActive           Boolean    @default(true) @map("is_active")
+  firstSeenAt        DateTime   @default(now()) @map("first_seen_at")
+  lastSeenAt         DateTime   @default(now()) @map("last_seen_at")
+  crawlRunId         Int?       @map("crawl_run_id")
+
+  resort   Resort    @relation(fields: [resortId], references: [id], onDelete: Cascade)
+  crawlRun CrawlRun? @relation(fields: [crawlRunId], references: [id], onDelete: SetNull)
+
+  @@index([resortId, isActive, validFrom])
+  @@map("ticket_product")
+}
+
+model LodgingPrice {
+  id            Int      @id @default(autoincrement())
+  lodgingId     Int      @map("lodging_id")
+  stayDate      DateTime @map("stay_date") @db.Date
+  priceMinCents Int?     @map("price_min_cents")
+  priceMaxCents Int?     @map("price_max_cents")
+  channel       Channel  @default(OFFICIAL)
+  crawledAt     DateTime @default(now()) @map("crawled_at")
+  crawlRunId    Int?     @map("crawl_run_id")
+
+  lodging  Lodging   @relation(fields: [lodgingId], references: [id], onDelete: Cascade)
+  crawlRun CrawlRun? @relation(fields: [crawlRunId], references: [id], onDelete: SetNull)
+
+  @@index([lodgingId, stayDate])
+  @@map("lodging_price")
+}
+
+model CrowdReport {
+  id             Int          @id @default(autoincrement())
+  resortId       Int          @map("resort_id")
+  reportedAt     DateTime     @map("reported_at")
+  source         ReportSource
+  // 拥挤度 1（空旷）- 5（爆满）
+  crowdLevel     Int          @map("crowd_level") @db.SmallInt
+  liftWaitMin    Int?         @map("lift_wait_min")
+  ticketSoldOut  Boolean?     @map("ticket_sold_out")
+  // 众包上报用户，Phase 5 引入 user 表后改为外键
+  reporterUserId Int?         @map("reporter_user_id")
+  rawText        String?      @map("raw_text")
+  confidence     Float?
+  createdAt      DateTime     @default(now()) @map("created_at")
+
+  resort Resort @relation(fields: [resortId], references: [id], onDelete: Cascade)
+
+  @@index([resortId, reportedAt(sort: Desc)])
+  @@map("crowd_report")
+}
+
+// ---------- 采集元数据 ----------
+
+model DataSource {
+  id              Int            @id @default(autoincrement())
+  code            String         @unique
+  name            String
+  type            DataSourceType
+  baseUrl         String?        @map("base_url")
+  rateLimitPerMin Int?           @map("rate_limit_per_min")
+  config          Json?
+  enabled         Boolean        @default(true)
+  createdAt       DateTime       @default(now()) @map("created_at")
+
+  crawlTasks CrawlTask[]
+
+  @@map("data_source")
+}
+
+model CrawlTask {
+  id         Int             @id @default(autoincrement())
+  sourceId   Int             @map("source_id")
+  resortId   Int?            @map("resort_id")
+  targetKind CrawlTargetKind @map("target_kind")
+  targetUrl  String?         @map("target_url")
+  cronExpr   String          @map("cron_expr")
+  parserKey  String          @map("parser_key")
+  enabled    Boolean         @default(true)
+  lastRunAt  DateTime?       @map("last_run_at")
+  createdAt  DateTime        @default(now()) @map("created_at")
+
+  source DataSource @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+  resort Resort?    @relation(fields: [resortId], references: [id], onDelete: Cascade)
+  runs   CrawlRun[]
+
+  @@index([enabled])
+  @@map("crawl_task")
+}
+
+model CrawlRun {
+  id           Int            @id @default(autoincrement())
+  taskId       Int            @map("task_id")
+  startedAt    DateTime       @default(now()) @map("started_at")
+  finishedAt   DateTime?      @map("finished_at")
+  status       CrawlRunStatus
+  itemsFound   Int            @default(0) @map("items_found")
+  itemsChanged Int            @default(0) @map("items_changed")
+  errorMessage String?        @map("error_message")
+
+  task           CrawlTask       @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  ticketProducts TicketProduct[]
+  lodgingPrices  LodgingPrice[]
+
+  @@index([taskId, startedAt(sort: Desc)])
+  @@map("crawl_run")
+}

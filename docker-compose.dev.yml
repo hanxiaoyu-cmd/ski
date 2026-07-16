@@ -1,0 +1,34 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ski-postgres
+    environment:
+      POSTGRES_USER: ski
+      POSTGRES_PASSWORD: ski_dev_password
+      POSTGRES_DB: ski
+    ports:
+      - "5432:5432"
+    volumes:
+      - ski-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ski"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: ski-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - ski-redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  ski-pgdata:
+  ski-redisdata:

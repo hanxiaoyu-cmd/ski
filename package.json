@@ -1,0 +1,23 @@
+{
+  "name": "ski",
+  "private": true,
+  "packageManager": "pnpm@11.13.1",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:api": "pnpm --filter @ski/api dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "db:generate": "pnpm --filter @ski/db generate",
+    "db:migrate": "pnpm --filter @ski/db migrate:dev",
+    "db:seed": "pnpm --filter @ski/db seed",
+    "db:studio": "pnpm --filter @ski/db studio"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0",
+    "typescript": "^5.8.0"
+  }
+}
