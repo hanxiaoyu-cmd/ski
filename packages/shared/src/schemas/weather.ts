@@ -26,8 +26,20 @@ export const dailyForecastSchema = z.object({
 });
 export type DailyForecast = z.infer<typeof dailyForecastSchema>;
 
+export const hourlyForecastSchema = z.object({
+  forecastTime: z.string(),
+  tempC: z.number().nullable(),
+  conditionCode: z.string().nullable(),
+  conditionText: z.string().nullable(),
+  windSpeedKmh: z.number().nullable(),
+  precipMm: z.number().nullable(),
+  precipProbPct: z.number().nullable(),
+});
+export type HourlyForecast = z.infer<typeof hourlyForecastSchema>;
+
 export const resortWeatherSchema = z.object({
   now: weatherNowSchema.nullable(),
+  hourly: z.array(hourlyForecastSchema),
   daily: z.array(dailyForecastSchema),
 });
 export type ResortWeather = z.infer<typeof resortWeatherSchema>;

@@ -29,6 +29,7 @@ export const resortDetailSchema = resortSummarySchema.extend({
   officialWechatName: z.string().nullable(),
   phone: z.string().nullable(),
   intro: z.string().nullable(),
+  trailMapUrl: z.string().nullable(),
   trailStats: trailStatsSchema.optional(),
 });
 export type ResortDetail = z.infer<typeof resortDetailSchema>;

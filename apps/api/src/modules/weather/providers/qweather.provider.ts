@@ -2,6 +2,7 @@ import { Injectable, Logger } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import {
   WeatherDailyData,
+  WeatherHourlyData,
   WeatherNowData,
   WeatherProvider,
 } from "./weather-provider.interface";
@@ -20,6 +21,20 @@ interface QWeatherNowResponse {
     precip: string;
     vis: string;
   };
+}
+
+interface QWeatherHourlyResponse {
+  code: string;
+  hourly: Array<{
+    fxTime: string;
+    temp: string;
+    icon: string;
+    text: string;
+    windSpeed: string;
+    humidity: string;
+    precip: string;
+    pop?: string;
+  }>;
 }
 
 interface QWeatherDailyResponse {
@@ -113,6 +128,22 @@ export class QWeatherProvider implements WeatherProvider {
       precipMm: num(now.precip),
       raw: body,
     };
+  }
+
+  async fetchHourly24(lat: number, lng: number): Promise<WeatherHourlyData[]> {
+    const location = `${lng.toFixed(2)},${lat.toFixed(2)}`;
+    const body = await this.request<QWeatherHourlyResponse>(`/v7/weather/24h?location=${location}`);
+    return body.hourly.map((h) => ({
+      forecastTime: new Date(h.fxTime),
+      tempC: num(h.temp),
+      conditionCode: h.icon || null,
+      conditionText: h.text || null,
+      windSpeedKmh: num(h.windSpeed),
+      humidityPct: num(h.humidity),
+      precipMm: num(h.precip),
+      precipProbPct: num(h.pop),
+      raw: h,
+    }));
   }
 
   async fetchDaily7(lat: number, lng: number): Promise<WeatherDailyData[]> {

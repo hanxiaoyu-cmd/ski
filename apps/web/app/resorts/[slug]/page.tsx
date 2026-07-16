@@ -5,7 +5,10 @@ import { TRAIL_DIFFICULTY_LABELS, type TrailDifficulty } from "@ski/shared";
 import { api } from "../../../lib/api";
 import { weatherEmoji } from "../../../lib/weather-icon";
 import { ForecastStrip } from "../../../components/forecast-strip";
+import { HourlyStrip } from "../../../components/hourly-strip";
 import { TicketTable } from "../../../components/ticket-table";
+import { LodgingList } from "../../../components/lodging-list";
+import { ResortCover } from "../../../components/resort-cover";
 
 export const revalidate = 900;
 
@@ -41,14 +44,18 @@ const DIFFICULTY_DOT: Record<TrailDifficulty, string> = {
 export default async function ResortPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const resort = await fetchResort(slug);
-  const [weather, tickets] = await Promise.all([
+  const [weather, tickets, lodgings] = await Promise.all([
     api.getResortWeather(slug),
     api.getResortTickets(slug),
+    api.getResortLodgings(slug),
   ]);
   const now = weather.now;
 
   return (
     <article className="space-y-8">
+      <div className="h-44 w-full overflow-hidden rounded-2xl sm:h-56">
+        <ResortCover slug={resort.slug} name={resort.name} imageUrl={resort.coverImageUrl} />
+      </div>
       <header>
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
@@ -91,9 +98,25 @@ export default async function ResortPage({ params }: { params: Promise<{ slug: s
       </header>
 
       <section>
+        <h2 className="mb-3 text-lg font-semibold">未来 24 小时</h2>
+        <HourlyStrip hourly={weather.hourly} />
+      </section>
+
+      <section>
         <h2 className="mb-3 text-lg font-semibold">未来 7 日预报</h2>
         <ForecastStrip daily={weather.daily} />
       </section>
+
+      {resort.trailMapUrl && (
+        <section>
+          <h2 className="mb-3 text-lg font-semibold">雪道图</h2>
+          <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={resort.trailMapUrl} alt={`${resort.name}雪道图`} className="w-full" loading="lazy" />
+          </div>
+          <p className="mt-1 text-[11px] text-slate-400">雪道图版权归雪场所有，如有更新以官方为准。</p>
+        </section>
+      )}
 
       {resort.trailStats && resort.trailStats.total > 0 && (
         <section>
@@ -117,6 +140,11 @@ export default async function ResortPage({ params }: { params: Promise<{ slug: s
       <section>
         <h2 className="mb-3 text-lg font-semibold">票价</h2>
         <TicketTable tickets={tickets} />
+      </section>
+
+      <section>
+        <h2 className="mb-3 text-lg font-semibold">周边住宿</h2>
+        <LodgingList lodgings={lodgings} resortName={resort.name} />
       </section>
 
       {(resort.officialWechatName || resort.officialWebsite || resort.phone) && (

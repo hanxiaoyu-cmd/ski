@@ -101,6 +101,7 @@ export class ResortService {
       officialWechatName: resort.officialWechatName,
       phone: resort.phone,
       intro: resort.intro,
+      trailMapUrl: resort.trailMapUrl,
       trailStats: { total: resort.trails.length, byDifficulty },
     };
 

@@ -1,0 +1,122 @@
+[
+  {
+    "resortSlug": "wanlong",
+    "name": "万龙双龙酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "河北省张家口市崇礼区万龙滑雪场内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%87%E9%BE%99%E5%8F%8C%E9%BE%99%E9%85%92%E5%BA%97",
+      "meituan": "https://www.meituan.com/s/%E4%B8%87%E9%BE%99%E5%8F%8C%E9%BE%99%E9%85%92%E5%BA%97"
+    }
+  },
+  {
+    "resortSlug": "wanlong",
+    "name": "万龙龙宫酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "河北省张家口市崇礼区万龙滑雪场内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%87%E9%BE%99%E9%BE%99%E5%AE%AB%E9%85%92%E5%BA%97",
+      "meituan": "https://www.meituan.com/s/%E4%B8%87%E9%BE%99%E9%BE%99%E5%AE%AB%E9%85%92%E5%BA%97"
+    }
+  },
+  {
+    "resortSlug": "thaiwoo",
+    "name": "太舞皇冠假日酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "河北省张家口市崇礼区太舞滑雪小镇内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%AA%E8%88%9E%E7%9A%87%E5%86%A0%E5%81%87%E6%97%A5",
+      "meituan": "https://www.meituan.com/s/%E5%A4%AA%E8%88%9E%E7%9A%87%E5%86%A0%E5%81%87%E6%97%A5"
+    }
+  },
+  {
+    "resortSlug": "thaiwoo",
+    "name": "太舞小镇度假公寓",
+    "type": "APARTMENT",
+    "distanceToResortM": 200,
+    "isSkiInOut": true,
+    "address": "河北省张家口市崇礼区太舞滑雪小镇内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%AA%E8%88%9E%E5%B0%8F%E9%95%87%E5%85%AC%E5%AF%93",
+      "meituan": "https://www.meituan.com/s/%E5%A4%AA%E8%88%9E%E5%B0%8F%E9%95%87%E5%85%AC%E5%AF%93"
+    }
+  },
+  {
+    "resortSlug": "genting",
+    "name": "云顶大酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "河北省张家口市崇礼区密苑云顶乐园内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E5%AF%86%E8%8B%91%E4%BA%91%E9%A1%B6%E5%A4%A7%E9%85%92%E5%BA%97",
+      "meituan": "https://www.meituan.com/s/%E4%BA%91%E9%A1%B6%E5%A4%A7%E9%85%92%E5%BA%97"
+    }
+  },
+  {
+    "resortSlug": "yabuli",
+    "name": "Club Med 亚布力度假村",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "黑龙江省尚志市亚布力滑雪旅游度假区内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=Club%20Med%20%E4%BA%9A%E5%B8%83%E5%8A%9B",
+      "meituan": "https://www.meituan.com/s/ClubMed%E4%BA%9A%E5%B8%83%E5%8A%9B"
+    }
+  },
+  {
+    "resortSlug": "songhuahu",
+    "name": "松花湖西武王子大饭店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "吉林省吉林市丰满区万科松花湖度假区内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E6%9D%BE%E8%8A%B1%E6%B9%96%E8%A5%BF%E6%AD%A6%E7%8E%8B%E5%AD%90%E5%A4%A7%E9%A5%AD%E5%BA%97",
+      "meituan": "https://www.meituan.com/s/%E8%A5%BF%E6%AD%A6%E7%8E%8B%E5%AD%90%E5%A4%A7%E9%A5%AD%E5%BA%97"
+    }
+  },
+  {
+    "resortSlug": "changbaishan",
+    "name": "长白山万达威斯汀度假酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 500,
+    "isSkiInOut": false,
+    "address": "吉林省白山市抚松县长白山国际度假区内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E9%95%BF%E7%99%BD%E5%B1%B1%E4%B8%87%E8%BE%BE%E5%A8%81%E6%96%AF%E6%B1%80",
+      "meituan": "https://www.meituan.com/s/%E9%95%BF%E7%99%BD%E5%B1%B1%E5%A8%81%E6%96%AF%E6%B1%80"
+    }
+  },
+  {
+    "resortSlug": "changbaishan",
+    "name": "长白山万达喜来登度假酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 500,
+    "isSkiInOut": false,
+    "address": "吉林省白山市抚松县长白山国际度假区内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E9%95%BF%E7%99%BD%E5%B1%B1%E4%B8%87%E8%BE%BE%E5%96%9C%E6%9D%A5%E7%99%BB",
+      "meituan": "https://www.meituan.com/s/%E9%95%BF%E7%99%BD%E5%B1%B1%E5%96%9C%E6%9D%A5%E7%99%BB"
+    }
+  },
+  {
+    "resortSlug": "changbaishan",
+    "name": "长白山万达假日度假酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 800,
+    "isSkiInOut": false,
+    "address": "吉林省白山市抚松县长白山国际度假区内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E9%95%BF%E7%99%BD%E5%B1%B1%E4%B8%87%E8%BE%BE%E5%81%87%E6%97%A5",
+      "meituan": "https://www.meituan.com/s/%E9%95%BF%E7%99%BD%E5%B1%B1%E5%81%87%E6%97%A5%E9%85%92%E5%BA%97"
+    }
+  }
+]

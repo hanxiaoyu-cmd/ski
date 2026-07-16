@@ -1,14 +1,24 @@
 import Link from "next/link";
 import type { ResortSummary } from "@ski/shared";
 import { weatherEmoji } from "../lib/weather-icon";
+import { ResortCover } from "./resort-cover";
 
 export function ResortCard({ resort }: { resort: ResortSummary }) {
   const w = resort.weatherNow;
   return (
     <Link
       href={`/resorts/${resort.slug}`}
-      className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
+      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
     >
+      <div className="h-32 w-full overflow-hidden">
+        <ResortCover
+          slug={resort.slug}
+          name={resort.name}
+          imageUrl={resort.coverImageUrl}
+          className="transition duration-300 group-hover:scale-105"
+        />
+      </div>
+      <div className="flex flex-1 flex-col p-5 pt-4">
       <div className="flex items-start justify-between gap-2">
         <div>
           <h2 className="text-base font-semibold group-hover:text-sky-600 dark:group-hover:text-sky-400">
@@ -52,6 +62,7 @@ export function ResortCard({ resort }: { resort: ResortSummary }) {
           </dd>
         </div>
       </dl>
+      </div>
     </Link>
   );
 }

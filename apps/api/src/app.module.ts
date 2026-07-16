@@ -4,6 +4,7 @@ import { CoreModule } from "./common/core.module";
 import { HealthModule } from "./modules/health/health.module";
 import { ResortModule } from "./modules/resort/resort.module";
 import { WeatherModule } from "./modules/weather/weather.module";
+import { LodgingModule } from "./modules/lodging/lodging.module";
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { WeatherModule } from "./modules/weather/weather.module";
     HealthModule,
     ResortModule,
     WeatherModule,
+    LodgingModule,
   ],
 })
 export class AppModule {}

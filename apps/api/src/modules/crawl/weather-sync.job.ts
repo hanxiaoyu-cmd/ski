@@ -5,12 +5,14 @@ import { WeatherService } from "../weather/weather.service";
 import { CrawlLogService } from "./crawl-log.service";
 
 const CRON_NOW = CronExpression.EVERY_HOUR;
+const CRON_HOURLY = "0 30 */2 * * *"; // 每 2 小时（错开整点，避免与实况同时打满限速）
 const CRON_DAILY = "0 0 */3 * * *"; // 每 3 小时
 
 @Injectable()
 export class WeatherSyncJob implements OnModuleInit {
   private readonly logger = new Logger(WeatherSyncJob.name);
   private nowTaskId?: number;
+  private hourlyTaskId?: number;
   private dailyTaskId?: number;
 
   constructor(
@@ -31,6 +33,14 @@ export class WeatherSyncJob implements OnModuleInit {
       parserKey: "qweather-now",
       cronExpr: CRON_NOW,
     });
+    this.hourlyTaskId = await this.crawlLog.ensureTask({
+      sourceCode: "qweather",
+      sourceName: "和风天气",
+      sourceType: DataSourceType.API,
+      targetKind: CrawlTargetKind.WEATHER,
+      parserKey: "qweather-hourly",
+      cronExpr: CRON_HOURLY,
+    });
     this.dailyTaskId = await this.crawlLog.ensureTask({
       sourceCode: "qweather",
       sourceName: "和风天气",
@@ -41,6 +51,7 @@ export class WeatherSyncJob implements OnModuleInit {
     });
     // 启动即执行一次，便于验证与冷启动补数
     await this.syncNow();
+    await this.syncHourly();
     await this.syncDaily();
   }
 
@@ -49,6 +60,15 @@ export class WeatherSyncJob implements OnModuleInit {
     if (!this.nowTaskId) return;
     this.logger.log("syncing weather now for all resorts...");
     await this.crawlLog.runLogged(this.nowTaskId, () => this.weatherService.syncNowForAllResorts());
+  }
+
+  @Cron(CRON_HOURLY)
+  async syncHourly() {
+    if (!this.hourlyTaskId) return;
+    this.logger.log("syncing 24h hourly forecast for all resorts...");
+    await this.crawlLog.runLogged(this.hourlyTaskId, () =>
+      this.weatherService.syncHourlyForAllResorts(),
+    );
   }
 
   @Cron(CRON_DAILY)

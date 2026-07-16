@@ -1,6 +1,6 @@
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
-import { PrismaClient, TicketType, DayType, Channel } from "@prisma/client";
+import { PrismaClient, TicketType, DayType, Channel, LodgingType } from "@prisma/client";
 
 const prisma = new PrismaClient();
 const seedsDir = join(__dirname, "..", "..", "..", "data", "seeds");
@@ -87,9 +87,54 @@ async function seedTickets() {
   console.log(`seeded ${count} ticket products`);
 }
 
+interface LodgingSeed {
+  resortSlug: string;
+  name: string;
+  type: keyof typeof LodgingType;
+  distanceToResortM?: number;
+  isSkiInOut?: boolean;
+  address?: string;
+  links?: Record<string, string>;
+}
+
+async function seedLodgings() {
+  const file = join(seedsDir, "lodgings.json");
+  if (!existsSync(file)) {
+    console.log("lodgings.json not found, skipping lodgings");
+    return;
+  }
+  const lodgings: LodgingSeed[] = JSON.parse(readFileSync(file, "utf8"));
+  let count = 0;
+  for (const l of lodgings) {
+    const resort = await prisma.resort.findUnique({ where: { slug: l.resortSlug } });
+    if (!resort) {
+      console.warn(`unknown resort slug in lodgings.json: ${l.resortSlug}`);
+      continue;
+    }
+    const data = {
+      type: LodgingType[l.type],
+      distanceToResortM: l.distanceToResortM ?? null,
+      isSkiInOut: l.isSkiInOut ?? false,
+      address: l.address ?? null,
+      externalRefs: l.links ?? {},
+    };
+    const existing = await prisma.lodging.findFirst({
+      where: { resortId: resort.id, name: l.name },
+    });
+    if (existing) {
+      await prisma.lodging.update({ where: { id: existing.id }, data });
+    } else {
+      await prisma.lodging.create({ data: { resortId: resort.id, name: l.name, ...data } });
+    }
+    count += 1;
+  }
+  console.log(`seeded ${count} lodgings`);
+}
+
 async function main() {
   await seedResorts();
   await seedTickets();
+  await seedLodgings();
 }
 
 main()

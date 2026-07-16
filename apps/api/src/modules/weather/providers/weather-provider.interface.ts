@@ -29,6 +29,18 @@ export interface WeatherDailyData {
   raw: unknown;
 }
 
+export interface WeatherHourlyData {
+  forecastTime: Date;
+  tempC: number | null;
+  conditionCode: string | null;
+  conditionText: string | null;
+  windSpeedKmh: number | null;
+  humidityPct: number | null;
+  precipMm: number | null;
+  precipProbPct: number | null;
+  raw: unknown;
+}
+
 export interface WeatherProvider {
   /** 写入 weather_snapshot.source / data_source.code 的标识 */
   readonly sourceCode: string;
@@ -36,6 +48,7 @@ export interface WeatherProvider {
   isConfigured(): boolean;
   fetchNow(lat: number, lng: number): Promise<WeatherNowData>;
   fetchDaily7(lat: number, lng: number): Promise<WeatherDailyData[]>;
+  fetchHourly24(lat: number, lng: number): Promise<WeatherHourlyData[]>;
 }
 
 export const WEATHER_PROVIDER = Symbol("WEATHER_PROVIDER");

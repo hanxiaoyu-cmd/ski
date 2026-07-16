@@ -1,6 +1,6 @@
 import { Inject, Injectable, Logger, NotFoundException } from "@nestjs/common";
 import { ResortStatus } from "@ski/db";
-import type { DailyForecast, ResortWeather } from "@ski/shared";
+import type { DailyForecast, HourlyForecast, ResortWeather } from "@ski/shared";
 import { PrismaService } from "../../common/prisma.service";
 import { CacheService } from "../../common/cache.service";
 import { WEATHER_PROVIDER, WeatherProvider } from "./providers/weather-provider.interface";
@@ -43,6 +43,44 @@ export class WeatherService {
       } catch (e) {
         const msg = `${resort.slug}: ${e instanceof Error ? e.message : String(e)}`;
         this.logger.warn(`sync now failed - ${msg}`);
+        result.errors.push(msg);
+      }
+    }
+    return result;
+  }
+
+  /** Worker 定时任务：拉取 24 小时预报并按 (resort, time, source) upsert */
+  async syncHourlyForAllResorts(): Promise<SyncResult> {
+    const resorts = await this.prisma.resort.findMany({ where: { status: ResortStatus.ACTIVE } });
+    const result: SyncResult = { found: resorts.length, changed: 0, errors: [] };
+    for (const resort of resorts) {
+      try {
+        const hours = await this.provider.fetchHourly24(resort.lat, resort.lng);
+        for (const hour of hours) {
+          const { raw, forecastTime, ...fields } = hour;
+          await this.prisma.weatherForecastHourly.upsert({
+            where: {
+              resortId_forecastTime_source: {
+                resortId: resort.id,
+                forecastTime,
+                source: this.provider.sourceCode,
+              },
+            },
+            create: {
+              resortId: resort.id,
+              source: this.provider.sourceCode,
+              forecastTime,
+              ...fields,
+              raw: raw as object,
+            },
+            update: { ...fields, raw: raw as object, fetchedAt: new Date() },
+          });
+        }
+        result.changed += hours.length;
+        await this.cache.del(`weather:${resort.slug}`);
+      } catch (e) {
+        const msg = `${resort.slug}: ${e instanceof Error ? e.message : String(e)}`;
+        this.logger.warn(`sync hourly failed - ${msg}`);
         result.errors.push(msg);
       }
     }
@@ -108,6 +146,22 @@ export class WeatherService {
       orderBy: { forecastDate: "asc" },
     });
 
+    const hourlyRows = await this.prisma.weatherForecastHourly.findMany({
+      where: { resortId: resort.id, forecastTime: { gte: new Date() } },
+      orderBy: { forecastTime: "asc" },
+      take: 24,
+    });
+
+    const hourly: HourlyForecast[] = hourlyRows.map((h) => ({
+      forecastTime: h.forecastTime.toISOString(),
+      tempC: h.tempC,
+      conditionCode: h.conditionCode,
+      conditionText: h.conditionText,
+      windSpeedKmh: h.windSpeedKmh,
+      precipMm: h.precipMm,
+      precipProbPct: h.precipProbPct,
+    }));
+
     const daily: DailyForecast[] = forecasts.map((f) => ({
       forecastDate: f.forecastDate.toISOString().slice(0, 10),
       tempMinC: f.tempMinC,
@@ -134,6 +188,7 @@ export class WeatherService {
             precipMm: latest.precipMm,
           }
         : null,
+      hourly,
       daily,
     };
 

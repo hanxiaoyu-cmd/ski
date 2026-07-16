@@ -145,6 +145,7 @@ model Resort {
   phone              String?
   intro              String?
   coverImageUrl      String?      @map("cover_image_url")
+  trailMapUrl        String?      @map("trail_map_url")
   status             ResortStatus @default(ACTIVE)
   createdAt          DateTime     @default(now()) @map("created_at")
   updatedAt          DateTime     @updatedAt @map("updated_at")
@@ -153,6 +154,7 @@ model Resort {
   lifts            Lift[]
   weatherSnapshots WeatherSnapshot[]
   weatherForecasts WeatherForecastDaily[]
+  weatherHourly    WeatherForecastHourly[]
   snowConditions   SnowCondition[]
   ticketProducts   TicketProduct[]
   lodgings         Lodging[]
@@ -258,6 +260,28 @@ model WeatherForecastDaily {
 
   @@unique([resortId, forecastDate, source])
   @@map("weather_forecast_daily")
+}
+
+model WeatherForecastHourly {
+  id            Int      @id @default(autoincrement())
+  resortId      Int      @map("resort_id")
+  source        String
+  forecastTime  DateTime @map("forecast_time")
+  fetchedAt     DateTime @default(now()) @map("fetched_at")
+  tempC         Float?   @map("temp_c")
+  conditionCode String?  @map("condition_code")
+  conditionText String?  @map("condition_text")
+  windSpeedKmh  Float?   @map("wind_speed_kmh")
+  humidityPct   Int?     @map("humidity_pct")
+  precipMm      Float?   @map("precip_mm")
+  precipProbPct Int?     @map("precip_prob_pct")
+  raw           Json?
+
+  resort Resort @relation(fields: [resortId], references: [id], onDelete: Cascade)
+
+  @@unique([resortId, forecastTime, source])
+  @@index([resortId, forecastTime])
+  @@map("weather_forecast_hourly")
 }
 
 model SnowCondition {

@@ -4,10 +4,12 @@ import {
   resortDetailSchema,
   resortWeatherSchema,
   ticketProductSchema,
+  lodgingSchema,
   type ResortSummary,
   type ResortDetail,
   type ResortWeather,
   type TicketProduct,
+  type LodgingInfo,
 } from "@ski/shared";
 
 /**
@@ -84,6 +86,9 @@ export function createApiClient(opts: ApiClientOptions) {
     },
     getResortTickets(slug: string): Promise<TicketProduct[]> {
       return call(opts, `/api/v1/resorts/${slug}/tickets`, z.array(ticketProductSchema));
+    },
+    getResortLodgings(slug: string): Promise<LodgingInfo[]> {
+      return call(opts, `/api/v1/resorts/${slug}/lodgings`, z.array(lodgingSchema));
     },
   };
 }
