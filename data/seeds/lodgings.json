@@ -1,75 +1,530 @@
 [
   {
-    "resortSlug": "wanlong",
-    "name": "万龙双龙酒店",
+    "resortSlug": "beidahu",
+    "name": "Club Med地中海俱乐部北大湖度假村",
     "type": "HOTEL",
     "distanceToResortM": 0,
     "isSkiInOut": true,
-    "address": "河北省张家口市崇礼区万龙滑雪场内",
+    "address": "吉林省吉林市永吉县北大湖开发区北大湖滑雪度假区",
     "links": {
-      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%87%E9%BE%99%E5%8F%8C%E9%BE%99%E9%85%92%E5%BA%97",
-      "meituan": "https://www.meituan.com/s/%E4%B8%87%E9%BE%99%E5%8F%8C%E9%BE%99%E9%85%92%E5%BA%97"
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=6035765"
     }
   },
   {
-    "resortSlug": "wanlong",
-    "name": "万龙龙宫酒店",
+    "resortSlug": "beidahu",
+    "name": "吉林北大湖假日酒店",
     "type": "HOTEL",
     "distanceToResortM": 0,
     "isSkiInOut": true,
-    "address": "河北省张家口市崇礼区万龙滑雪场内",
+    "address": "吉林省吉林市永吉县北大湖滑雪场24-12-10-117号",
     "links": {
-      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E4%B8%87%E9%BE%99%E9%BE%99%E5%AE%AB%E9%85%92%E5%BA%97",
-      "meituan": "https://www.meituan.com/s/%E4%B8%87%E9%BE%99%E9%BE%99%E5%AE%AB%E9%85%92%E5%BA%97"
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=52749677"
     }
   },
   {
-    "resortSlug": "thaiwoo",
-    "name": "太舞皇冠假日酒店",
+    "resortSlug": "beidahu",
+    "name": "北大湖北美时光度假酒店",
     "type": "HOTEL",
     "distanceToResortM": 0,
     "isSkiInOut": true,
-    "address": "河北省张家口市崇礼区太舞滑雪小镇内",
+    "address": "吉林省吉林市永吉县北大湖镇北大湖滑雪场",
     "links": {
-      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%AA%E8%88%9E%E7%9A%87%E5%86%A0%E5%81%87%E6%97%A5",
-      "meituan": "https://www.meituan.com/s/%E5%A4%AA%E8%88%9E%E7%9A%87%E5%86%A0%E5%81%87%E6%97%A5"
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=4846803"
     }
   },
   {
-    "resortSlug": "thaiwoo",
-    "name": "太舞小镇度假公寓",
+    "resortSlug": "beidahu",
+    "name": "北大湖山湖居酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": false,
+    "address": "吉林省吉林市永吉县北大湖滑雪度假区冬奥村2栋",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=68539324"
+    }
+  },
+  {
+    "resortSlug": "beidahu",
+    "name": "北大湖百万石温泉酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": false,
+    "address": "吉林省吉林市永吉县北大湖镇北大湖滑雪度假区极乐汤温泉馆东北30米",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=114608390"
+    }
+  },
+  {
+    "resortSlug": "beidahu",
+    "name": "北大湖滑雪场冬奥村珊瑚居民宿",
+    "type": "HOMESTAY",
+    "distanceToResortM": 0,
+    "isSkiInOut": false,
+    "address": "吉林省吉林市永吉县北大湖滑雪场冬奥村1期2号楼105号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=114851006"
+    }
+  },
+  {
+    "resortSlug": "changbaishan",
+    "name": "长白山万达威斯汀度假酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "吉林省白山市抚松县长白山国际度假区白云路333号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=427093"
+    }
+  },
+  {
+    "resortSlug": "changbaishan",
+    "name": "长白山万达喜来登度假酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "吉林省白山市抚松县长白山国际度假区白云路369号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=427096"
+    }
+  },
+  {
+    "resortSlug": "changbaishan",
+    "name": "长白山柏悦酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": false,
+    "address": "吉林省白山市抚松县长白山国际度假区南区冠冕街236号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=533948"
+    }
+  },
+  {
+    "resortSlug": "changbaishan",
+    "name": "长白山凯悦酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": false,
+    "address": "吉林省白山市抚松县长白山国际度假区南区冠冕街303号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=533945"
+    }
+  },
+  {
+    "resortSlug": "changbaishan",
+    "name": "长白山万达智选假日酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": false,
+    "address": "吉林省白山市抚松县长白山国际度假区白云路87号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=546163"
+    }
+  },
+  {
+    "resortSlug": "changbaishan",
+    "name": "长白山万达锦华度假酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": false,
+    "address": "吉林省白山市抚松县长白山国际度假区白云路455号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=427100"
+    }
+  },
+  {
+    "resortSlug": "cuiyunshan",
+    "name": "崇礼翠云山皇冠假日度假酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 100,
+    "isSkiInOut": true,
+    "address": "河北省张家口市崇礼区西湾子镇大夹道沟翠云山国际旅游度假区内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=83196766"
+    }
+  },
+  {
+    "resortSlug": "cuiyunshan",
+    "name": "崇礼翠云山智选假日酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 300,
+    "isSkiInOut": true,
+    "address": "河北省张家口市崇礼区西湾子镇大夹道沟奥雪小镇国际旅游度假区内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=81150362"
+    }
+  },
+  {
+    "resortSlug": "cuiyunshan",
+    "name": "翠云山奥雪小镇公寓",
     "type": "APARTMENT",
-    "distanceToResortM": 200,
+    "distanceToResortM": 300,
     "isSkiInOut": true,
-    "address": "河北省张家口市崇礼区太舞滑雪小镇内",
+    "address": "河北省张家口市崇礼区翠云山奥雪小镇",
+    "links": {}
+  },
+  {
+    "resortSlug": "cuiyunshan",
+    "name": "张家口崇礼雪山舍公寓(翠云山星澜谷店)",
+    "type": "APARTMENT",
+    "distanceToResortM": 400,
+    "isSkiInOut": true,
+    "address": "河北省张家口市崇礼区奥雪小镇32号楼103室",
     "links": {
-      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E5%A4%AA%E8%88%9E%E5%B0%8F%E9%95%87%E5%85%AC%E5%AF%93",
-      "meituan": "https://www.meituan.com/s/%E5%A4%AA%E8%88%9E%E5%B0%8F%E9%95%87%E5%85%AC%E5%AF%93"
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=68261458"
+    }
+  },
+  {
+    "resortSlug": "cuiyunshan",
+    "name": "张家口云瑧金陵翠云山酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 500,
+    "isSkiInOut": true,
+    "address": "河北省张家口市崇礼区西湾子镇大夹道沟",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=68687422"
+    }
+  },
+  {
+    "resortSlug": "cuiyunshan",
+    "name": "翠云山自然与你度假宿集(崇礼店)",
+    "type": "HOTEL",
+    "distanceToResortM": 500,
+    "isSkiInOut": false,
+    "address": "河北省张家口市崇礼区西湾子镇大夹道沟翠云山国际旅游度假区1号楼",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=110905999"
+    }
+  },
+  {
+    "resortSlug": "dolomiti",
+    "name": "张家口多乐美地白桦酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 70,
+    "isSkiInOut": true,
+    "address": "河北省张家口市崇礼区四台嘴乡窑子湾村多乐美地雪场旁",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=1440960"
+    }
+  },
+  {
+    "resortSlug": "dolomiti",
+    "name": "多乐美地滑雪场沐蘭汤温泉酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 200,
+    "isSkiInOut": false,
+    "address": "河北省张家口市崇礼区四台嘴乡窑子湾村多乐美地滑雪场北200米",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=104664045"
+    }
+  },
+  {
+    "resortSlug": "dolomiti",
+    "name": "多乐美地滑雪场多乐美苑假日酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 500,
+    "isSkiInOut": false,
+    "address": "河北省张家口市崇礼区四台嘴乡窑子湾村多乐美地小镇营销中心东南100米",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=100862563"
+    }
+  },
+  {
+    "resortSlug": "dolomiti",
+    "name": "多乐美地酒店式公寓",
+    "type": "APARTMENT",
+    "distanceToResortM": null,
+    "isSkiInOut": false,
+    "address": "河北省张家口市崇礼区四台嘴乡窑子湾村多乐美地度假区内",
+    "links": {}
+  },
+  {
+    "resortSlug": "fulong",
+    "name": "富龙度假酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 200,
+    "isSkiInOut": false,
+    "address": "河北省张家口市崇礼区万龙路3号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=19438139"
+    }
+  },
+  {
+    "resortSlug": "fulong",
+    "name": "崇礼雪世界民宿(富龙滑雪场店)",
+    "type": "HOMESTAY",
+    "distanceToResortM": 500,
+    "isSkiInOut": false,
+    "address": "河北省张家口市崇礼区万龙路汤印公寓9号楼822",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=97259127"
+    }
+  },
+  {
+    "resortSlug": "fulong",
+    "name": "宜居度假民宿(富龙四季小镇店)",
+    "type": "HOMESTAY",
+    "distanceToResortM": 500,
+    "isSkiInOut": false,
+    "address": "河北省张家口市崇礼区万龙路梦特芳丹公寓5号楼2单元401室",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=122188988"
+    }
+  },
+  {
+    "resortSlug": "fulong",
+    "name": "张家口富龙风铃乐谷焕活酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 600,
+    "isSkiInOut": false,
+    "address": "河北省张家口市崇礼区富龙四季小镇旅游风景区万龙路32号风铃乐谷8号楼",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=81155369"
+    }
+  },
+  {
+    "resortSlug": "fulong",
+    "name": "崇礼万泊公寓(富龙滑雪场店)",
+    "type": "APARTMENT",
+    "distanceToResortM": 800,
+    "isSkiInOut": false,
+    "address": "河北省张家口市崇礼区西湾子镇尚诚庄园(汤INN)9号楼1单元",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=51732205"
     }
   },
   {
     "resortSlug": "genting",
-    "name": "云顶大酒店",
+    "name": "张家口云顶大酒店",
     "type": "HOTEL",
     "distanceToResortM": 0,
     "isSkiInOut": true,
-    "address": "河北省张家口市崇礼区密苑云顶乐园内",
+    "address": "河北张家口崇礼区四台嘴乡太子城村三道沟云顶滑雪公园核心区",
     "links": {
-      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E5%AF%86%E8%8B%91%E4%BA%91%E9%A1%B6%E5%A4%A7%E9%85%92%E5%BA%97",
-      "meituan": "https://www.meituan.com/s/%E4%BA%91%E9%A1%B6%E5%A4%A7%E9%85%92%E5%BA%97"
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=439326"
     }
   },
   {
-    "resortSlug": "yabuli",
-    "name": "Club Med 亚布力度假村",
+    "resortSlug": "genting",
+    "name": "密苑云顶乐园山麓酒店",
     "type": "HOTEL",
     "distanceToResortM": 0,
     "isSkiInOut": true,
-    "address": "黑龙江省尚志市亚布力滑雪旅游度假区内",
+    "address": "河北张家口崇礼区太子城密苑云顶乐园内",
+    "links": {}
+  },
+  {
+    "resortSlug": "genting",
+    "name": "张家口云顶太子公寓",
+    "type": "APARTMENT",
+    "distanceToResortM": 100,
+    "isSkiInOut": true,
+    "address": "河北张家口崇礼区四台嘴乡太子城村梧桐大道密苑太子小镇1号楼",
     "links": {
-      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=Club%20Med%20%E4%BA%9A%E5%B8%83%E5%8A%9B",
-      "meituan": "https://www.meituan.com/s/ClubMed%E4%BA%9A%E5%B8%83%E5%8A%9B"
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=65359657"
     }
+  },
+  {
+    "resortSlug": "genting",
+    "name": "云顶丽苑滑进滑出雪道房公寓(梧桐大道1号分店)",
+    "type": "APARTMENT",
+    "distanceToResortM": 100,
+    "isSkiInOut": true,
+    "address": "河北张家口崇礼区梧桐大道云顶乐园云顶丽苑",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=54248523"
+    }
+  },
+  {
+    "resortSlug": "genting",
+    "name": "崇礼洲际酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 3000,
+    "isSkiInOut": false,
+    "address": "河北张家口崇礼区梧桐大道太子城站东南550米",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=116717441"
+    }
+  },
+  {
+    "resortSlug": "jiangjunshan",
+    "name": "泰熙金陵山水酒店(将军山滑雪场店)",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": false,
+    "address": "新疆阿勒泰市将军山路41号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=115828127"
+    }
+  },
+  {
+    "resortSlug": "jiangjunshan",
+    "name": "GRAY｜一川月白酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "新疆阿勒泰市将军山路滑雪公寓9栋1楼",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=116129933"
+    }
+  },
+  {
+    "resortSlug": "jiangjunshan",
+    "name": "将军山度假酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "新疆阿勒泰市解放路街道将军山路37号C栋1楼",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=125866516"
+    }
+  },
+  {
+    "resortSlug": "jiangjunshan",
+    "name": "阿勒泰屿歇民宿(将军山国际滑雪场店)",
+    "type": "HOMESTAY",
+    "distanceToResortM": 300,
+    "isSkiInOut": false,
+    "address": "新疆阿勒泰市将军山路25号山间民宿三区41栋1层101号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=116502331"
+    }
+  },
+  {
+    "resortSlug": "jundushan",
+    "name": "北京军都山滑雪场如意农家院",
+    "type": "HOMESTAY",
+    "distanceToResortM": 1000,
+    "isSkiInOut": false,
+    "address": "北京市昌平区崔村镇真顺村102号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=1017594"
+    }
+  },
+  {
+    "resortSlug": "jundushan",
+    "name": "北京静之湖度假区酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 6000,
+    "isSkiInOut": false,
+    "address": "北京市昌平区兴寿镇桃峪口",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=1164894"
+    }
+  },
+  {
+    "resortSlug": "koktokay",
+    "name": "芳华可可酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "新疆阿勒泰地区富蕴县可可托海国际滑雪度假区游客服务中心向西20米",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=117191663"
+    }
+  },
+  {
+    "resortSlug": "koktokay",
+    "name": "西街48号快捷酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "新疆阿勒泰地区富蕴县可可托海国际滑雪度假区内",
+    "links": {}
+  },
+  {
+    "resortSlug": "koktokay",
+    "name": "壹号精选酒店(可可托海镇店)",
+    "type": "HOTEL",
+    "distanceToResortM": null,
+    "isSkiInOut": false,
+    "address": "新疆阿勒泰地区富蕴县可可托海镇和平路80号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=119730791"
+    }
+  },
+  {
+    "resortSlug": "koktokay",
+    "name": "芳华·故事里酒店",
+    "type": "HOTEL",
+    "distanceToResortM": null,
+    "isSkiInOut": false,
+    "address": "新疆阿勒泰地区富蕴县可可托海镇额河路1号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=76484205"
+    }
+  },
+  {
+    "resortSlug": "nanshan",
+    "name": "北京南山滑雪场雪顿木屋度假酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 100,
+    "isSkiInOut": true,
+    "address": "北京市密云区河南寨镇圣水头村南山滑雪场内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=3744012"
+    }
+  },
+  {
+    "resortSlug": "nanshan",
+    "name": "南山里观山民宿(南山滑雪场店)",
+    "type": "HOMESTAY",
+    "distanceToResortM": 1000,
+    "isSkiInOut": false,
+    "address": "北京市密云区河南寨镇圣水头村中心街91号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=115543735"
+    }
+  },
+  {
+    "resortSlug": "nanshan",
+    "name": "仨茉·南山里等风精品民宿(南山滑雪场店)",
+    "type": "HOMESTAY",
+    "distanceToResortM": 1000,
+    "isSkiInOut": false,
+    "address": "北京市密云区河南寨镇圣水头村中心街155号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=114850968"
+    }
+  },
+  {
+    "resortSlug": "silkroad",
+    "name": "丝路山地SPA民宿",
+    "type": "HOMESTAY",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "新疆乌鲁木齐县丝绸之路国际度假区游客服务中心4楼",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=115864793"
+    }
+  },
+  {
+    "resortSlug": "silkroad",
+    "name": "艾文文化酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "新疆乌鲁木齐县水西沟镇平西梁村丝绸之路国际度假区内",
+    "links": {}
+  },
+  {
+    "resortSlug": "silkroad",
+    "name": "乌鲁木齐县慕蝉民宿",
+    "type": "HOMESTAY",
+    "distanceToResortM": 2000,
+    "isSkiInOut": false,
+    "address": "新疆乌鲁木齐县水西沟镇平西梁村A2-03号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=102654957"
+    }
+  },
+  {
+    "resortSlug": "silkroad",
+    "name": "大山小舍民宿",
+    "type": "HOMESTAY",
+    "distanceToResortM": 2000,
+    "isSkiInOut": false,
+    "address": "新疆乌鲁木齐县水西沟镇平西梁村五巷",
+    "links": {}
   },
   {
     "resortSlug": "songhuahu",
@@ -77,46 +532,291 @@
     "type": "HOTEL",
     "distanceToResortM": 0,
     "isSkiInOut": true,
-    "address": "吉林省吉林市丰满区万科松花湖度假区内",
+    "address": "吉林省吉林市丰满区青山大街888号万科松花湖度假区",
     "links": {
-      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E6%9D%BE%E8%8A%B1%E6%B9%96%E8%A5%BF%E6%AD%A6%E7%8E%8B%E5%AD%90%E5%A4%A7%E9%A5%AD%E5%BA%97",
-      "meituan": "https://www.meituan.com/s/%E8%A5%BF%E6%AD%A6%E7%8E%8B%E5%AD%90%E5%A4%A7%E9%A5%AD%E5%BA%97"
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=3153123"
     }
   },
   {
-    "resortSlug": "changbaishan",
-    "name": "长白山万达威斯汀度假酒店",
+    "resortSlug": "songhuahu",
+    "name": "万科松花湖青山宿集",
+    "type": "APARTMENT",
+    "distanceToResortM": 0,
+    "isSkiInOut": false,
+    "address": "吉林省吉林市丰满区青山大街888号松花湖国际度假区青山公寓三期A区5号楼1单元107号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=81773477"
+    }
+  },
+  {
+    "resortSlug": "songhuahu",
+    "name": "青松漫野·Breeze·山屿山宿(松花湖度假区店)",
+    "type": "HOMESTAY",
+    "distanceToResortM": 0,
+    "isSkiInOut": false,
+    "address": "吉林省吉林市丰满区青山大街888号松花湖国际度假区青山公寓二期10#住宅1单元2层007号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=68528684"
+    }
+  },
+  {
+    "resortSlug": "songhuahu",
+    "name": "吉林市云麓酒店(松花湖度假区店)",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": false,
+    "address": "吉林省吉林市丰满区松花西路松花湖度假三期B区3号楼3单元1层",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=116491912"
+    }
+  },
+  {
+    "resortSlug": "thaiwoo",
+    "name": "太舞小镇太舞酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "河北张家口崇礼区四台嘴乡营岔村太舞滑雪小镇",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=6981625"
+    }
+  },
+  {
+    "resortSlug": "thaiwoo",
+    "name": "张家口崇礼太舞凯悦嘉轩酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "河北张家口崇礼区四台嘴乡营岔村太舞滑雪小镇",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=25650108"
+    }
+  },
+  {
+    "resortSlug": "thaiwoo",
+    "name": "太舞小镇雪麓居酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": false,
+    "address": "河北张家口崇礼区四台嘴乡营岔村太舞滑雪小镇",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=15053412"
+    }
+  },
+  {
+    "resortSlug": "thaiwoo",
+    "name": "太舞小镇帕思顿酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "河北张家口崇礼区四台嘴乡营岔村太舞滑雪小镇雪皓居",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=70159434"
+    }
+  },
+  {
+    "resortSlug": "thaiwoo",
+    "name": "太舞小镇逅雪民宿",
+    "type": "HOMESTAY",
+    "distanceToResortM": 200,
+    "isSkiInOut": false,
+    "address": "河北张家口崇礼区太舞四季文化旅游度假区一期工程K座（雪麓居）",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=109471123"
+    }
+  },
+  {
+    "resortSlug": "wanlong",
+    "name": "万龙滑雪场龙宫酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "河北张家口崇礼区西湾子镇黄土嘴村红花梁区域万龙滑雪场内01号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=14094637"
+    }
+  },
+  {
+    "resortSlug": "wanlong",
+    "name": "万龙滑雪场双龙酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "河北张家口崇礼区雪场路万龙滑雪场双龙A座",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=4005466"
+    }
+  },
+  {
+    "resortSlug": "wanlong",
+    "name": "万龙公寓(张家口万龙滑雪场店)",
+    "type": "APARTMENT",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "河北张家口崇礼区雪场路万龙滑雪场双龙公寓B座",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=4010691"
+    }
+  },
+  {
+    "resortSlug": "wanlong",
+    "name": "盛龙公寓(万龙滑雪场店)",
+    "type": "APARTMENT",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "河北张家口崇礼区西湾子镇黄土嘴村红花梁区域万龙滑雪场内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=123954763"
+    }
+  },
+  {
+    "resortSlug": "wanlong",
+    "name": "万龙滑雪场悦龙酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "河北张家口崇礼区万龙滑雪场内03号C座",
+    "links": {}
+  },
+  {
+    "resortSlug": "wanlongbayi",
+    "name": "汉庭酒店(北京园博园店)",
+    "type": "HOTEL",
+    "distanceToResortM": 2500,
+    "isSkiInOut": false,
+    "address": "北京市丰台区长辛店大灰厂东路8号院",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=96811503"
+    }
+  },
+  {
+    "resortSlug": "wanlongbayi",
+    "name": "汉庭酒店(北京园博园杜家坎店)",
+    "type": "HOTEL",
+    "distanceToResortM": 4500,
+    "isSkiInOut": false,
+    "address": "北京市丰台区杜家坎南路33号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=104183640"
+    }
+  },
+  {
+    "resortSlug": "xiling",
+    "name": "西岭雪山西舍映雪酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 300,
+    "isSkiInOut": false,
+    "address": "四川省成都市大邑县西岭雪山滑雪场景区映雪广场",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=436652"
+    }
+  },
+  {
+    "resortSlug": "xiling",
+    "name": "西岭雪山阳光假日酒店",
     "type": "HOTEL",
     "distanceToResortM": 500,
     "isSkiInOut": false,
-    "address": "吉林省白山市抚松县长白山国际度假区内",
+    "address": "四川省成都市大邑县西岭镇西岭雪山滑雪场景区(近映雪广场)",
     "links": {
-      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E9%95%BF%E7%99%BD%E5%B1%B1%E4%B8%87%E8%BE%BE%E5%A8%81%E6%96%AF%E6%B1%80",
-      "meituan": "https://www.meituan.com/s/%E9%95%BF%E7%99%BD%E5%B1%B1%E5%A8%81%E6%96%AF%E6%B1%80"
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=1585463"
     }
   },
   {
-    "resortSlug": "changbaishan",
-    "name": "长白山万达喜来登度假酒店",
+    "resortSlug": "xiling",
+    "name": "西岭雪山雪花酒店",
     "type": "HOTEL",
     "distanceToResortM": 500,
     "isSkiInOut": false,
-    "address": "吉林省白山市抚松县长白山国际度假区内",
+    "address": "四川省成都市大邑县西岭雪山滑雪场景区内",
     "links": {
-      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E9%95%BF%E7%99%BD%E5%B1%B1%E4%B8%87%E8%BE%BE%E5%96%9C%E6%9D%A5%E7%99%BB",
-      "meituan": "https://www.meituan.com/s/%E9%95%BF%E7%99%BD%E5%B1%B1%E5%96%9C%E6%9D%A5%E7%99%BB"
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=768456"
     }
   },
   {
-    "resortSlug": "changbaishan",
-    "name": "长白山万达假日度假酒店",
+    "resortSlug": "xiling",
+    "name": "西岭雪山首峰别苑",
     "type": "HOTEL",
-    "distanceToResortM": 800,
+    "distanceToResortM": null,
     "isSkiInOut": false,
-    "address": "吉林省白山市抚松县长白山国际度假区内",
+    "address": "四川省成都市大邑县西岭雪山滑雪场日月坪(海拔3250米)",
     "links": {
-      "ctrip": "https://hotels.ctrip.com/hotels/list?keyword=%E9%95%BF%E7%99%BD%E5%B1%B1%E4%B8%87%E8%BE%BE%E5%81%87%E6%97%A5",
-      "meituan": "https://www.meituan.com/s/%E9%95%BF%E7%99%BD%E5%B1%B1%E5%81%87%E6%97%A5%E9%85%92%E5%BA%97"
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=1925193"
+    }
+  },
+  {
+    "resortSlug": "yabuli",
+    "name": "Club Med地中海俱乐部亚布力度假村",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "黑龙江省哈尔滨市尚志市亚布力滑雪旅游度假区",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=436418"
+    }
+  },
+  {
+    "resortSlug": "yabuli",
+    "name": "亚布力阳光度假村沐云楼山顶酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "黑龙江省尚志市亚布力滑雪旅游度假区（大锅盔山顶，需乘缆车抵达）",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=646738"
+    }
+  },
+  {
+    "resortSlug": "yabuli",
+    "name": "雪韵假日精选酒店(亚布力新体委滑雪场店)",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": false,
+    "address": "黑龙江省尚志市亚布力滑雪旅游度假区（原亚布力广电国际酒店）",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=458897"
+    }
+  },
+  {
+    "resortSlug": "yabuli",
+    "name": "亚布力森林温泉酒店",
+    "type": "HOTEL",
+    "distanceToResortM": null,
+    "isSkiInOut": false,
+    "address": "黑龙江省尚志市亚布力滑雪旅游度假区亚布力南站旁",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=6378189"
+    }
+  },
+  {
+    "resortSlug": "yuyang",
+    "name": "北京渔阳国际度假村",
+    "type": "HOTEL",
+    "distanceToResortM": 300,
+    "isSkiInOut": true,
+    "address": "北京市平谷区东高村镇大旺务村688号",
+    "links": {}
+  },
+  {
+    "resortSlug": "yuyang",
+    "name": "北京渔阳酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 4000,
+    "isSkiInOut": false,
+    "address": "北京市平谷区新平北路39号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=1310517"
+    }
+  },
+  {
+    "resortSlug": "yuyang",
+    "name": "北京平谷万达锦华酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 5000,
+    "isSkiInOut": false,
+    "address": "北京市平谷区体育中心西路3号院3号楼",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=112307708"
     }
   }
 ]

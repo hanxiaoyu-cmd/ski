@@ -2,9 +2,10 @@ import type { LodgingInfo } from "@ski/shared";
 import { LODGING_TYPE_LABELS, formatPrice } from "@ski/shared";
 
 const LINK_LABELS: Record<string, string> = {
-  ctrip: "携程",
-  meituan: "美团",
-  official: "官方",
+  ctrip: "携程预订",
+  meituan: "美团预订",
+  official: "官网",
+  amap: "地图",
 };
 
 function distanceText(m: number | null): string | null {
@@ -15,14 +16,11 @@ function distanceText(m: number | null): string | null {
 }
 
 export function LodgingList({ lodgings, resortName }: { lodgings: LodgingInfo[]; resortName: string }) {
+  // 关键词搜索链接在携程/美团会被重定向到首页，地图搜索是目前最可靠的通用入口
   const searchLinks = [
     {
-      label: "在携程搜索周边酒店",
-      href: `https://hotels.ctrip.com/hotels/list?keyword=${encodeURIComponent(resortName)}`,
-    },
-    {
-      label: "在美团搜索周边住宿",
-      href: `https://www.meituan.com/s/${encodeURIComponent(resortName)}`,
+      label: "在高德地图查看周边住宿",
+      href: `https://uri.amap.com/search?keyword=${encodeURIComponent(`${resortName}附近酒店`)}`,
     },
   ];
 
@@ -72,9 +70,15 @@ export function LodgingList({ lodgings, resortName }: { lodgings: LodgingInfo[];
                   )}
                 </div>
               </div>
-              {Object.keys(l.links).length > 0 && (
-                <div className="mt-3 flex gap-2">
-                  {Object.entries(l.links).map(([key, href]) => (
+              {(
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {Object.entries({
+                    ...l.links,
+                    // 每家住宿保底一个可用的地图入口
+                    amap:
+                      l.links.amap ??
+                      `https://uri.amap.com/search?keyword=${encodeURIComponent(l.name)}`,
+                  }).map(([key, href]) => (
                     <a
                       key={key}
                       href={href}

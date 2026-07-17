@@ -104,31 +104,35 @@ async function seedLodgings() {
     return;
   }
   const lodgings: LodgingSeed[] = JSON.parse(readFileSync(file, "utf8"));
+
+  // 住宿数据目前完全由种子文件管理：对文件覆盖到的雪场做整体替换，
+  // 避免改名/纠错后旧条目残留
+  const slugs = [...new Set(lodgings.map((l) => l.resortSlug))];
+  const resorts = await prisma.resort.findMany({ where: { slug: { in: slugs } } });
+  const idBySlug = new Map(resorts.map((r) => [r.slug, r.id]));
+  await prisma.lodging.deleteMany({ where: { resortId: { in: [...idBySlug.values()] } } });
+
   let count = 0;
   for (const l of lodgings) {
-    const resort = await prisma.resort.findUnique({ where: { slug: l.resortSlug } });
-    if (!resort) {
+    const resortId = idBySlug.get(l.resortSlug);
+    if (!resortId) {
       console.warn(`unknown resort slug in lodgings.json: ${l.resortSlug}`);
       continue;
     }
-    const data = {
-      type: LodgingType[l.type],
-      distanceToResortM: l.distanceToResortM ?? null,
-      isSkiInOut: l.isSkiInOut ?? false,
-      address: l.address ?? null,
-      externalRefs: l.links ?? {},
-    };
-    const existing = await prisma.lodging.findFirst({
-      where: { resortId: resort.id, name: l.name },
+    await prisma.lodging.create({
+      data: {
+        resortId,
+        name: l.name,
+        type: LodgingType[l.type],
+        distanceToResortM: l.distanceToResortM ?? null,
+        isSkiInOut: l.isSkiInOut ?? false,
+        address: l.address ?? null,
+        externalRefs: l.links ?? {},
+      },
     });
-    if (existing) {
-      await prisma.lodging.update({ where: { id: existing.id }, data });
-    } else {
-      await prisma.lodging.create({ data: { resortId: resort.id, name: l.name, ...data } });
-    }
     count += 1;
   }
-  console.log(`seeded ${count} lodgings`);
+  console.log(`seeded ${count} lodgings (replaced ${slugs.length} resorts)`);
 }
 
 async function main() {

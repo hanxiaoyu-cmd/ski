@@ -23,7 +23,8 @@ export class LodgingService {
 
     const lodgings = await this.prisma.lodging.findMany({
       where: { resortId: resort.id, status: ResortStatus.ACTIVE },
-      orderBy: [{ isSkiInOut: "desc" }, { distanceToResortM: "asc" }],
+      // 按距雪场距离升序（未知距离排最后），同距离时滑进滑出优先
+      orderBy: [{ distanceToResortM: { sort: "asc", nulls: "last" } }, { isSkiInOut: "desc" }],
       include: {
         prices: { orderBy: { crawledAt: "desc" }, take: 1 },
       },

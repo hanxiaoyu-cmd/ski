@@ -5,7 +5,7 @@ import Redis from "ioredis";
  * 缓存 key 版本：API 响应结构变化时 +1，让旧结构缓存自然失效，
  * 避免部署新代码后从 Redis 读出旧 shape 导致前端校验失败。
  */
-const CACHE_VERSION = "v2";
+const CACHE_VERSION = "v3";
 
 /**
  * Cache-Aside 封装。Redis 不可用时静默降级为「无缓存」，不影响主流程。
