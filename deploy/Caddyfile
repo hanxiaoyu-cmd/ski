@@ -1,0 +1,9 @@
+# Caddy 自动申请/续期 Let's Encrypt 证书
+xiaoyuu.me {
+	reverse_proxy web:3001
+	encode gzip
+}
+
+www.xiaoyuu.me {
+	redir https://xiaoyuu.me{uri} permanent
+}

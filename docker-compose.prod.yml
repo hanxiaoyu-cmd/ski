@@ -1,6 +1,8 @@
-# 生产栈（家用电脑自托管 + Cloudflare Tunnel）
-# 启动：docker compose -f docker-compose.prod.yml up -d --build
-# 需要根目录 .env 提供：QWEATHER_API_KEY / QWEATHER_API_HOST / CLOUDFLARE_TUNNEL_TOKEN / POSTGRES_PROD_PASSWORD
+# 生产栈，两种对外方式二选一（通过 profile 选择）：
+#   家用电脑 + Cloudflare Tunnel: docker compose -f docker-compose.prod.yml --profile tunnel up -d --build
+#   云服务器(香港/首尔等境外) + Caddy: docker compose -f docker-compose.prod.yml --profile caddy up -d --build
+# 需要根目录 .env 提供：QWEATHER_API_KEY / QWEATHER_API_HOST / POSTGRES_PROD_PASSWORD
+# （tunnel 方式另需 CLOUDFLARE_TUNNEL_TOKEN）
 
 services:
   postgres:
@@ -103,6 +105,24 @@ services:
       - web
     command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}
 
+  # 云服务器方式：Caddy 直接监听 80/443，自动 HTTPS（需要域名 A 记录已指向本机）
+  caddy:
+    image: caddy:2-alpine
+    container_name: ski-prod-caddy
+    restart: unless-stopped
+    profiles: ["caddy"]
+    depends_on:
+      - web
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - ski-prod-caddydata:/data
+      - ski-prod-caddyconfig:/config
+
 volumes:
   ski-prod-pgdata:
   ski-prod-redisdata:
+  ski-prod-caddydata:
+  ski-prod-caddyconfig:
