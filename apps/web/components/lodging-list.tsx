@@ -1,5 +1,5 @@
 import type { LodgingInfo } from "@ski/shared";
-import { LODGING_TYPE_LABELS, formatPrice } from "@ski/shared";
+import { LODGING_TYPE_LABELS, distanceLabel, formatPrice } from "@ski/shared";
 
 const LINK_LABELS: Record<string, string> = {
   ctrip: "携程预订",
@@ -8,12 +8,6 @@ const LINK_LABELS: Record<string, string> = {
   amap: "地图",
 };
 
-function distanceText(m: number | null): string | null {
-  if (m === null) return null;
-  if (m === 0) return "雪场内";
-  if (m < 1000) return `距雪场 ${m}m`;
-  return `距雪场 ${(m / 1000).toFixed(1)}km`;
-}
 
 export function LodgingList({ lodgings, resortName }: { lodgings: LodgingInfo[]; resortName: string }) {
   // 关键词搜索链接在携程/美团会被重定向到首页，地图搜索是目前最可靠的通用入口
@@ -47,9 +41,9 @@ export function LodgingList({ lodgings, resortName }: { lodgings: LodgingInfo[];
                         滑进滑出
                       </span>
                     )}
-                    {distanceText(l.distanceToResortM) && (
-                      <span className="ml-1.5">{distanceText(l.distanceToResortM)}</span>
-                    )}
+                  </p>
+                  <p className="mt-1 text-xs font-medium text-slate-700 dark:text-slate-200">
+                    {distanceLabel(l.distanceToResortM) ?? "距离待核实"}
                   </p>
                 </div>
                 <div className="shrink-0 text-right">

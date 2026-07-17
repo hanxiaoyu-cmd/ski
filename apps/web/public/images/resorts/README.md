@@ -1,6 +1,8 @@
-# 雪场图片目录
+# 雪场封面图
 
-- 封面图放这里：`<slug>.jpg`（如 `wanlong.jpg`），然后把 `data/seeds/resorts.json` 中该雪场的
-  `coverImageUrl` 设为 `/images/resorts/<slug>.jpg` 并重新 `pnpm db:seed`。
-- 雪道图放 `../trail-maps/<slug>.jpg`，对应字段 `trailMapUrl`。
-- 请使用有授权的图片（自摄、雪场官方授权或 CC0 图库），注意版权。
+当前 18 张 `<slug>.jpg` 为 **Pexels 免费商用许可**的滑雪/雪山题材实拍照片（示意图，
+非各雪场实景；Pexels License 允许商用、无需署名）。
+
+替换为真实雪场照片（自摄或官方授权图）：直接覆盖同名文件即可，无需改代码；
+建议尺寸 1600×640 左右、JPEG ≤300KB。雪道图放 `../trail-maps/<slug>.jpg`，
+对应 `data/seeds/resorts.json` 的 `trailMapUrl` 字段。

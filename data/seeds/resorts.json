@@ -12,7 +12,8 @@
     "seasonOpen": "11-05",
     "seasonClose": "04-15",
     "officialWechatName": "万龙度假天堂",
-    "intro": "国内最早开板、最晚封板的雪场之一，以雪质和高级道著称。"
+    "intro": "国内最早开板、最晚封板的雪场之一，以雪质和高级道著称。",
+    "coverImageUrl": "/images/resorts/wanlong.jpg"
   },
   {
     "slug": "thaiwoo",
@@ -27,7 +28,8 @@
     "seasonOpen": "11-15",
     "seasonClose": "04-05",
     "officialWechatName": "太舞滑雪小镇",
-    "intro": "崇礼落差最大的雪场之一，山地度假小镇配套完善，冬奥赛事场地。"
+    "intro": "崇礼落差最大的雪场之一，山地度假小镇配套完善，冬奥赛事场地。",
+    "coverImageUrl": "/images/resorts/thaiwoo.jpg"
   },
   {
     "slug": "genting",
@@ -42,7 +44,8 @@
     "seasonOpen": "11-15",
     "seasonClose": "04-05",
     "officialWechatName": "密苑云顶乐园",
-    "intro": "2022 冬奥会自由式滑雪与单板滑雪比赛场地，地形公园出色。"
+    "intro": "2022 冬奥会自由式滑雪与单板滑雪比赛场地，地形公园出色。",
+    "coverImageUrl": "/images/resorts/genting.jpg"
   },
   {
     "slug": "fulong",
@@ -57,7 +60,8 @@
     "seasonOpen": "11-20",
     "seasonClose": "03-31",
     "officialWechatName": "富龙四季度假地",
-    "intro": "紧邻崇礼城区，夜场规模大，适合家庭与初中级滑手。"
+    "intro": "紧邻崇礼城区，夜场规模大，适合家庭与初中级滑手。",
+    "coverImageUrl": "/images/resorts/fulong.jpg"
   },
   {
     "slug": "cuiyunshan",
@@ -72,7 +76,8 @@
     "seasonOpen": "11-20",
     "seasonClose": "03-31",
     "officialWechatName": "翠云山银河滑雪场",
-    "intro": "崇礼性价比之选，人流相对较少，中级道体验好。"
+    "intro": "崇礼性价比之选，人流相对较少，中级道体验好。",
+    "coverImageUrl": "/images/resorts/cuiyunshan.jpg"
   },
   {
     "slug": "dolomiti",
@@ -87,7 +92,8 @@
     "seasonOpen": "11-20",
     "seasonClose": "03-31",
     "officialWechatName": "多乐美地度假区",
-    "intro": "意式风格雪场，雪道以中级为主，游客密度低。"
+    "intro": "意式风格雪场，雪道以中级为主，游客密度低。",
+    "coverImageUrl": "/images/resorts/dolomiti.jpg"
   },
   {
     "slug": "yabuli",
@@ -102,7 +108,8 @@
     "seasonOpen": "11-10",
     "seasonClose": "03-31",
     "officialWechatName": "亚布力滑雪旅游度假区",
-    "intro": "中国现代滑雪发源地，国内规模最大的综合滑雪度假区之一。"
+    "intro": "中国现代滑雪发源地，国内规模最大的综合滑雪度假区之一。",
+    "coverImageUrl": "/images/resorts/yabuli.jpg"
   },
   {
     "slug": "beidahu",
@@ -117,7 +124,8 @@
     "seasonOpen": "11-10",
     "seasonClose": "04-05",
     "officialWechatName": "北大湖滑雪度假区",
-    "intro": "国内落差最大的雪场之一，粉雪资源出色，雪季长。"
+    "intro": "国内落差最大的雪场之一，粉雪资源出色，雪季长。",
+    "coverImageUrl": "/images/resorts/beidahu.jpg"
   },
   {
     "slug": "songhuahu",
@@ -132,7 +140,8 @@
     "seasonOpen": "11-15",
     "seasonClose": "03-31",
     "officialWechatName": "万科松花湖度假区",
-    "intro": "临近吉林市区交通便利，度假配套成熟，青山主峰视野开阔。"
+    "intro": "临近吉林市区交通便利，度假配套成熟，青山主峰视野开阔。",
+    "coverImageUrl": "/images/resorts/songhuahu.jpg"
   },
   {
     "slug": "changbaishan",
@@ -147,7 +156,8 @@
     "seasonOpen": "11-15",
     "seasonClose": "04-05",
     "officialWechatName": "长白山国际度假区",
-    "intro": "度假型雪场，风小雪软适合家庭，可联游长白山景区与温泉。"
+    "intro": "度假型雪场，风小雪软适合家庭，可联游长白山景区与温泉。",
+    "coverImageUrl": "/images/resorts/changbaishan.jpg"
   },
   {
     "slug": "koktokay",
@@ -162,7 +172,8 @@
     "seasonOpen": "10-01",
     "seasonClose": "05-01",
     "officialWechatName": "可可托海国际滑雪度假区",
-    "intro": "国内落差与雪期兼具的顶级雪场，野雪与高山地形闻名。"
+    "intro": "国内落差与雪期兼具的顶级雪场，野雪与高山地形闻名。",
+    "coverImageUrl": "/images/resorts/koktokay.jpg"
   },
   {
     "slug": "silkroad",
@@ -177,7 +188,8 @@
     "seasonOpen": "11-01",
     "seasonClose": "04-15",
     "officialWechatName": "丝绸之路山地度假区",
-    "intro": "距乌鲁木齐市区约 1 小时，夜景与城市可达性是特色。"
+    "intro": "距乌鲁木齐市区约 1 小时，夜景与城市可达性是特色。",
+    "coverImageUrl": "/images/resorts/silkroad.jpg"
   },
   {
     "slug": "jiangjunshan",
@@ -192,7 +204,8 @@
     "seasonOpen": "10-20",
     "seasonClose": "04-30",
     "officialWechatName": "将军山滑雪场",
-    "intro": "紧贴阿勒泰市区的城市雪场，雪期超长，粉雪品质高。"
+    "intro": "紧贴阿勒泰市区的城市雪场，雪期超长，粉雪品质高。",
+    "coverImageUrl": "/images/resorts/jiangjunshan.jpg"
   },
   {
     "slug": "nanshan",
@@ -207,7 +220,8 @@
     "seasonOpen": "12-01",
     "seasonClose": "03-05",
     "officialWechatName": "南山滑雪场",
-    "intro": "京郊规模最大的雪场之一，地形公园与单板文化聚集地。"
+    "intro": "京郊规模最大的雪场之一，地形公园与单板文化聚集地。",
+    "coverImageUrl": "/images/resorts/nanshan.jpg"
   },
   {
     "slug": "jundushan",
@@ -222,7 +236,8 @@
     "seasonOpen": "12-01",
     "seasonClose": "03-01",
     "officialWechatName": "军都山滑雪场",
-    "intro": "距市区最近的雪场之一，夜场人气高，适合下班后夜滑。"
+    "intro": "距市区最近的雪场之一，夜场人气高，适合下班后夜滑。",
+    "coverImageUrl": "/images/resorts/jundushan.jpg"
   },
   {
     "slug": "yuyang",
@@ -237,7 +252,8 @@
     "seasonOpen": "12-01",
     "seasonClose": "03-01",
     "officialWechatName": "渔阳国际滑雪场",
-    "intro": "京郊东部大型雪场，雪道宽阔，团建与培训热门。"
+    "intro": "京郊东部大型雪场，雪道宽阔，团建与培训热门。",
+    "coverImageUrl": "/images/resorts/yuyang.jpg"
   },
   {
     "slug": "wanlongbayi",
@@ -252,7 +268,8 @@
     "seasonOpen": "12-05",
     "seasonClose": "02-28",
     "officialWechatName": "万龙八易滑雪场",
-    "intro": "北京城区内的练习型雪场，适合入门与日常练习。"
+    "intro": "北京城区内的练习型雪场，适合入门与日常练习。",
+    "coverImageUrl": "/images/resorts/wanlongbayi.jpg"
   },
   {
     "slug": "xiling",
@@ -267,6 +284,7 @@
     "seasonOpen": "12-01",
     "seasonClose": "03-15",
     "officialWechatName": "西岭雪山",
-    "intro": "南方代表性雪场，成都周边周末游热门目的地。"
+    "intro": "南方代表性雪场，成都周边周末游热门目的地。",
+    "coverImageUrl": "/images/resorts/xiling.jpg"
   }
 ]

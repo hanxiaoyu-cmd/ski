@@ -5,4 +5,5 @@ export * from "./schemas/weather";
 export * from "./schemas/ticket";
 export * from "./schemas/lodging";
 export * from "./utils/crowd";
+export * from "./utils/distance";
 export * from "./utils/money";
