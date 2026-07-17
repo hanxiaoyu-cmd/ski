@@ -1,67 +1,56 @@
 import Link from "next/link";
+import { CalendarRange, MapPin, Mountain, Route } from "lucide-react";
 import type { ResortSummary } from "@ski/shared";
-import { weatherEmoji } from "../lib/weather-icon";
 import { ResortCover } from "./resort-cover";
+import { WeatherGlyph } from "./weather-glyph";
 
 export function ResortCard({ resort }: { resort: ResortSummary }) {
   const w = resort.weatherNow;
   return (
     <Link
       href={`/resorts/${resort.slug}`}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
+      className="group overflow-hidden rounded-2xl border border-slate-100 bg-white transition duration-200 hover:-translate-y-1 hover:border-slate-200 hover:shadow-lg hover:shadow-slate-200/60 dark:border-slate-800/80 dark:bg-slate-900 dark:hover:shadow-black/30"
     >
-      <div className="h-32 w-full overflow-hidden">
+      <div className="relative h-36 w-full overflow-hidden">
         <ResortCover
           slug={resort.slug}
           name={resort.name}
           imageUrl={resort.coverImageUrl}
-          className="transition duration-300 group-hover:scale-105"
+          className="transition duration-500 group-hover:scale-105"
         />
-      </div>
-      <div className="flex flex-1 flex-col p-5 pt-4">
-      <div className="flex items-start justify-between gap-2">
-        <div>
-          <h2 className="text-base font-semibold group-hover:text-sky-600 dark:group-hover:text-sky-400">
-            {resort.name}
-          </h2>
-          <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">
-            {resort.province} · {resort.city}
-          </p>
-        </div>
-        {w ? (
-          <div className="flex shrink-0 items-center gap-1 rounded-full bg-sky-50 px-2.5 py-1 text-sm dark:bg-sky-950">
-            <span aria-hidden>{weatherEmoji(w.conditionText)}</span>
-            <span className="font-medium">{w.tempC !== null ? `${Math.round(w.tempC)}°C` : "--"}</span>
-          </div>
-        ) : (
-          <span className="shrink-0 rounded-full bg-slate-100 px-2.5 py-1 text-xs text-slate-400 dark:bg-slate-800 dark:text-slate-500">
-            暂无天气
+        {w && (
+          <span className="absolute right-3 top-3 flex items-center gap-1.5 rounded-full bg-white/90 px-2.5 py-1 text-sm font-medium backdrop-blur dark:bg-slate-900/80">
+            <WeatherGlyph text={w.conditionText} size={16} />
+            {w.tempC !== null ? `${Math.round(w.tempC)}°` : "--"}
           </span>
         )}
       </div>
 
-      <dl className="mt-4 grid grid-cols-3 gap-2 text-center text-xs">
-        <div className="rounded-lg bg-slate-50 py-2 dark:bg-slate-800/60">
-          <dt className="text-slate-500 dark:text-slate-400">海拔</dt>
-          <dd className="mt-0.5 font-medium">
+      <div className="p-5">
+        <h2 className="text-base font-semibold tracking-tight group-hover:text-sky-600 dark:group-hover:text-sky-400">
+          {resort.name}
+        </h2>
+        <p className="mt-1 flex items-center gap-1 text-xs text-slate-400">
+          <MapPin size={12} strokeWidth={2} />
+          {resort.province} · {resort.city}
+        </p>
+
+        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-slate-500 dark:text-slate-400">
+          <span className="flex items-center gap-1">
+            <Mountain size={13} className="text-slate-400" />
             {resort.altitudeTopM ? `${resort.altitudeTopM}m` : "--"}
-          </dd>
-        </div>
-        <div className="rounded-lg bg-slate-50 py-2 dark:bg-slate-800/60">
-          <dt className="text-slate-500 dark:text-slate-400">雪道</dt>
-          <dd className="mt-0.5 font-medium">
-            {resort.totalTrailKm ? `${resort.totalTrailKm}km` : "--"}
-          </dd>
-        </div>
-        <div className="rounded-lg bg-slate-50 py-2 dark:bg-slate-800/60">
-          <dt className="text-slate-500 dark:text-slate-400">雪季</dt>
-          <dd className="mt-0.5 font-medium">
+          </span>
+          <span className="flex items-center gap-1">
+            <Route size={13} className="text-slate-400" />
+            {resort.totalTrailKm ? `${resort.totalTrailKm}km 雪道` : "--"}
+          </span>
+          <span className="flex items-center gap-1">
+            <CalendarRange size={13} className="text-slate-400" />
             {resort.seasonOpen && resort.seasonClose
-              ? `${resort.seasonOpen.replace("-", ".")}~${resort.seasonClose.replace("-", ".")}`
+              ? `${resort.seasonOpen.replace("-", ".")} ~ ${resort.seasonClose.replace("-", ".")}`
               : "--"}
-          </dd>
+          </span>
         </div>
-      </dl>
       </div>
     </Link>
   );

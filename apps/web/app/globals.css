@@ -5,5 +5,9 @@
 }
 
 body {
-  @apply bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+  @apply bg-white text-slate-800 antialiased dark:bg-slate-950 dark:text-slate-100;
+}
+
+::selection {
+  @apply bg-sky-100 text-sky-900 dark:bg-sky-900 dark:text-sky-100;
 }

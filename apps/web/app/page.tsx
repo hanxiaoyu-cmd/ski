@@ -16,14 +16,14 @@ export default async function HomePage({
 
   return (
     <div>
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold">滑雪场一览</h1>
-        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-          {all.length} 家雪场的天气、雪况与票价信息，持续更新中
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold tracking-tight">滑雪场一览</h1>
+        <p className="mt-2 text-sm text-slate-400">
+          {all.length} 家雪场的天气、雪况与票价，持续更新
         </p>
       </div>
 
-      <div className="mb-6 flex flex-wrap gap-2">
+      <div className="mb-8 flex flex-wrap gap-2">
         <FilterPill href="/" active={!province} label="全部" />
         {provinces.map((p) => (
           <FilterPill
@@ -36,9 +36,9 @@ export default async function HomePage({
       </div>
 
       {resorts.length === 0 ? (
-        <p className="py-16 text-center text-slate-500">该地区暂无收录雪场</p>
+        <p className="py-20 text-center text-slate-400">该地区暂无收录雪场</p>
       ) : (
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {resorts.map((r) => (
             <ResortCard key={r.slug} resort={r} />
           ))}
@@ -54,8 +54,8 @@ function FilterPill({ href, active, label }: { href: string; active: boolean; la
       href={href}
       className={
         active
-          ? "rounded-full bg-sky-600 px-3.5 py-1.5 text-sm font-medium text-white"
-          : "rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-sm text-slate-600 hover:border-sky-300 hover:text-sky-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+          ? "rounded-full bg-sky-600 px-4 py-1.5 text-sm font-medium text-white shadow-sm shadow-sky-600/30"
+          : "rounded-full bg-slate-50 px-4 py-1.5 text-sm text-slate-500 transition hover:bg-sky-50 hover:text-sky-600 dark:bg-slate-800/80 dark:text-slate-300 dark:hover:bg-slate-800"
       }
     >
       {label}

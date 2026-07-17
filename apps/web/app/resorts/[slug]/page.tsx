@@ -1,14 +1,27 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import {
+  BedDouble,
+  CalendarDays,
+  Clock3,
+  Globe,
+  Map as MapIcon,
+  MapPin,
+  MessageCircle,
+  Phone,
+  Route,
+  Ticket,
+} from "lucide-react";
 import { ApiError } from "@ski/api-client";
 import { TRAIL_DIFFICULTY_LABELS, type TrailDifficulty } from "@ski/shared";
 import { api } from "../../../lib/api";
-import { weatherEmoji } from "../../../lib/weather-icon";
 import { ForecastStrip } from "../../../components/forecast-strip";
 import { HourlyStrip } from "../../../components/hourly-strip";
 import { TicketTable } from "../../../components/ticket-table";
 import { LodgingList } from "../../../components/lodging-list";
 import { ResortCover } from "../../../components/resort-cover";
+import { SectionTitle } from "../../../components/section-title";
+import { WeatherGlyph } from "../../../components/weather-glyph";
 
 export const revalidate = 900;
 
@@ -52,15 +65,17 @@ export default async function ResortPage({ params }: { params: Promise<{ slug: s
   const now = weather.now;
 
   return (
-    <article className="space-y-8">
-      <div className="h-44 w-full overflow-hidden rounded-2xl sm:h-56">
+    <article className="space-y-10">
+      <div className="h-44 w-full overflow-hidden rounded-3xl sm:h-60">
         <ResortCover slug={resort.slug} name={resort.name} imageUrl={resort.coverImageUrl} />
       </div>
+
       <header>
-        <div className="flex flex-wrap items-start justify-between gap-4">
+        <div className="flex flex-wrap items-start justify-between gap-5">
           <div>
-            <h1 className="text-2xl font-bold">{resort.name}</h1>
-            <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+            <h1 className="text-3xl font-bold tracking-tight">{resort.name}</h1>
+            <p className="mt-2 flex items-center gap-1 text-sm text-slate-400">
+              <MapPin size={14} strokeWidth={2} />
               {resort.province} · {resort.city}
               {resort.altitudeBaseM && resort.altitudeTopM
                 ? ` · 海拔 ${resort.altitudeBaseM}-${resort.altitudeTopM}m`
@@ -71,19 +86,17 @@ export default async function ResortPage({ params }: { params: Promise<{ slug: s
             </p>
           </div>
           {now && (
-            <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-2.5 dark:border-slate-800 dark:bg-slate-900">
-              <span className="text-3xl" aria-hidden>
-                {weatherEmoji(now.conditionText)}
-              </span>
+            <div className="flex items-center gap-4 rounded-2xl border border-slate-100 px-5 py-3.5 dark:border-slate-800/80">
+              <WeatherGlyph text={now.conditionText} size={36} />
               <div>
-                <div className="text-xl font-bold">
-                  {now.tempC !== null ? `${Math.round(now.tempC)}°C` : "--"}
-                  <span className="ml-1.5 text-sm font-normal text-slate-500">
+                <div className="text-2xl font-bold tracking-tight">
+                  {now.tempC !== null ? `${Math.round(now.tempC)}°` : "--"}
+                  <span className="ml-2 text-sm font-normal text-slate-500 dark:text-slate-400">
                     {now.conditionText ?? ""}
                   </span>
                 </div>
-                <div className="text-xs text-slate-500 dark:text-slate-400">
-                  体感 {now.feelsLikeC !== null ? `${Math.round(now.feelsLikeC)}°C` : "--"}
+                <div className="mt-0.5 text-xs text-slate-400">
+                  体感 {now.feelsLikeC !== null ? `${Math.round(now.feelsLikeC)}°` : "--"}
                   {now.windDir ? ` · ${now.windDir} ${now.windSpeedKmh ?? "--"}km/h` : ""}
                 </div>
               </div>
@@ -91,42 +104,44 @@ export default async function ResortPage({ params }: { params: Promise<{ slug: s
           )}
         </div>
         {resort.intro && (
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-500 dark:text-slate-300">
             {resort.intro}
           </p>
         )}
       </header>
 
       <section>
-        <h2 className="mb-3 text-lg font-semibold">未来 24 小时</h2>
+        <SectionTitle icon={Clock3}>未来 24 小时</SectionTitle>
         <HourlyStrip hourly={weather.hourly} />
       </section>
 
       <section>
-        <h2 className="mb-3 text-lg font-semibold">未来 7 日预报</h2>
+        <SectionTitle icon={CalendarDays}>未来 7 日预报</SectionTitle>
         <ForecastStrip daily={weather.daily} />
       </section>
 
       {resort.trailMapUrl && (
         <section>
-          <h2 className="mb-3 text-lg font-semibold">雪道图</h2>
-          <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
+          <SectionTitle icon={MapIcon}>雪道图</SectionTitle>
+          <div className="overflow-hidden rounded-2xl border border-slate-100 dark:border-slate-800/80">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={resort.trailMapUrl} alt={`${resort.name}雪道图`} className="w-full" loading="lazy" />
           </div>
-          <p className="mt-1 text-[11px] text-slate-400">雪道图版权归雪场所有，如有更新以官方为准。</p>
+          <p className="mt-2 text-[11px] text-slate-300 dark:text-slate-500">
+            雪道图版权归雪场所有，如有更新以官方为准
+          </p>
         </section>
       )}
 
       {resort.trailStats && resort.trailStats.total > 0 && (
         <section>
-          <h2 className="mb-3 text-lg font-semibold">雪道构成（{resort.trailStats.total} 条）</h2>
-          <div className="flex flex-wrap gap-3">
+          <SectionTitle icon={Route}>雪道构成（{resort.trailStats.total} 条）</SectionTitle>
+          <div className="flex flex-wrap gap-2.5">
             {(Object.entries(resort.trailStats.byDifficulty) as [TrailDifficulty, number][]).map(
               ([difficulty, count]) => (
                 <span
                   key={difficulty}
-                  className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-sm dark:border-slate-800 dark:bg-slate-900"
+                  className="flex items-center gap-2 rounded-full border border-slate-100 px-4 py-1.5 text-sm dark:border-slate-800/80"
                 >
                   <span className={`h-2.5 w-2.5 rounded-full ${DIFFICULTY_DOT[difficulty]}`} />
                   {TRAIL_DIFFICULTY_LABELS[difficulty]} × {count}
@@ -138,23 +153,28 @@ export default async function ResortPage({ params }: { params: Promise<{ slug: s
       )}
 
       <section>
-        <h2 className="mb-3 text-lg font-semibold">票价</h2>
+        <SectionTitle icon={Ticket}>票价</SectionTitle>
         <TicketTable tickets={tickets} />
       </section>
 
       <section>
-        <h2 className="mb-3 text-lg font-semibold">周边住宿</h2>
+        <SectionTitle icon={BedDouble}>周边住宿</SectionTitle>
         <LodgingList lodgings={lodgings} resortName={resort.name} />
       </section>
 
       {(resort.officialWechatName || resort.officialWebsite || resort.phone) && (
-        <section className="rounded-xl border border-slate-200 bg-white p-4 text-sm dark:border-slate-800 dark:bg-slate-900">
-          <h2 className="mb-2 font-semibold">官方渠道</h2>
-          <ul className="space-y-1 text-slate-600 dark:text-slate-300">
-            {resort.officialWechatName && <li>微信公众号：{resort.officialWechatName}</li>}
+        <section className="rounded-2xl border border-slate-100 p-6 dark:border-slate-800/80">
+          <h2 className="mb-3 text-sm font-semibold tracking-tight">官方渠道</h2>
+          <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-300">
+            {resort.officialWechatName && (
+              <li className="flex items-center gap-2">
+                <MessageCircle size={14} className="text-slate-300 dark:text-slate-500" />
+                微信公众号：{resort.officialWechatName}
+              </li>
+            )}
             {resort.officialWebsite && (
-              <li>
-                官网：
+              <li className="flex items-center gap-2">
+                <Globe size={14} className="text-slate-300 dark:text-slate-500" />
                 <a
                   href={resort.officialWebsite}
                   target="_blank"
@@ -165,7 +185,12 @@ export default async function ResortPage({ params }: { params: Promise<{ slug: s
                 </a>
               </li>
             )}
-            {resort.phone && <li>电话：{resort.phone}</li>}
+            {resort.phone && (
+              <li className="flex items-center gap-2">
+                <Phone size={14} className="text-slate-300 dark:text-slate-500" />
+                {resort.phone}
+              </li>
+            )}
           </ul>
         </section>
       )}
