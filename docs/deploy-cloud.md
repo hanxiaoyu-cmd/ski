@@ -56,11 +56,17 @@ docker compose -f docker-compose.prod.yml --profile caddy up -d --build
 docker compose -f docker-compose.prod.yml ps
 docker compose -f docker-compose.prod.yml logs -f web
 
-# 更新代码后重新部署
-git pull && docker compose -f docker-compose.prod.yml --profile caddy up -d --build
-
 # 数据库备份（建议每周跑一次，或加进 crontab）
 docker exec ski-prod-postgres pg_dump -U ski ski | gzip > backup_$(date +%F).sql.gz
+```
+
+**更新部署**：不要在服务器上执行 `--build`——小规格机器的构建缓存和中间层会打爆磁盘。
+统一在本地 Windows 运行 `.\scripts\deploy.ps1`：本地构建镜像 → ssh 压缩流式传输 →
+服务器 `docker load` → `up -d`（自动识别镜像变化重建容器）→ `docker image prune -f` 清理旧层。
+
+若服务器磁盘已被历史构建占满，一次性清理：
+```bash
+docker system prune -af --volumes=false && docker builder prune -af
 ```
 
 ## 与家用电脑方案的关系
