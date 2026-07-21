@@ -7,6 +7,14 @@ interface GeoTrail {
   name: string | null;
   difficulty: string | null; // OSM piste:difficulty
   points: [number, number][]; // [lng, lat]
+  /** 以下由 enrich-trails 脚本预计算（可能缺失） */
+  lengthM?: number;
+  dropM?: number;
+  avgDeg?: number;
+  maxDeg?: number;
+  photo?: string;
+  photoBy?: string | null;
+  photoLicense?: string | null;
 }
 interface GeoLift {
   id: number;
@@ -189,6 +197,8 @@ export function TrailMapVector({
   const [geo, setGeo] = useState<TrailGeo | null>(null);
   const [failed, setFailed] = useState(false);
   const [hover, setHover] = useState<string | null>(null);
+  /** 点击选中的雪道 + 弹窗位置（容器百分比） */
+  const [selected, setSelected] = useState<{ id: number; xPct: number; yPct: number } | null>(null);
 
   useEffect(() => {
     fetch(`/trail-geo/${slug}.json`)
@@ -267,6 +277,7 @@ export function TrailMapVector({
           className="block w-full bg-gradient-to-b from-sky-50/60 to-white dark:from-slate-900 dark:to-slate-950"
           role="img"
           aria-label="雪道分布图"
+          onClick={() => setSelected(null)}
         >
           {/* 雪道 */}
           {geo.trails.map((t) => {
@@ -283,19 +294,25 @@ export function TrailMapVector({
                   d={view.d(t.points)}
                   fill="none"
                   stroke={color}
-                  strokeWidth={hover === `t${t.id}` ? 7 : 4.5}
+                  strokeWidth={hover === `t${t.id}` || selected?.id === t.id ? 7 : 4.5}
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  opacity={open ? 0.9 : 0.5}
+                  opacity={open ? (selected && selected.id !== t.id ? 0.55 : 0.9) : 0.5}
                   className="cursor-pointer transition-all"
                   onMouseEnter={() => setHover(`t${t.id}`)}
                   onMouseLeave={() => setHover(null)}
-                >
-                  <title>
-                    {(t.name ?? "未命名雪道") +
-                      (t.difficulty && DIFF_LABEL[t.difficulty] ? ` · ${DIFF_LABEL[t.difficulty]}` : "")}
-                  </title>
-                </path>
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    const svgEl = (e.currentTarget as SVGPathElement).ownerSVGElement;
+                    if (!svgEl) return;
+                    const rect = svgEl.getBoundingClientRect();
+                    setSelected({
+                      id: t.id,
+                      xPct: ((e.clientX - rect.left) / rect.width) * 100,
+                      yPct: ((e.clientY - rect.top) / rect.height) * 100,
+                    });
+                  }}
+                />
                 {showLabel && (
                   <>
                     <path id={`lp-${slug}-${t.id}`} d={view.d(labelPts)} fill="none" stroke="none" />
@@ -395,7 +412,94 @@ export function TrailMapVector({
             </text>
           </g>
         </svg>
-        {hover && (
+        {selected &&
+          (() => {
+            const t = geo.trails.find((x) => x.id === selected.id);
+            if (!t) return null;
+            const diffTxt = t.difficulty && DIFF_LABEL[t.difficulty] ? DIFF_LABEL[t.difficulty] : null;
+            const diffColor = DIFF_COLOR[t.difficulty ?? ""] ?? "#64748b";
+            const fmtLen = (m: number) => (m >= 1000 ? `${(m / 1000).toFixed(1)}km` : `${m}m`);
+            const flipX = selected.xPct > 58;
+            const flipY = selected.yPct < 45;
+            return (
+              <div
+                className="absolute z-10 w-60 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl shadow-slate-900/10 dark:border-slate-700 dark:bg-slate-900"
+                style={{
+                  left: `${selected.xPct}%`,
+                  top: `${selected.yPct}%`,
+                  transform: `translate(${flipX ? "calc(-100% - 10px)" : "10px"}, ${flipY ? "10px" : "calc(-100% - 10px)"})`,
+                }}
+              >
+                {t.photo && (
+                  <div className="relative">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={t.photo} alt={t.name ?? "雪道照片"} className="h-28 w-full object-cover" />
+                    {(t.photoBy || t.photoLicense) && (
+                      <span className="absolute bottom-1 right-1.5 rounded bg-black/50 px-1.5 py-0.5 text-[9px] text-white">
+                        {[t.photoBy, t.photoLicense].filter(Boolean).join(" · ")}
+                      </span>
+                    )}
+                  </div>
+                )}
+                <div className="p-3.5">
+                  <div className="flex items-start justify-between gap-2">
+                    <h3 className="text-sm font-semibold leading-snug">{t.name ?? "未命名雪道"}</h3>
+                    <button
+                      type="button"
+                      onClick={() => setSelected(null)}
+                      aria-label="关闭"
+                      className="-mr-1 -mt-1 rounded-full px-1.5 text-slate-400 transition hover:bg-slate-100 hover:text-slate-600 dark:hover:bg-slate-800"
+                    >
+                      ×
+                    </button>
+                  </div>
+                  {diffTxt && (
+                    <span
+                      className="mt-1.5 inline-block rounded-full px-2 py-0.5 text-[10px] font-medium text-white"
+                      style={{ background: diffColor }}
+                    >
+                      {diffTxt}
+                    </span>
+                  )}
+                  <dl className="mt-2.5 space-y-1 text-xs">
+                    {t.lengthM !== undefined && (
+                      <div className="flex justify-between">
+                        <dt className="text-slate-400">雪道长度</dt>
+                        <dd className="font-medium">{fmtLen(t.lengthM)}</dd>
+                      </div>
+                    )}
+                    {t.dropM !== undefined && t.dropM > 0 && (
+                      <div className="flex justify-between">
+                        <dt className="text-slate-400">垂直落差</dt>
+                        <dd className="font-medium">{t.dropM}m</dd>
+                      </div>
+                    )}
+                    {t.avgDeg !== undefined && t.avgDeg > 0 && (
+                      <div className="flex justify-between">
+                        <dt className="text-slate-400">平均坡度</dt>
+                        <dd className="font-medium">{t.avgDeg}°</dd>
+                      </div>
+                    )}
+                    {t.maxDeg !== undefined && t.maxDeg > 0 && (
+                      <div className="flex justify-between">
+                        <dt className="text-slate-400">最大坡度</dt>
+                        <dd className="font-medium">{t.maxDeg}°</dd>
+                      </div>
+                    )}
+                  </dl>
+                  {t.lengthM === undefined && (
+                    <p className="mt-2 text-[11px] text-slate-400">详细数据整理中</p>
+                  )}
+                  {t.dropM !== undefined && (
+                    <p className="mt-2 text-[10px] leading-relaxed text-slate-300 dark:text-slate-500">
+                      坡度由公开高程数据估算，仅供参考
+                    </p>
+                  )}
+                </div>
+              </div>
+            );
+          })()}
+        {hover && !selected && (
           <div className="pointer-events-none absolute left-3 top-3 rounded-lg bg-slate-900/85 px-3 py-1.5 text-xs font-medium text-white backdrop-blur dark:bg-white/90 dark:text-slate-900">
             {(() => {
               if (hover.startsWith("t")) {
@@ -442,7 +546,7 @@ export function TrailMapVector({
           </span>
         ))}
         <span className="ml-auto text-slate-300 dark:text-slate-500">
-          {geo.trails.length} 条雪道 · {geo.lifts.length} 条缆车 · © OpenStreetMap
+          点击雪道查看详情 · {geo.trails.length} 条雪道 · {geo.lifts.length} 条缆车 · © OpenStreetMap
         </span>
       </div>
     </div>
