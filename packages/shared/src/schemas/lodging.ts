@@ -22,5 +22,9 @@ export const lodgingSchema = z.object({
   priceMinCents: z.number().nullable(),
   priceMaxCents: z.number().nullable(),
   priceUpdatedAt: z.string().nullable(),
+  /** 携程页面提取的展示信息 */
+  rating: z.number().nullable(),
+  priceFromCents: z.number().nullable(),
+  photoUrl: z.string().nullable(),
 });
 export type LodgingInfo = z.infer<typeof lodgingSchema>;

@@ -95,6 +95,10 @@ interface LodgingSeed {
   isSkiInOut?: boolean;
   address?: string;
   links?: Record<string, string>;
+  rating?: number;
+  /** 参考起价（元/晚） */
+  priceFrom?: number;
+  photo?: string;
 }
 
 async function seedLodgings() {
@@ -128,6 +132,9 @@ async function seedLodgings() {
         isSkiInOut: l.isSkiInOut ?? false,
         address: l.address ?? null,
         externalRefs: l.links ?? {},
+        rating: l.rating ?? null,
+        priceFromCents: l.priceFrom != null ? Math.round(l.priceFrom * 100) : null,
+        photoUrl: l.photo ?? null,
       },
     });
     count += 1;

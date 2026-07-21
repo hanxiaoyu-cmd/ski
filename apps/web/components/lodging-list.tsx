@@ -51,8 +51,24 @@ export function LodgingList({ lodgings, resortName }: { lodgings: LodgingInfo[];
           {lodgings.map((l) => (
             <div
               key={l.id}
-              className="rounded-2xl border border-slate-100 p-5 transition hover:border-slate-200 dark:border-slate-800/80"
+              className="overflow-hidden rounded-2xl border border-slate-100 transition hover:border-slate-200 dark:border-slate-800/80"
             >
+              {l.photoUrl && (
+                <div className="relative h-32 w-full">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={l.photoUrl} alt={l.name} className="h-full w-full object-cover" loading="lazy" />
+                  {l.rating !== null && (
+                    <span className="absolute right-2 top-2 rounded-lg bg-sky-600/95 px-2 py-0.5 text-xs font-bold text-white">
+                      {l.rating.toFixed(1)}
+                      <span className="ml-0.5 text-[9px] font-normal opacity-80">分</span>
+                    </span>
+                  )}
+                  <span className="absolute bottom-1 right-1.5 rounded bg-black/40 px-1.5 py-0.5 text-[9px] text-white/90">
+                    图自携程
+                  </span>
+                </div>
+              )}
+              <div className="p-5 pt-4">
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
                   <h3 className="truncate text-sm font-semibold tracking-tight">{l.name}</h3>
@@ -61,6 +77,11 @@ export function LodgingList({ lodgings, resortName }: { lodgings: LodgingInfo[];
                     {l.isSkiInOut && (
                       <span className="rounded-full bg-sky-50 px-2 py-0.5 text-[10px] font-medium text-sky-600 dark:bg-sky-950 dark:text-sky-300">
                         滑进滑出
+                      </span>
+                    )}
+                    {!l.photoUrl && l.rating !== null && (
+                      <span className="rounded-full bg-sky-600 px-2 py-0.5 text-[10px] font-bold text-white">
+                        {l.rating.toFixed(1)}分
                       </span>
                     )}
                   </p>
@@ -78,6 +99,14 @@ export function LodgingList({ lodgings, resortName }: { lodgings: LodgingInfo[];
                       <p className="text-[10px] text-slate-400">
                         {l.priceUpdatedAt ? `更新于 ${l.priceUpdatedAt.slice(0, 10)}` : ""}
                       </p>
+                    </>
+                  ) : l.priceFromCents !== null ? (
+                    <>
+                      <span className="text-sm font-semibold text-sky-700 dark:text-sky-400">
+                        {formatPrice(l.priceFromCents)}
+                        <span className="text-xs font-normal"> 起</span>
+                      </span>
+                      <p className="text-[10px] text-slate-400">携程参考价</p>
                     </>
                   ) : (
                     <span className="text-xs text-slate-300 dark:text-slate-500">价格以平台为准</span>
@@ -101,6 +130,7 @@ export function LodgingList({ lodgings, resortName }: { lodgings: LodgingInfo[];
                     <ExternalLink size={11} strokeWidth={2} />
                   </a>
                 ))}
+              </div>
               </div>
             </div>
           ))}

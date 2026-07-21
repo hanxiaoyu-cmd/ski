@@ -205,6 +205,10 @@ model Lodging {
   lng               Float?
   // 各外部平台 ID：{ "meituan": "...", "ctrip": "..." }
   externalRefs      Json?       @map("external_refs")
+  // 携程页面提取的展示信息（低频人工/脚本更新）
+  rating            Float?
+  priceFromCents    Int?        @map("price_from_cents")
+  photoUrl          String?     @map("photo_url")
   status            ResortStatus @default(ACTIVE)
   createdAt         DateTime    @default(now()) @map("created_at")
   updatedAt         DateTime    @updatedAt @map("updated_at")

@@ -182,6 +182,81 @@ function PoiIcon({ x, y, kind }: { x: number; y: number; kind: PoiKind }) {
   }
 }
 
+/** 雪道信息卡（桌面悬浮 / 移动端固定在图下方共用） */
+function TrailCard({ t, onClose }: { t: GeoTrail; onClose: () => void }) {
+  const diffTxt = t.difficulty && DIFF_LABEL[t.difficulty] ? DIFF_LABEL[t.difficulty] : null;
+  const diffColor = DIFF_COLOR[t.difficulty ?? ""] ?? "#64748b";
+  const fmtLen = (m: number) => (m >= 1000 ? `${(m / 1000).toFixed(1)}km` : `${m}m`);
+  return (
+    <>
+      {t.photo && (
+        <div className="relative">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={t.photo} alt={t.name ?? "雪道照片"} className="h-28 w-full object-cover" />
+          {(t.photoBy || t.photoLicense) && (
+            <span className="absolute bottom-1 right-1.5 rounded bg-black/50 px-1.5 py-0.5 text-[9px] text-white">
+              {[t.photoBy, t.photoLicense].filter(Boolean).join(" · ")}
+            </span>
+          )}
+        </div>
+      )}
+      <div className="p-3.5">
+        <div className="flex items-start justify-between gap-2">
+          <h3 className="text-sm font-semibold leading-snug">{t.name ?? "未命名雪道"}</h3>
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="关闭"
+            className="-mr-1 -mt-1 rounded-full px-1.5 text-slate-400 transition hover:bg-slate-100 hover:text-slate-600 dark:hover:bg-slate-800"
+          >
+            ×
+          </button>
+        </div>
+        {diffTxt && (
+          <span
+            className="mt-1.5 inline-block rounded-full px-2 py-0.5 text-[10px] font-medium text-white"
+            style={{ background: diffColor }}
+          >
+            {diffTxt}
+          </span>
+        )}
+        <dl className="mt-2.5 space-y-1 text-xs">
+          {t.lengthM !== undefined && (
+            <div className="flex justify-between">
+              <dt className="text-slate-400">雪道长度</dt>
+              <dd className="font-medium">{fmtLen(t.lengthM)}</dd>
+            </div>
+          )}
+          {t.dropM !== undefined && t.dropM > 0 && (
+            <div className="flex justify-between">
+              <dt className="text-slate-400">垂直落差</dt>
+              <dd className="font-medium">{t.dropM}m</dd>
+            </div>
+          )}
+          {t.avgDeg !== undefined && t.avgDeg > 0 && (
+            <div className="flex justify-between">
+              <dt className="text-slate-400">平均坡度</dt>
+              <dd className="font-medium">{t.avgDeg}°</dd>
+            </div>
+          )}
+          {t.maxDeg !== undefined && t.maxDeg > 0 && (
+            <div className="flex justify-between">
+              <dt className="text-slate-400">最大坡度</dt>
+              <dd className="font-medium">{t.maxDeg}°</dd>
+            </div>
+          )}
+        </dl>
+        {t.lengthM === undefined && <p className="mt-2 text-[11px] text-slate-400">详细数据整理中</p>}
+        {t.dropM !== undefined && (
+          <p className="mt-2 text-[10px] leading-relaxed text-slate-300 dark:text-slate-500">
+            坡度由公开高程数据估算，仅供参考
+          </p>
+        )}
+      </div>
+    </>
+  );
+}
+
 /**
  * OSM 矢量雪道图：雪道按难度着色并沿线标注名称；缆车带类型图标与站点；
  * POI 图标层（山峰/餐饮/停车等）；指北针 + 比例尺。
@@ -268,6 +343,7 @@ export function TrailMapVector({
   const liftKindsPresent = [...new Set(geo.lifts.map((l) => liftKind(l.type)))];
   const pois = geo.pois ?? [];
   const poiKindsPresent = [...new Set(pois.map((p) => p.kind))];
+  const selectedTrail = selected ? (geo.trails.find((x) => x.id === selected.id) ?? null) : null;
 
   return (
     <div className="overflow-hidden rounded-2xl border border-slate-100 dark:border-slate-800/80">
@@ -413,89 +489,21 @@ export function TrailMapVector({
           </g>
         </svg>
         {selected &&
+          selectedTrail &&
           (() => {
-            const t = geo.trails.find((x) => x.id === selected.id);
-            if (!t) return null;
-            const diffTxt = t.difficulty && DIFF_LABEL[t.difficulty] ? DIFF_LABEL[t.difficulty] : null;
-            const diffColor = DIFF_COLOR[t.difficulty ?? ""] ?? "#64748b";
-            const fmtLen = (m: number) => (m >= 1000 ? `${(m / 1000).toFixed(1)}km` : `${m}m`);
             const flipX = selected.xPct > 58;
             const flipY = selected.yPct < 45;
             return (
+              // 悬浮定位仅桌面端；移动端（手势缩放下悬浮定位会漂移）改用图下方固定卡片
               <div
-                className="absolute z-10 w-60 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl shadow-slate-900/10 dark:border-slate-700 dark:bg-slate-900"
+                className="absolute z-10 hidden w-60 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl shadow-slate-900/10 sm:block dark:border-slate-700 dark:bg-slate-900"
                 style={{
                   left: `${selected.xPct}%`,
                   top: `${selected.yPct}%`,
                   transform: `translate(${flipX ? "calc(-100% - 10px)" : "10px"}, ${flipY ? "10px" : "calc(-100% - 10px)"})`,
                 }}
               >
-                {t.photo && (
-                  <div className="relative">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={t.photo} alt={t.name ?? "雪道照片"} className="h-28 w-full object-cover" />
-                    {(t.photoBy || t.photoLicense) && (
-                      <span className="absolute bottom-1 right-1.5 rounded bg-black/50 px-1.5 py-0.5 text-[9px] text-white">
-                        {[t.photoBy, t.photoLicense].filter(Boolean).join(" · ")}
-                      </span>
-                    )}
-                  </div>
-                )}
-                <div className="p-3.5">
-                  <div className="flex items-start justify-between gap-2">
-                    <h3 className="text-sm font-semibold leading-snug">{t.name ?? "未命名雪道"}</h3>
-                    <button
-                      type="button"
-                      onClick={() => setSelected(null)}
-                      aria-label="关闭"
-                      className="-mr-1 -mt-1 rounded-full px-1.5 text-slate-400 transition hover:bg-slate-100 hover:text-slate-600 dark:hover:bg-slate-800"
-                    >
-                      ×
-                    </button>
-                  </div>
-                  {diffTxt && (
-                    <span
-                      className="mt-1.5 inline-block rounded-full px-2 py-0.5 text-[10px] font-medium text-white"
-                      style={{ background: diffColor }}
-                    >
-                      {diffTxt}
-                    </span>
-                  )}
-                  <dl className="mt-2.5 space-y-1 text-xs">
-                    {t.lengthM !== undefined && (
-                      <div className="flex justify-between">
-                        <dt className="text-slate-400">雪道长度</dt>
-                        <dd className="font-medium">{fmtLen(t.lengthM)}</dd>
-                      </div>
-                    )}
-                    {t.dropM !== undefined && t.dropM > 0 && (
-                      <div className="flex justify-between">
-                        <dt className="text-slate-400">垂直落差</dt>
-                        <dd className="font-medium">{t.dropM}m</dd>
-                      </div>
-                    )}
-                    {t.avgDeg !== undefined && t.avgDeg > 0 && (
-                      <div className="flex justify-between">
-                        <dt className="text-slate-400">平均坡度</dt>
-                        <dd className="font-medium">{t.avgDeg}°</dd>
-                      </div>
-                    )}
-                    {t.maxDeg !== undefined && t.maxDeg > 0 && (
-                      <div className="flex justify-between">
-                        <dt className="text-slate-400">最大坡度</dt>
-                        <dd className="font-medium">{t.maxDeg}°</dd>
-                      </div>
-                    )}
-                  </dl>
-                  {t.lengthM === undefined && (
-                    <p className="mt-2 text-[11px] text-slate-400">详细数据整理中</p>
-                  )}
-                  {t.dropM !== undefined && (
-                    <p className="mt-2 text-[10px] leading-relaxed text-slate-300 dark:text-slate-500">
-                      坡度由公开高程数据估算，仅供参考
-                    </p>
-                  )}
-                </div>
+                <TrailCard t={selectedTrail} onClose={() => setSelected(null)} />
               </div>
             );
           })()}
@@ -522,6 +530,12 @@ export function TrailMapVector({
           </div>
         )}
       </div>
+      {/* 移动端：选中信息固定显示在图下方，不受页面手势缩放影响 */}
+      {selectedTrail && (
+        <div className="border-t border-slate-100 sm:hidden dark:border-slate-800/80">
+          <TrailCard t={selectedTrail} onClose={() => setSelected(null)} />
+        </div>
+      )}
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 border-t border-slate-100 px-4 py-2.5 text-[11px] text-slate-500 dark:border-slate-800/80 dark:text-slate-400">
         {diffsPresent.map((d) => (
           <span key={d} className="flex items-center gap-1.5">

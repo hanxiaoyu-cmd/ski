@@ -43,6 +43,9 @@ export class LodgingService {
         priceMinCents: latest?.priceMinCents ?? null,
         priceMaxCents: latest?.priceMaxCents ?? null,
         priceUpdatedAt: latest ? latest.crawledAt.toISOString() : null,
+        rating: l.rating,
+        priceFromCents: l.priceFromCents,
+        photoUrl: l.photoUrl,
       };
     });
 
