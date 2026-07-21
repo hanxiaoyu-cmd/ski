@@ -21,7 +21,9 @@ import { TicketTable } from "../../../components/ticket-table";
 import { LodgingList } from "../../../components/lodging-list";
 import { ResortCover } from "../../../components/resort-cover";
 import { SectionTitle } from "../../../components/section-title";
+import { TrailMapVector } from "../../../components/trail-map-vector";
 import { WeatherGlyph } from "../../../components/weather-glyph";
+import { TRAIL_GEO_SLUGS } from "../../../lib/trail-geo-manifest";
 
 export const revalidate = 900;
 
@@ -120,12 +122,19 @@ export default async function ResortPage({ params }: { params: Promise<{ slug: s
         <ForecastStrip daily={weather.daily} />
       </section>
 
+      {(TRAIL_GEO_SLUGS as readonly string[]).includes(slug) && (
+        <section>
+          <SectionTitle icon={Route}>雪道分布（可交互）</SectionTitle>
+          <TrailMapVector slug={slug} />
+        </section>
+      )}
+
       {resort.trailMapUrl && (
         <section>
-          <SectionTitle icon={MapIcon}>雪道图</SectionTitle>
+          <SectionTitle icon={MapIcon}>官方雪道图</SectionTitle>
           <div className="overflow-hidden rounded-2xl border border-slate-100 dark:border-slate-800/80">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={resort.trailMapUrl} alt={`${resort.name}雪道图`} className="w-full" loading="lazy" />
+            <img src={resort.trailMapUrl} alt={`${resort.name}官方雪道图`} className="w-full" loading="lazy" />
           </div>
           <p className="mt-2 text-[11px] text-slate-300 dark:text-slate-500">
             雪道图版权归雪场所有，如有更新以官方为准
