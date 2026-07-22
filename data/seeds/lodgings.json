@@ -987,5 +987,724 @@
     },
     "rating": 4.8,
     "photo": "/images/lodgings/112307708.jpg"
+  },
+  {
+    "resortSlug": "wanfeng",
+    "name": "通化万峰五洲皇冠酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 300,
+    "isSkiInOut": false,
+    "address": "吉林通化东昌区金厂镇万峰路777号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=80837358"
+    },
+    "rating": 4.7,
+    "priceFrom": 339,
+    "photo": "/images/lodgings/80837358.jpg"
+  },
+  {
+    "resortSlug": "wanfeng",
+    "name": "万峰假日酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "吉林通化金厂镇万峰通化滑雪度假区内",
+    "links": {}
+  },
+  {
+    "resortSlug": "wanfeng",
+    "name": "万峰观山公寓",
+    "type": "APARTMENT",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "吉林通化金厂镇万峰通化滑雪度假区内",
+    "links": {}
+  },
+  {
+    "resortSlug": "wanfeng",
+    "name": "万峰鹿鸣温泉酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 300,
+    "isSkiInOut": false,
+    "address": "吉林通化金厂镇万峰通化滑雪度假区内",
+    "links": {}
+  },
+  {
+    "resortSlug": "luneng",
+    "name": "长白山绿发雅高瑞士酒店度假村",
+    "type": "HOTEL",
+    "distanceToResortM": 500,
+    "isSkiInOut": false,
+    "address": "吉林抚松漫江镇长白山华美胜地国际度假区29号楼",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=6641712"
+    },
+    "rating": 4.6,
+    "priceFrom": 903,
+    "photo": "/images/lodgings/6641712.jpg"
+  },
+  {
+    "resortSlug": "luneng",
+    "name": "长白山华美胜地度假区松果里度假俱乐部",
+    "type": "APARTMENT",
+    "distanceToResortM": 800,
+    "isSkiInOut": false,
+    "address": "吉林抚松长白山华美胜地景区管理中心东行100米",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=124881899"
+    },
+    "rating": 4.7,
+    "priceFrom": 570,
+    "photo": "/images/lodgings/124881899.jpg"
+  },
+  {
+    "resortSlug": "luneng",
+    "name": "望长白绿发雅高美憬阁精选酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 600,
+    "isSkiInOut": false,
+    "address": "吉林抚松漫江镇长白山华美胜地国际度假区",
+    "links": {}
+  },
+  {
+    "resortSlug": "miaoxiangshan",
+    "name": "庙香山森林别墅度假区",
+    "type": "APARTMENT",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "吉林长春九台区波泥河街道庙香山温泉滑雪度假区内",
+    "links": {}
+  },
+  {
+    "resortSlug": "miaoxiangshan",
+    "name": "庙香山房车宿营区",
+    "type": "HOMESTAY",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "吉林长春九台区波泥河街道庙香山温泉滑雪度假区内",
+    "links": {}
+  },
+  {
+    "resortSlug": "dongbeiya",
+    "name": "沈阳观山宿(东北亚滑雪场店)",
+    "type": "HOMESTAY",
+    "distanceToResortM": 2000,
+    "isSkiInOut": false,
+    "address": "辽宁沈阳沈北新区沈阳国家森林公园内双泉山庄南100米",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=115583009"
+    },
+    "rating": 4.6,
+    "priceFrom": 588,
+    "photo": "/images/lodgings/115583009.jpg"
+  },
+  {
+    "resortSlug": "dongbeiya",
+    "name": "双泉山庄民宿",
+    "type": "HOMESTAY",
+    "distanceToResortM": 2000,
+    "isSkiInOut": false,
+    "address": "辽宁沈阳沈北新区马刚街道沈阳国家森林公园内",
+    "links": {}
+  },
+  {
+    "resortSlug": "jinlongshan",
+    "name": "扎兰屯金龙山温泉宾馆",
+    "type": "HOTEL",
+    "distanceToResortM": 300,
+    "isSkiInOut": false,
+    "address": "内蒙古呼伦贝尔扎兰屯市卧牛河镇金龙山昂勒滑雪小镇内",
+    "links": {}
+  },
+  {
+    "resortSlug": "jinlongshan",
+    "name": "昂勒滑雪小镇别墅度假区",
+    "type": "APARTMENT",
+    "distanceToResortM": 300,
+    "isSkiInOut": false,
+    "address": "内蒙古呼伦贝尔扎兰屯市卧牛河镇金龙山昂勒滑雪小镇内",
+    "links": {}
+  },
+  {
+    "resortSlug": "huaibei",
+    "name": "怀北国际滑雪场美树酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "北京怀柔区怀北镇河防口村北京怀北国际滑雪场内",
+    "links": {}
+  },
+  {
+    "resortSlug": "huaibei",
+    "name": "怀北国际滑雪场木屋别墅",
+    "type": "APARTMENT",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "北京怀柔区怀北镇河防口村北京怀北国际滑雪场内",
+    "links": {}
+  },
+  {
+    "resortSlug": "huaibei",
+    "name": "忘憂谷民宿(怀北漂流店)",
+    "type": "HOMESTAY",
+    "distanceToResortM": 1500,
+    "isSkiInOut": false,
+    "address": "北京怀柔区怀北镇河防口村北1500米",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=81940761"
+    },
+    "rating": 4.8,
+    "priceFrom": 298,
+    "photo": "/images/lodgings/81940761.jpg"
+  },
+  {
+    "resortSlug": "qishan",
+    "name": "七山滑雪度假区酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "河北保定涞源县冠军大道373号七山滑雪度假区综合服务楼",
+    "links": {}
+  },
+  {
+    "resortSlug": "qishan",
+    "name": "涞源华中假日酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 4000,
+    "isSkiInOut": false,
+    "address": "河北涞源108国道南白石山镇白石山村南侧白石山温泉度假区内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=5931064"
+    },
+    "rating": 4.8,
+    "priceFrom": 559,
+    "photo": "/images/lodgings/5931064.jpg"
+  },
+  {
+    "resortSlug": "qishan",
+    "name": "涞源七山万达锦华度假酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 2000,
+    "isSkiInOut": false,
+    "address": "河北保定涞源县白石山镇西龙虎村",
+    "links": {}
+  },
+  {
+    "resortSlug": "jikepulin",
+    "name": "喀纳斯禾木假日度假酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "新疆布尔津吉克普林国际滑雪度假区东区服务大厅东北50米",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/123707710.html"
+    },
+    "rating": 4.7,
+    "priceFrom": 697,
+    "photo": "/images/lodgings/123707710.jpg"
+  },
+  {
+    "resortSlug": "jikepulin",
+    "name": "阿勒泰布尔津禾木三百所民宿(禾木店)",
+    "type": "HOMESTAY",
+    "distanceToResortM": 300,
+    "isSkiInOut": false,
+    "address": "新疆布尔津禾木哈纳斯蒙古族乡禾木村吉克普林国际滑雪度假区东区服务大厅西北300米",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/119315589.html"
+    },
+    "rating": 4.5,
+    "priceFrom": 900,
+    "photo": "/images/lodgings/119315589.jpg"
+  },
+  {
+    "resortSlug": "jikepulin",
+    "name": "吉朵山房(吉克普林滑雪场店)",
+    "type": "HOMESTAY",
+    "distanceToResortM": null,
+    "isSkiInOut": false,
+    "address": "新疆布尔津禾木乡吉克普林滑雪场山脚",
+    "links": {}
+  },
+  {
+    "resortSlug": "tianshantianchi",
+    "name": "天山天池国际滑雪场酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "新疆阜康市天山天池风景区滑雪场",
+    "links": {}
+  },
+  {
+    "resortSlug": "tianshantianchi",
+    "name": "天山天池度假区运动员公寓",
+    "type": "APARTMENT",
+    "distanceToResortM": null,
+    "isSkiInOut": false,
+    "address": "新疆阜康天山天池风景区内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/109456339.html"
+    },
+    "rating": 4.4,
+    "priceFrom": 171,
+    "photo": "/images/lodgings/109456339.jpg"
+  },
+  {
+    "resortSlug": "aoshan",
+    "name": "宝鸡云端森林酒店(鳌山滑雪场店)",
+    "type": "HOTEL",
+    "distanceToResortM": 30,
+    "isSkiInOut": false,
+    "address": "陕西宝鸡太白县塘口村鳌山滑雪度假区内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/14121711.html"
+    },
+    "rating": 4.2,
+    "priceFrom": 298,
+    "photo": "/images/lodgings/14121711.jpg"
+  },
+  {
+    "resortSlug": "aoshan",
+    "name": "太白望鳌山温泉私汤山景美学度假民宿(鳌山度假区店)",
+    "type": "HOMESTAY",
+    "distanceToResortM": null,
+    "isSkiInOut": false,
+    "address": "陕西太白县咀头镇蒿谷堆村1组50号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/114936551.html"
+    },
+    "rating": 4.7,
+    "priceFrom": 551,
+    "photo": "/images/lodgings/114936551.jpg"
+  },
+  {
+    "resortSlug": "aoshan",
+    "name": "太白牧云居酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 1500,
+    "isSkiInOut": false,
+    "address": "陕西太白县眉太路塘口村牧云人家",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/98508514.html"
+    },
+    "rating": 4.6,
+    "priceFrom": 180,
+    "photo": "/images/lodgings/98508514.jpg"
+  },
+  {
+    "resortSlug": "taiziling",
+    "name": "九鼎山太子岭滑雪场第一楼度假酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "四川阿坝州茂县南新镇安乡村太子岭滑雪场雪具大厅",
+    "links": {}
+  },
+  {
+    "resortSlug": "taiziling",
+    "name": "茂县怡雅山庄",
+    "type": "HOTEL",
+    "distanceToResortM": null,
+    "isSkiInOut": false,
+    "address": "四川茂县九鼎山太子岭滑雪场山脚(开车约15分钟)",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/3797524.html"
+    },
+    "rating": 3.6,
+    "photo": "/images/lodgings/3797524.jpg"
+  },
+  {
+    "resortSlug": "taiziling",
+    "name": "蜀宿九顶雪民宿",
+    "type": "HOMESTAY",
+    "distanceToResortM": null,
+    "isSkiInOut": false,
+    "address": "四川茂县南新镇安乡村7组",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/54661472.html"
+    },
+    "rating": 4.6,
+    "priceFrom": 358,
+    "photo": "/images/lodgings/54661472.jpg"
+  },
+  {
+    "resortSlug": "shennongjia",
+    "name": "神农架国际滑雪场假日酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 0,
+    "isSkiInOut": true,
+    "address": "湖北神农架林区红坪镇牛场坪",
+    "links": {}
+  },
+  {
+    "resortSlug": "shennongjia",
+    "name": "神农架阿尔卡迪亚森林酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 28000,
+    "isSkiInOut": false,
+    "address": "湖北神农架龙降坪国际生态旅游度假区",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/4532906.html"
+    },
+    "rating": 4.6,
+    "priceFrom": 580,
+    "photo": "/images/lodgings/4532906.jpg"
+  },
+  {
+    "resortSlug": "shennongjia",
+    "name": "盛景怡家酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 28000,
+    "isSkiInOut": false,
+    "address": "湖北神农架林区木鱼镇",
+    "links": {}
+  },
+  {
+    "resortSlug": "meihuashan",
+    "name": "盘布拉格度假酒店(六盘水梅花山国际滑雪场店)",
+    "type": "HOTEL",
+    "distanceToResortM": 100,
+    "isSkiInOut": false,
+    "address": "贵州六盘水钟山区双戛乡梅花山景区内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/38937989.html"
+    },
+    "rating": 3.7,
+    "priceFrom": 518,
+    "photo": "/images/lodgings/38937989.jpg"
+  },
+  {
+    "resortSlug": "meihuashan",
+    "name": "六盘水梅花山度假别墅",
+    "type": "HOTEL",
+    "distanceToResortM": null,
+    "isSkiInOut": false,
+    "address": "贵州六盘水水城区双戛乡马戛村四组梅花山景区内",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/38646909.html"
+    },
+    "rating": 4.1,
+    "photo": "/images/lodgings/38646909.jpg"
+  },
+  {
+    "resortSlug": "meihuashan",
+    "name": "梅花山索道龙滩中继站酒店",
+    "type": "HOTEL",
+    "distanceToResortM": null,
+    "isSkiInOut": false,
+    "address": "贵州六盘水梅花山景区龙滩索道中继站",
+    "links": {}
+  },
+  {
+    "resortSlug": "yaoxue",
+    "name": "洲至奢选上海冰雪世界酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 100,
+    "isSkiInOut": true,
+    "address": "上海市浦东新区南汇新城镇银飞路399弄1号(耀雪冰雪世界内)",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=121202025"
+    },
+    "rating": 4.7,
+    "photo": "/images/lodgings/121202025.jpg"
+  },
+  {
+    "resortSlug": "yaoxue",
+    "name": "上海冰雪世界皇冠假日酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 200,
+    "isSkiInOut": true,
+    "address": "上海市浦东新区南汇新城镇临港耀雪冰雪世界",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=121198627"
+    },
+    "rating": 4.8,
+    "photo": "/images/lodgings/121198627.jpg"
+  },
+  {
+    "resortSlug": "yaoxue",
+    "name": "临港冰雪明城酒店(海洋公园店)",
+    "type": "HOTEL",
+    "distanceToResortM": 300,
+    "isSkiInOut": false,
+    "address": "上海市浦东新区临港新片区杞青路888弄1-3号(耀雪冰雪世界南区)",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=81189647"
+    },
+    "rating": 4.7,
+    "photo": "/images/lodgings/81189647.jpg"
+  },
+  {
+    "resortSlug": "qianhai",
+    "name": "深圳国际会展中心洲际酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 1500,
+    "isSkiInOut": false,
+    "address": "深圳市宝安区展览广场路6号",
+    "links": {}
+  },
+  {
+    "resortSlug": "qianhai",
+    "name": "深圳国际会展中心希尔顿酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 1800,
+    "isSkiInOut": false,
+    "address": "深圳市宝安区福海街道会展中心",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=71649086"
+    },
+    "rating": 4.8,
+    "photo": "/images/lodgings/71649086.jpg"
+  },
+  {
+    "resortSlug": "qianhai",
+    "name": "深圳国际会展中心皇冠假日酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 2000,
+    "isSkiInOut": false,
+    "address": "深圳市宝安区展览馆路1号",
+    "links": {}
+  },
+  {
+    "resortSlug": "guangzhou-snow",
+    "name": "安谧度假酒店(广州融创文旅城热雪奇迹店)",
+    "type": "HOTEL",
+    "distanceToResortM": 200,
+    "isSkiInOut": false,
+    "address": "广州市花都区凤凰北路76号融创文旅城",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=44127620"
+    },
+    "rating": 4.4,
+    "photo": "/images/lodgings/44127620.jpg"
+  },
+  {
+    "resortSlug": "guangzhou-snow",
+    "name": "广州融创施柏阁酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 300,
+    "isSkiInOut": false,
+    "address": "广州市花都区凤凰北路73号融创文旅城",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=35504752"
+    },
+    "rating": 4.6,
+    "photo": "/images/lodgings/35504752.jpg"
+  },
+  {
+    "resortSlug": "guangzhou-snow",
+    "name": "广州融创堇山酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 400,
+    "isSkiInOut": false,
+    "address": "广州市花都区凤凰北路融创文旅城",
+    "links": {}
+  },
+  {
+    "resortSlug": "guangzhou-snow",
+    "name": "广州融创施柏阁大观酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 700,
+    "isSkiInOut": false,
+    "address": "广州市花都区凤凰北路融创文旅城",
+    "links": {}
+  },
+  {
+    "resortSlug": "harbin-snow",
+    "name": "哈尔滨融创万达文华酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 600,
+    "isSkiInOut": false,
+    "address": "哈尔滨市松北区世茂大道87号融创文旅城",
+    "links": {}
+  },
+  {
+    "resortSlug": "harbin-snow",
+    "name": "哈尔滨融创万达嘉华酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 700,
+    "isSkiInOut": false,
+    "address": "哈尔滨市松北区世茂大道融创文旅城",
+    "links": {}
+  },
+  {
+    "resortSlug": "harbin-snow",
+    "name": "哈尔滨松北融创皇冠假日酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 800,
+    "isSkiInOut": false,
+    "address": "哈尔滨市松北区丰源街233号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=8345167"
+    },
+    "rating": 4.8,
+    "photo": "/images/lodgings/8345167.jpg"
+  },
+  {
+    "resortSlug": "chengdu-snow",
+    "name": "都江堰融创万达嘉华酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 500,
+    "isSkiInOut": false,
+    "address": "成都市都江堰市青城山大道成都融创文旅城",
+    "links": {}
+  },
+  {
+    "resortSlug": "chengdu-snow",
+    "name": "成都融创花间阁·踏雪",
+    "type": "HOTEL",
+    "distanceToResortM": 400,
+    "isSkiInOut": false,
+    "address": "四川省都江堰市至臻路100号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=76154846"
+    },
+    "rating": 4.7,
+    "photo": "/images/lodgings/76154846.jpg"
+  },
+  {
+    "resortSlug": "wuxi-snow",
+    "name": "无锡融创万达文华酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 600,
+    "isSkiInOut": false,
+    "address": "无锡市滨湖区雪浪街道万达文化旅游城1号",
+    "links": {}
+  },
+  {
+    "resortSlug": "wuxi-snow",
+    "name": "无锡融创万达嘉华酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 400,
+    "isSkiInOut": false,
+    "address": "无锡市滨湖区万达文化旅游城3号",
+    "links": {}
+  },
+  {
+    "resortSlug": "wuxi-snow",
+    "name": "无锡融创皇冠假日酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 400,
+    "isSkiInOut": false,
+    "address": "江苏省无锡市滨湖区融创文化旅游城5号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=36505879"
+    },
+    "rating": 4.7,
+    "photo": "/images/lodgings/36505879.jpg"
+  },
+  {
+    "resortSlug": "wuhan-snow",
+    "name": "武汉甘露山花间堂·岚雪酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 500,
+    "isSkiInOut": true,
+    "address": "湖北省武汉市黄陂区梦华东街1号(甘露山文创城)",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=130847073"
+    },
+    "rating": 4.7,
+    "photo": "/images/lodgings/130847073.jpg"
+  },
+  {
+    "resortSlug": "wuhan-snow",
+    "name": "千里走单骑·甘露山民宿(武汉甘露山文创城店)",
+    "type": "HOMESTAY",
+    "distanceToResortM": null,
+    "isSkiInOut": false,
+    "address": "湖北省武汉市黄陂区黄陂大道83号附4号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=118998641"
+    },
+    "rating": 4.7,
+    "photo": "/images/lodgings/118998641.jpg"
+  },
+  {
+    "resortSlug": "chongqing-snow",
+    "name": "重庆融创万达文华酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 1200,
+    "isSkiInOut": false,
+    "address": "重庆市沙坪坝区文广大道18号附8号",
+    "links": {}
+  },
+  {
+    "resortSlug": "chongqing-snow",
+    "name": "重庆融创施柏阁酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 1200,
+    "isSkiInOut": false,
+    "address": "重庆市沙坪坝区文广大道18号附2号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=64962729"
+    },
+    "rating": 4.7,
+    "photo": "/images/lodgings/64962729.jpg"
+  },
+  {
+    "resortSlug": "kunming-snow",
+    "name": "昆明融创万达嘉华酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 1000,
+    "isSkiInOut": false,
+    "address": "云南省昆明市西山区碧鸡路2999-9号",
+    "links": {}
+  },
+  {
+    "resortSlug": "kunming-snow",
+    "name": "昆明融创万达文华酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 1000,
+    "isSkiInOut": false,
+    "address": "云南省昆明市西山区碧鸡路2999号(昆明融创文旅城)",
+    "links": {}
+  },
+  {
+    "resortSlug": "kunming-snow",
+    "name": "昆明滇池施柏阁酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 1000,
+    "isSkiInOut": false,
+    "address": "云南省昆明市西山区碧鸡路2999-9号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=46811215"
+    },
+    "rating": 4.8,
+    "photo": "/images/lodgings/46811215.jpg"
+  },
+  {
+    "resortSlug": "changsha-snow",
+    "name": "长沙大王山朗豪酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 800,
+    "isSkiInOut": false,
+    "address": "湖南省长沙市岳麓区潭州大道二段171-202号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=69028511"
+    },
+    "rating": 4.7,
+    "photo": "/images/lodgings/69028511.jpg"
+  },
+  {
+    "resortSlug": "changsha-snow",
+    "name": "长沙大王山假日酒店",
+    "type": "HOTEL",
+    "distanceToResortM": 1000,
+    "isSkiInOut": false,
+    "address": "湖南省长沙市岳麓区坪塘街道桐溪路31号",
+    "links": {
+      "ctrip": "https://hotels.ctrip.com/hotels/detail/?hotelId=52823659"
+    },
+    "rating": 4.8,
+    "photo": "/images/lodgings/52823659.jpg"
+  },
+  {
+    "resortSlug": "changsha-snow",
+    "name": "维也纳国际酒店(长沙大王山湘江欢乐城店)",
+    "type": "HOTEL",
+    "distanceToResortM": 1500,
+    "isSkiInOut": false,
+    "address": "湖南省长沙市岳麓区坪塘街道",
+    "links": {}
   }
 ]

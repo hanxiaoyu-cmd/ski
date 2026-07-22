@@ -606,7 +606,8 @@
         "title": "自驾",
         "detail": "沪芦高速S2临港新城出口下，经申港大道、沪城环路至银飞路海枣路交叉口。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/yaoxue.jpg"
   },
   {
     "slug": "qianhai",
@@ -634,7 +635,8 @@
         "title": "自驾",
         "detail": "导航深圳前海华发冰雪世界，经沿江高速沙井出口至滨江大道666号。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/qianhai.jpg"
   },
   {
     "slug": "guangzhou-snow",
@@ -656,7 +658,8 @@
         "title": "自驾",
         "detail": "导航广州融创文旅城，花都区凤凰北路78号，经机场高速/大广高速花都出口。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/guangzhou-snow.jpg"
   },
   {
     "slug": "harbin-snow",
@@ -683,7 +686,8 @@
         "title": "自驾",
         "detail": "哈尔滨站出发约30分钟、哈西站约25分钟、机场约33分钟车程。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/harbin-snow.jpg"
   },
   {
     "slug": "chengdu-snow",
@@ -710,7 +714,8 @@
         "title": "自驾",
         "detail": "成都市区经成灌高速约1小时，导航成都融创雪世界（都江堰玉堂街道）。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/chengdu-snow.jpg"
   },
   {
     "slug": "wuxi-snow",
@@ -737,7 +742,8 @@
         "title": "自驾",
         "detail": "G42沪蓉高速无锡东出口或S19华庄枢纽下，导航无锡融创茂。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/wuxi-snow.jpg"
   },
   {
     "slug": "wuhan-snow",
@@ -764,7 +770,8 @@
         "title": "自驾",
         "detail": "汉口市区经岱黄高速转G318黄陂大道约1小时，导航武汉甘露山文创城。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/wuhan-snow.jpg"
   },
   {
     "slug": "chongqing-snow",
@@ -791,7 +798,8 @@
         "title": "自驾",
         "detail": "主城经快速路一横线至沙坪坝区文兴大道9号融创茂，导航重庆热雪奇迹。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/chongqing-snow.jpg"
   },
   {
     "slug": "kunming-snow",
@@ -818,7 +826,8 @@
         "title": "自驾",
         "detail": "经二环快速B线积善路出口，或广福路草海隧道至碧鸡路2999号。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/kunming-snow.jpg"
   },
   {
     "slug": "changsha-snow",
@@ -840,7 +849,8 @@
         "title": "自驾",
         "detail": "导航湘江欢乐城，岳麓区潭州大道二段168号，市区经潇湘南路/潭州大道约30分钟。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/changsha-snow.jpg"
   },
   {
     "slug": "wanfeng",
@@ -873,7 +883,9 @@
         "title": "自驾",
         "detail": "雪场位于东昌区金厂镇，距通化市区约15公里；长春出发经抚长/鹤大方向高速约3.5-4小时。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/wanfeng.jpg",
+    "trailMapUrl": "/images/trail-maps/wanfeng.jpg"
   },
   {
     "slug": "luneng",
@@ -903,7 +915,9 @@
         "title": "自驾",
         "detail": "长春出发经抚长高速、鹤大高速至松江河/漫江出口，全程约340公里、4.5小时。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/luneng.jpg",
+    "trailMapUrl": "/images/trail-maps/luneng.jpg"
   },
   {
     "slug": "miaoxiangshan",
@@ -936,7 +950,9 @@
         "title": "自驾",
         "detail": "从长春市区经珲乌高速（吉林方向）至九台/土们岭出口下，左转约7公里到达，全程约50公里、1小时。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/miaoxiangshan.jpg",
+    "trailMapUrl": "/images/trail-maps/miaoxiangshan.jpg"
   },
   {
     "slug": "dongbeiya",
@@ -968,7 +984,9 @@
         "title": "自驾",
         "detail": "从沈阳市区沿沈北方向经蒲河路/沈康高速至马刚街道沈阳国家森林公园，约28公里、40分钟。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/dongbeiya.jpg",
+    "trailMapUrl": "/images/trail-maps/dongbeiya.jpg"
   },
   {
     "slug": "jinlongshan",
@@ -1000,7 +1018,8 @@
         "title": "自驾",
         "detail": "雪场位于扎兰屯市区西北8公里的卧牛河镇，市区出租车约15分钟直达。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/jinlongshan.jpg"
   },
   {
     "slug": "jikepulin",
@@ -1032,7 +1051,9 @@
         "title": "自驾",
         "detail": "沿喀纳斯至禾木公路行驶，雪场位于禾木村东侧约5公里处，冬季路面积雪需备防滑链。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/jikepulin.jpg",
+    "trailMapUrl": "/images/trail-maps/jikepulin.jpg"
   },
   {
     "slug": "tianshantianchi",
@@ -1063,7 +1084,9 @@
         "title": "自驾",
         "detail": "从乌鲁木齐市区出发约90公里，经吐乌大高速至阜康后转天池方向，全程约1.5小时。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/tianshantianchi.jpg",
+    "trailMapUrl": "/images/trail-maps/tianshantianchi.jpg"
   },
   {
     "slug": "aoshan",
@@ -1096,7 +1119,8 @@
         "title": "雪季直通车",
         "detail": "雪季期间西安城市运动公园南门、宝鸡汽车客运中心站每日开行直通车，西安往返约70元/人，需提前一天预约。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/aoshan.jpg"
   },
   {
     "slug": "taiziling",
@@ -1129,7 +1153,9 @@
         "title": "川青铁路至茂县站",
         "detail": "成都东站乘动车约1.5小时至茂县站，再包车经G213至铜钟隧道口转盘山公路上山，车程约1-1.5小时。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/taiziling.jpg",
+    "trailMapUrl": "/images/trail-maps/taiziling.jpg"
   },
   {
     "slug": "shennongjia",
@@ -1162,7 +1188,9 @@
         "title": "宜昌方向自驾",
         "detail": "从宜昌经沪蓉高速、呼北高速至神农架木鱼镇后转209国道至红坪镇雪场，全程约200公里，车程约3小时。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/shennongjia.jpg",
+    "trailMapUrl": "/images/trail-maps/shennongjia.jpg"
   },
   {
     "slug": "meihuashan",
@@ -1194,7 +1222,8 @@
         "title": "市区自驾或索道",
         "detail": "雪场距六盘水市中心约5公里，自驾约30分钟可达；也可在市区乘全长9.91公里的梅花山索道上山抵达景区。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/meihuashan.jpg"
   },
   {
     "slug": "qishan",
@@ -1226,7 +1255,8 @@
         "title": "雪季滑雪大巴",
         "detail": "雪季期间保定等周边城市开行七山滑雪直通大巴，班次以当季公告时刻表为准。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/qishan.jpg"
   },
   {
     "slug": "huaibei",
@@ -1259,6 +1289,8 @@
         "title": "自驾",
         "detail": "市区走京承高速14号怀柔出口，经京密高速/京加路过雁栖湖直行约5公里至九谷口，距三元桥约56公里、车程约1小时。"
       }
-    ]
+    ],
+    "coverImageUrl": "/images/resorts/huaibei.jpg",
+    "trailMapUrl": "/images/trail-maps/huaibei.jpg"
   }
 ]
