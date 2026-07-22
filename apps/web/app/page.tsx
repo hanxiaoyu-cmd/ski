@@ -7,12 +7,17 @@ export const revalidate = 600;
 export default async function HomePage({
   searchParams,
 }: {
-  searchParams: Promise<{ province?: string }>;
+  searchParams: Promise<{ province?: string; type?: string }>;
 }) {
-  const { province } = await searchParams;
+  const { province, type } = await searchParams;
   const all = await api.listResorts();
-  const provinces = [...new Set(all.map((r) => r.province))];
-  const resorts = province ? all.filter((r) => r.province === province) : all;
+  const provinces = [...new Set(all.filter((r) => !r.isIndoor).map((r) => r.province))];
+  const resorts =
+    type === "indoor"
+      ? all.filter((r) => r.isIndoor)
+      : province
+        ? all.filter((r) => r.province === province)
+        : all;
 
   return (
     <div>
@@ -24,12 +29,13 @@ export default async function HomePage({
       </div>
 
       <div className="mb-8 flex flex-wrap gap-2">
-        <FilterPill href="/" active={!province} label="全部" />
+        <FilterPill href="/" active={!province && type !== "indoor"} label="全部" />
+        <FilterPill href="/?type=indoor" active={type === "indoor"} label="室内雪场" />
         {provinces.map((p) => (
           <FilterPill
             key={p}
             href={`/?province=${encodeURIComponent(p)}`}
-            active={province === p}
+            active={province === p && type !== "indoor"}
             label={p}
           />
         ))}

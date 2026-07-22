@@ -23,6 +23,7 @@ interface ResortSeed {
   coverImageUrl?: string;
   trailMapUrl?: string;
   transport?: Array<{ mode: string; title: string; detail: string }>;
+  isIndoor?: boolean;
 }
 
 interface TicketSeed {

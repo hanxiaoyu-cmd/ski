@@ -4,9 +4,11 @@ import { CrawlTargetKind, DataSourceType } from "@ski/db";
 import { WeatherService } from "../weather/weather.service";
 import { CrawlLogService } from "./crawl-log.service";
 
-const CRON_NOW = CronExpression.EVERY_HOUR;
-const CRON_HOURLY = "0 30 */2 * * *"; // 每 2 小时（错开整点，避免与实况同时打满限速）
-const CRON_DAILY = "0 0 */3 * * *"; // 每 3 小时
+// 雪场扩到 40+ 家后放缓频率，保持在和风免费额度（5 万次/月）内：
+// 43 场 × (12+8+4) 次/天 ≈ 3.1 万次/月
+const CRON_NOW = "0 0 */2 * * *"; // 实况每 2 小时
+const CRON_HOURLY = "0 30 */3 * * *"; // 24h 预报每 3 小时（错开整点）
+const CRON_DAILY = "0 15 */6 * * *"; // 7 日预报每 6 小时
 
 @Injectable()
 export class WeatherSyncJob implements OnModuleInit {

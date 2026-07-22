@@ -38,6 +38,7 @@ function toSummary(r: Resort, weatherNow: WeatherNow | null): ResortSummary {
     seasonOpen: r.seasonOpen,
     seasonClose: r.seasonClose,
     coverImageUrl: r.coverImageUrl,
+    isIndoor: r.isIndoor,
     weatherNow,
   };
 }

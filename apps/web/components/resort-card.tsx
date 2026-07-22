@@ -24,6 +24,11 @@ export function ResortCard({ resort }: { resort: ResortSummary }) {
             {w.tempC !== null ? `${Math.round(w.tempC)}°` : "--"}
           </span>
         )}
+        {resort.isIndoor && (
+          <span className="absolute left-3 top-3 rounded-full bg-indigo-600/95 px-2.5 py-1 text-xs font-medium text-white">
+            室内雪场
+          </span>
+        )}
       </div>
 
       <div className="p-5">
@@ -36,20 +41,41 @@ export function ResortCard({ resort }: { resort: ResortSummary }) {
         </p>
 
         <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-slate-500 dark:text-slate-400">
-          <span className="flex items-center gap-1">
-            <Mountain size={13} className="text-slate-400" />
-            {resort.altitudeTopM ? `${resort.altitudeTopM}m` : "--"}
-          </span>
-          <span className="flex items-center gap-1">
-            <Route size={13} className="text-slate-400" />
-            {resort.totalTrailKm ? `${resort.totalTrailKm}km 雪道` : "--"}
-          </span>
-          <span className="flex items-center gap-1">
-            <CalendarRange size={13} className="text-slate-400" />
-            {resort.seasonOpen && resort.seasonClose
-              ? `${resort.seasonOpen.replace("-", ".")} ~ ${resort.seasonClose.replace("-", ".")}`
-              : "--"}
-          </span>
+          {resort.isIndoor ? (
+            <>
+              <span className="flex items-center gap-1">
+                <Mountain size={13} className="text-slate-400" />
+                室内恒温
+              </span>
+              {resort.totalTrailKm && (
+                <span className="flex items-center gap-1">
+                  <Route size={13} className="text-slate-400" />
+                  {resort.totalTrailKm}km 雪道
+                </span>
+              )}
+              <span className="flex items-center gap-1">
+                <CalendarRange size={13} className="text-slate-400" />
+                全年开放
+              </span>
+            </>
+          ) : (
+            <>
+              <span className="flex items-center gap-1">
+                <Mountain size={13} className="text-slate-400" />
+                {resort.altitudeTopM ? `${resort.altitudeTopM}m` : "--"}
+              </span>
+              <span className="flex items-center gap-1">
+                <Route size={13} className="text-slate-400" />
+                {resort.totalTrailKm ? `${resort.totalTrailKm}km 雪道` : "--"}
+              </span>
+              <span className="flex items-center gap-1">
+                <CalendarRange size={13} className="text-slate-400" />
+                {resort.seasonOpen && resort.seasonClose
+                  ? `${resort.seasonOpen.replace("-", ".")} ~ ${resort.seasonClose.replace("-", ".")}`
+                  : "--"}
+              </span>
+            </>
+          )}
         </div>
       </div>
     </Link>

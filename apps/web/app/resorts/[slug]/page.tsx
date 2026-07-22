@@ -81,12 +81,14 @@ export default async function ResortPage({ params }: { params: Promise<{ slug: s
             <p className="mt-2 flex items-center gap-1 text-sm text-slate-400">
               <MapPin size={14} strokeWidth={2} />
               {resort.province} · {resort.city}
-              {resort.altitudeBaseM && resort.altitudeTopM
-                ? ` · 海拔 ${resort.altitudeBaseM}-${resort.altitudeTopM}m`
-                : ""}
-              {resort.seasonOpen && resort.seasonClose
-                ? ` · 雪季 ${resort.seasonOpen.replace("-", ".")}~${resort.seasonClose.replace("-", ".")}`
-                : ""}
+              {resort.isIndoor
+                ? " · 室内雪场 · 全年开放"
+                : (resort.altitudeBaseM && resort.altitudeTopM
+                    ? ` · 海拔 ${resort.altitudeBaseM}-${resort.altitudeTopM}m`
+                    : "") +
+                  (resort.seasonOpen && resort.seasonClose
+                    ? ` · 雪季 ${resort.seasonOpen.replace("-", ".")}~${resort.seasonClose.replace("-", ".")}`
+                    : "")}
             </p>
           </div>
           {now && (

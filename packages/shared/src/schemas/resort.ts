@@ -14,6 +14,7 @@ export const resortSummarySchema = z.object({
   seasonOpen: z.string().nullable(),
   seasonClose: z.string().nullable(),
   coverImageUrl: z.string().nullable(),
+  isIndoor: z.boolean(),
   /** 列表页聚合的当前天气（可能尚未采集到） */
   weatherNow: weatherNowSchema.nullable().optional(),
 });
