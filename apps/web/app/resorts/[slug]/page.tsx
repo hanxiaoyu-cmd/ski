@@ -8,6 +8,7 @@ import {
   Map as MapIcon,
   MapPin,
   MessageCircle,
+  Navigation,
   Phone,
   Route,
   Ticket,
@@ -19,6 +20,7 @@ import { ForecastStrip } from "../../../components/forecast-strip";
 import { HourlyStrip } from "../../../components/hourly-strip";
 import { TicketTable } from "../../../components/ticket-table";
 import { LodgingList } from "../../../components/lodging-list";
+import { TransportCards } from "../../../components/transport-cards";
 import { ResortCover } from "../../../components/resort-cover";
 import { SectionTitle } from "../../../components/section-title";
 import { TrailMapVector } from "../../../components/trail-map-vector";
@@ -158,6 +160,16 @@ export default async function ResortPage({ params }: { params: Promise<{ slug: s
               ),
             )}
           </div>
+        </section>
+      )}
+
+      {resort.transport && resort.transport.length > 0 && (
+        <section>
+          <SectionTitle icon={Navigation}>如何抵达</SectionTitle>
+          <TransportCards items={resort.transport} />
+          <p className="mt-2 text-[11px] text-slate-300 dark:text-slate-500">
+            交通信息为整理参考，出行前请以铁路/航空/雪场官方最新信息为准
+          </p>
         </section>
       )}
 

@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { Prisma, Resort, ResortStatus, WeatherSnapshot } from "@ski/db";
-import type { ResortDetail, ResortSummary, TicketProduct, WeatherNow } from "@ski/shared";
+import type { ResortDetail, ResortSummary, TicketProduct, TransportItem, WeatherNow } from "@ski/shared";
 import { PrismaService } from "../../common/prisma.service";
 import { CacheService } from "../../common/cache.service";
 
@@ -102,6 +102,7 @@ export class ResortService {
       phone: resort.phone,
       intro: resort.intro,
       trailMapUrl: resort.trailMapUrl,
+      transport: (resort.transport as TransportItem[] | null) ?? null,
       trailStats: { total: resort.trails.length, byDifficulty },
     };
 

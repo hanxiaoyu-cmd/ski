@@ -146,6 +146,8 @@ model Resort {
   intro              String?
   coverImageUrl      String?      @map("cover_image_url")
   trailMapUrl        String?      @map("trail_map_url")
+  // 抵达方式卡片：[{mode:"train|plane|car", title, detail}]
+  transport          Json?
   status             ResortStatus @default(ACTIVE)
   createdAt          DateTime     @default(now()) @map("created_at")
   updatedAt          DateTime     @updatedAt @map("updated_at")

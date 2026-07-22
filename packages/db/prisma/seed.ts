@@ -20,6 +20,9 @@ interface ResortSeed {
   officialWebsite?: string;
   officialWechatName?: string;
   intro?: string;
+  coverImageUrl?: string;
+  trailMapUrl?: string;
+  transport?: Array<{ mode: string; title: string; detail: string }>;
 }
 
 interface TicketSeed {
@@ -36,7 +39,8 @@ async function seedResorts() {
   const file = join(seedsDir, "resorts.json");
   const resorts: ResortSeed[] = JSON.parse(readFileSync(file, "utf8"));
   for (const r of resorts) {
-    const { slug, ...data } = r;
+    const { slug, transport, ...rest } = r;
+    const data = { ...rest, transport: transport ?? undefined };
     await prisma.resort.upsert({
       where: { slug },
       create: { slug, ...data },

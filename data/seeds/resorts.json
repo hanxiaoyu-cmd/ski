@@ -14,7 +14,24 @@
     "officialWechatName": "万龙度假天堂",
     "intro": "国内最早开板、最晚封板的雪场之一，以雪质和高级道著称。",
     "coverImageUrl": "/images/resorts/wanlong.jpg",
-    "trailMapUrl": "/images/trail-maps/wanlong.jpg"
+    "trailMapUrl": "/images/trail-maps/wanlong.jpg",
+    "transport": [
+      {
+        "mode": "train",
+        "title": "高铁",
+        "detail": "京张高铁从北京北/清河站出发约1小时至太子城站，站前乘雪场免费接驳车约15分钟直达；也可在崇礼站下车换乘班车前往"
+      },
+      {
+        "mode": "plane",
+        "title": "飞机",
+        "detail": "最近为张家口宁远机场，雪季有直达万龙的免费预约接驳车，车程约1-1.5小时；北京首都/大兴机场则建议转乘高铁或自驾约3-4小时"
+      },
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "北京出发走京藏/京礼高速接延崇高速，太子城收费站下高速后前往雪场，全程约200余公里、车程约2.5-3小时，雪场设有停车场"
+      }
+    ]
   },
   {
     "slug": "thaiwoo",
@@ -31,7 +48,24 @@
     "officialWechatName": "太舞滑雪小镇",
     "intro": "崇礼落差最大的雪场之一，山地度假小镇配套完善，冬奥赛事场地。",
     "coverImageUrl": "/images/resorts/thaiwoo.jpg",
-    "trailMapUrl": "/images/trail-maps/thaiwoo.jpg"
+    "trailMapUrl": "/images/trail-maps/thaiwoo.jpg",
+    "transport": [
+      {
+        "mode": "train",
+        "title": "高铁",
+        "detail": "京张高铁从北京北/清河站出发约1-1.5小时至太子城站，太舞距站最近，免费接驳车约5分钟即达，打车约10元"
+      },
+      {
+        "mode": "plane",
+        "title": "飞机",
+        "detail": "最近为张家口宁远机场，打车/接驳车程约1-1.5小时；北京首都/大兴机场可换乘京张高铁至太子城站，或自驾约3-4小时"
+      },
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "北京出发走京藏/京礼高速接延崇高速，太子城出口下高速约3分钟到达小镇，全程约2.5小时，小镇设有大型停车场"
+      }
+    ]
   },
   {
     "slug": "genting",
@@ -48,7 +82,24 @@
     "officialWechatName": "密苑云顶乐园",
     "intro": "2022 冬奥会自由式滑雪与单板滑雪比赛场地，地形公园出色。",
     "coverImageUrl": "/images/resorts/genting.jpg",
-    "trailMapUrl": "/images/trail-maps/genting.jpg"
+    "trailMapUrl": "/images/trail-maps/genting.jpg",
+    "transport": [
+      {
+        "mode": "train",
+        "title": "高铁",
+        "detail": "京张高铁从北京北/清河站出发约1小时至太子城站，出站乘云顶接驳车约10-15分钟直达雪场"
+      },
+      {
+        "mode": "plane",
+        "title": "飞机",
+        "detail": "最近为张家口宁远机场，雪季有直达云顶的免费预约接驳车，车程约1-1.5小时；北京两大机场则建议转乘高铁或自驾约3-4小时"
+      },
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "北京出发走京藏/京礼高速接延崇高速至太子城出口，全程约220公里、车程约2.5-3小时，雪场设有停车场"
+      }
+    ]
   },
   {
     "slug": "fulong",
@@ -65,7 +116,24 @@
     "officialWechatName": "富龙四季度假地",
     "intro": "紧邻崇礼城区，夜场规模大，适合家庭与初中级滑手。",
     "coverImageUrl": "/images/resorts/fulong.jpg",
-    "trailMapUrl": "/images/trail-maps/fulong.jpg"
+    "trailMapUrl": "/images/trail-maps/fulong.jpg",
+    "transport": [
+      {
+        "mode": "train",
+        "title": "高铁",
+        "detail": "京张高铁从北京北/清河站出发约1-1.5小时至崇礼站，出站乘免费接驳车约15分钟即达；雪场紧邻崇礼城区"
+      },
+      {
+        "mode": "plane",
+        "title": "飞机",
+        "detail": "最近为张家口宁远机场，雪季有直达富龙的免费预约接驳车，车程约1-1.5小时；北京首都/大兴机场建议转乘高铁或自驾约3-4小时"
+      },
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "北京出发走京藏/京礼高速接延崇高速，崇礼城区方向下高速即达，全程约3小时，雪场设有停车场"
+      }
+    ]
   },
   {
     "slug": "cuiyunshan",
@@ -82,7 +150,24 @@
     "officialWechatName": "翠云山银河滑雪场",
     "intro": "崇礼性价比之选，人流相对较少，中级道体验好。",
     "coverImageUrl": "/images/resorts/cuiyunshan.jpg",
-    "trailMapUrl": "/images/trail-maps/cuiyunshan.jpg"
+    "trailMapUrl": "/images/trail-maps/cuiyunshan.jpg",
+    "transport": [
+      {
+        "mode": "train",
+        "title": "高铁",
+        "detail": "京张高铁从北京北/清河站出发约1-1.5小时至崇礼站，出站乘雪场接驳车约20分钟到达翠云山度假区"
+      },
+      {
+        "mode": "plane",
+        "title": "飞机",
+        "detail": "最近为张家口宁远机场，打车/包车至翠云山约1-1.5小时；北京首都/大兴机场建议转乘京张高铁或自驾约3.5小时"
+      },
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "北京出发可走京藏—张承高速(G95)崇礼北出口东行约500米即达，或走京礼高速转东马线，全程约240公里、车程约3小时，度假区设有停车场"
+      }
+    ]
   },
   {
     "slug": "dolomiti",
@@ -99,7 +184,24 @@
     "officialWechatName": "多乐美地度假区",
     "intro": "意式风格雪场，雪道以中级为主，游客密度低。",
     "coverImageUrl": "/images/resorts/dolomiti.jpg",
-    "trailMapUrl": "/images/trail-maps/dolomiti.jpg"
+    "trailMapUrl": "/images/trail-maps/dolomiti.jpg",
+    "transport": [
+      {
+        "mode": "train",
+        "title": "高铁",
+        "detail": "京张高铁从北京北/清河站出发约1小时至太子城站或崇礼站，下车后乘接驳车/出租车约20分钟到达喜鹊梁的雪场"
+      },
+      {
+        "mode": "plane",
+        "title": "飞机",
+        "detail": "最近为张家口宁远机场，打车/包车至雪场约1-1.5小时；北京首都/大兴机场建议转乘高铁或自驾约3.5小时"
+      },
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "北京出发走京藏/京礼高速接延崇高速往崇礼方向，雪场距县城约18公里，全程约226公里、车程约3小时，雪场设有停车场"
+      }
+    ]
   },
   {
     "slug": "yabuli",
@@ -116,7 +218,24 @@
     "officialWechatName": "亚布力滑雪旅游度假区",
     "intro": "中国现代滑雪发源地，国内规模最大的综合滑雪度假区之一。",
     "coverImageUrl": "/images/resorts/yabuli.jpg",
-    "trailMapUrl": "/images/trail-maps/yabuli.jpg"
+    "trailMapUrl": "/images/trail-maps/yabuli.jpg",
+    "transport": [
+      {
+        "mode": "train",
+        "title": "火车",
+        "detail": "哈尔滨乘高铁约2小时15分直达亚布力南站，该站距滑雪场仅约500米，出站可乘景区免费摆渡车或步行抵达。"
+      },
+      {
+        "mode": "plane",
+        "title": "飞机",
+        "detail": "最近机场为哈尔滨太平国际机场，距度假区约198公里；可乘机场大巴或打车至哈尔滨火车站转高铁到亚布力南站，或直接包车前往，车程约2.5-3小时。"
+      },
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "从哈尔滨出发走哈牡高速约198公里至亚布力出口，下高速后沿亚雪公路行驶约15-20公里即达，全程约2.5小时；冬季冰雪路面需谨慎驾驶。"
+      }
+    ]
   },
   {
     "slug": "beidahu",
@@ -133,7 +252,24 @@
     "officialWechatName": "北大湖滑雪度假区",
     "intro": "国内落差最大的雪场之一，粉雪资源出色，雪季长。",
     "coverImageUrl": "/images/resorts/beidahu.jpg",
-    "trailMapUrl": "/images/trail-maps/beidahu.jpg"
+    "trailMapUrl": "/images/trail-maps/beidahu.jpg",
+    "transport": [
+      {
+        "mode": "train",
+        "title": "火车",
+        "detail": "最近大站为吉林站（高铁通达），距雪场约53公里；雪季吉林站有北大湖雪场专线班车（约30元/人），车程约1-1.5小时。"
+      },
+      {
+        "mode": "plane",
+        "title": "飞机",
+        "detail": "最近为长春龙嘉国际机场，距雪场约126公里；可在机场换乘城际高铁约36分钟至吉林站再转雪场班车，雪季亦有机场班车和包车服务，全程约2小时。"
+      },
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "从吉林市区出发经吉桦路—S206约53公里、车程约1小时10分至1个半小时；走高速可从吉草高速永吉收费站驶出后沿国道直达。"
+      }
+    ]
   },
   {
     "slug": "songhuahu",
@@ -150,7 +286,24 @@
     "officialWechatName": "万科松花湖度假区",
     "intro": "临近吉林市区交通便利，度假配套成熟，青山主峰视野开阔。",
     "coverImageUrl": "/images/resorts/songhuahu.jpg",
-    "trailMapUrl": "/images/trail-maps/songhuahu.jpg"
+    "trailMapUrl": "/images/trail-maps/songhuahu.jpg",
+    "transport": [
+      {
+        "mode": "train",
+        "title": "火车",
+        "detail": "最近车站为吉林站，距度假区约25公里；雪季吉林站西广场有度假区专线班车（约10元/人，车程约40分钟），打车约60-80元。"
+      },
+      {
+        "mode": "plane",
+        "title": "飞机",
+        "detail": "最近为长春龙嘉国际机场，雪季有直达度假区的大巴（约50元/人）；也可在机场龙嘉站乘高铁约30分钟至吉林站再转乘，全程约1.5-2小时。"
+      },
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "从长春或哈尔滨方向走高速至吉林绕城高速红旗收费站驶出，按导航再行驶约15公里即达；度假区设有4处免费停车场。"
+      }
+    ]
   },
   {
     "slug": "changbaishan",
@@ -167,7 +320,24 @@
     "officialWechatName": "长白山国际度假区",
     "intro": "度假型雪场，风小雪软适合家庭，可联游长白山景区与温泉。",
     "coverImageUrl": "/images/resorts/changbaishan.jpg",
-    "trailMapUrl": "/images/trail-maps/changbaishan.jpg"
+    "trailMapUrl": "/images/trail-maps/changbaishan.jpg",
+    "transport": [
+      {
+        "mode": "train",
+        "title": "火车",
+        "detail": "最近火车站为松江河站（沈阳、大连、吉林等地有列车到达），距度假区约10公里，打车约40元；敦白高铁长白山站距度假区约92公里，可乘景区直通车接驳。"
+      },
+      {
+        "mode": "plane",
+        "title": "飞机",
+        "detail": "最近为长白山机场，距度假区仅约15公里，是最便捷的抵达方式；度假区提供免费机场往返巴士，车程约20-30分钟。"
+      },
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "度假区位于抚松县松江河镇，从长春方向自驾约400公里、车程约5小时，直接导航长白山万达国际度假区即可；冬季山区冰雪路面需谨慎驾驶。"
+      }
+    ]
   },
   {
     "slug": "koktokay",
@@ -184,7 +354,19 @@
     "officialWechatName": "可可托海国际滑雪度假区",
     "intro": "国内落差与雪期兼具的顶级雪场，野雪与高山地形闻名。",
     "coverImageUrl": "/images/resorts/koktokay.jpg",
-    "trailMapUrl": "/images/trail-maps/koktokay.jpg"
+    "trailMapUrl": "/images/trail-maps/koktokay.jpg",
+    "transport": [
+      {
+        "mode": "plane",
+        "title": "飞机",
+        "detail": "可直飞或经乌鲁木齐转机至富蕴可可托海机场，机场距雪场约90公里，车程约2小时。"
+      },
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "私家车不能直接进入雪场，可停放在宝石沟免费停车场后换乘雪场摆渡车（约10公里、20分钟）；冬季山路冰雪路面，建议四驱车加雪地胎。"
+      }
+    ]
   },
   {
     "slug": "silkroad",
@@ -201,7 +383,24 @@
     "officialWechatName": "丝绸之路山地度假区",
     "intro": "距乌鲁木齐市区约 1 小时，夜景与城市可达性是特色。",
     "coverImageUrl": "/images/resorts/silkroad.jpg",
-    "trailMapUrl": "/images/trail-maps/silkroad.jpg"
+    "trailMapUrl": "/images/trail-maps/silkroad.jpg",
+    "transport": [
+      {
+        "mode": "plane",
+        "title": "飞机",
+        "detail": "乌鲁木齐地窝堡国际机场距雪场约55公里，打网约车或包车约1小时可达。"
+      },
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "雪场位于乌鲁木齐县水西沟镇，距市区约38公里，全程一级公路，车程约1小时。"
+      },
+      {
+        "mode": "bus",
+        "title": "班车/公共交通",
+        "detail": "雪季有乌鲁木齐市区多个站点（铁路局、红山等）上午发车的雪场班车，约17:00返程；也可乘班车至水西沟镇后换乘雪场区间车。"
+      }
+    ]
   },
   {
     "slug": "jiangjunshan",
@@ -218,7 +417,24 @@
     "officialWechatName": "将军山滑雪场",
     "intro": "紧贴阿勒泰市区的城市雪场，雪期超长，粉雪品质高。",
     "coverImageUrl": "/images/resorts/jiangjunshan.jpg",
-    "trailMapUrl": "/images/trail-maps/jiangjunshan.jpg"
+    "trailMapUrl": "/images/trail-maps/jiangjunshan.jpg",
+    "transport": [
+      {
+        "mode": "plane",
+        "title": "飞机",
+        "detail": "阿勒泰雪都机场距雪场约16公里，车程约30分钟。"
+      },
+      {
+        "mode": "train",
+        "title": "火车",
+        "detail": "阿勒泰火车站距雪场约24公里，车程约40分钟。"
+      },
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "雪场就在阿勒泰市将军山前山坡，距市区仅约2公里，自驾或打车几分钟即达。"
+      }
+    ]
   },
   {
     "slug": "nanshan",
@@ -235,7 +451,19 @@
     "officialWechatName": "南山滑雪场",
     "intro": "京郊规模最大的雪场之一，地形公园与单板文化聚集地。",
     "coverImageUrl": "/images/resorts/nanshan.jpg",
-    "trailMapUrl": "/images/trail-maps/nanshan.jpg"
+    "trailMapUrl": "/images/trail-maps/nanshan.jpg",
+    "transport": [
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "从市区走京承高速至第16出口（密云城区方向），经圣东路按指示前往，车程约1小时，雪场设有停车场。"
+      },
+      {
+        "mode": "train",
+        "title": "高铁/班车",
+        "detail": "京哈高铁从北京朝阳站至密云站约30分钟，出站有免费接驳巴士到雪场（约3公里）；雪季另有三元桥、五道口直通班车，当日往返约58元。"
+      }
+    ]
   },
   {
     "slug": "jundushan",
@@ -252,7 +480,19 @@
     "officialWechatName": "军都山滑雪场",
     "intro": "距市区最近的雪场之一，夜场人气高，适合下班后夜滑。",
     "coverImageUrl": "/images/resorts/jundushan.jpg",
-    "trailMapUrl": "/images/trail-maps/jundushan.jpg"
+    "trailMapUrl": "/images/trail-maps/jundushan.jpg",
+    "transport": [
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "位于昌平区崔村镇真顺村，从市区走京藏高速至昌平南环出口，经南环路、昌崔路前往，车程约1小时。"
+      },
+      {
+        "mode": "bus",
+        "title": "公共交通",
+        "detail": "乘地铁昌平线至北邵洼站，换乘昌21路公交至研发中心站下车步行可达；雪季雪场也有市区直达班车。"
+      }
+    ]
   },
   {
     "slug": "yuyang",
@@ -269,7 +509,19 @@
     "officialWechatName": "渔阳国际滑雪场",
     "intro": "京郊东部大型雪场，雪道宽阔，团建与培训热门。",
     "coverImageUrl": "/images/resorts/yuyang.jpg",
-    "trailMapUrl": "/images/trail-maps/yuyang.jpg"
+    "trailMapUrl": "/images/trail-maps/yuyang.jpg",
+    "transport": [
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "从市区经京承高速或机场高速转京平高速，至平三路（东高村）出口后约3公里即到；距四元桥60多公里，车程约1小时。"
+      },
+      {
+        "mode": "bus",
+        "title": "班车/公共交通",
+        "detail": "雪季开通国贸、东直门、五道口、通州、惠新西街等地直通班车；也可从东直门乘852路至平谷，再换乘48路公交或打车前往。"
+      }
+    ]
   },
   {
     "slug": "wanlongbayi",
@@ -286,7 +538,19 @@
     "officialWechatName": "万龙八易滑雪场",
     "intro": "北京城区内的练习型雪场，适合入门与日常练习。",
     "coverImageUrl": "/images/resorts/wanlongbayi.jpg",
-    "trailMapUrl": "/images/trail-maps/wanlongbayi.jpg"
+    "trailMapUrl": "/images/trail-maps/wanlongbayi.jpg",
+    "transport": [
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "雪场位于丰台区长辛店八一射击场内（西五环与西六环之间），市区可走莲石东路至芦井路出口，按指示牌行驶即达。"
+      },
+      {
+        "mode": "bus",
+        "title": "地铁+公交",
+        "detail": "乘地铁1号线至八宝山站或古城站，换乘327、385等公交至八一射击场站下车即到，是北京少数可依靠地铁抵达的雪场。"
+      }
+    ]
   },
   {
     "slug": "xiling",
@@ -303,6 +567,18 @@
     "officialWechatName": "西岭雪山",
     "intro": "南方代表性雪场，成都周边周末游热门目的地。",
     "coverImageUrl": "/images/resorts/xiling.jpg",
-    "trailMapUrl": "/images/trail-maps/xiling.jpg"
+    "trailMapUrl": "/images/trail-maps/xiling.jpg",
+    "transport": [
+      {
+        "mode": "car",
+        "title": "自驾",
+        "detail": "从成都走成名高速至大邑出口，经大邑县城前往景区（后山），车程约1.5小时。"
+      },
+      {
+        "mode": "train",
+        "title": "高铁/直通车",
+        "detail": "成都西站有动车滚动发往大邑站，出站可换乘至西岭雪山的旅游专线；成都金沙遗址地铁站等处也有景区直通车，单程约35元起。"
+      }
+    ]
   }
 ]
