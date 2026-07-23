@@ -26,9 +26,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 中国滑雪场情报站
               </span>
             </Link>
-            <nav className="text-sm font-medium text-slate-500 dark:text-slate-400">
+            <nav className="flex items-center gap-5 text-sm font-medium text-slate-500 dark:text-slate-400">
               <Link href="/" className="transition hover:text-sky-600 dark:hover:text-sky-400">
-                全部雪场
+                雪场
+              </Link>
+              <Link href="/boards" className="transition hover:text-sky-600 dark:hover:text-sky-400">
+                雪板
               </Link>
             </nav>
           </div>

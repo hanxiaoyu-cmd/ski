@@ -1,6 +1,6 @@
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
-import { PrismaClient, TicketType, DayType, Channel, LodgingType } from "@prisma/client";
+import { PrismaClient, TicketType, DayType, Channel, LodgingType, BoardCategory } from "@prisma/client";
 
 const prisma = new PrismaClient();
 const seedsDir = join(__dirname, "..", "..", "..", "data", "seeds");
@@ -147,10 +147,57 @@ async function seedLodgings() {
   console.log(`seeded ${count} lodgings (replaced ${slugs.length} resorts)`);
 }
 
+interface BoardSeed {
+  slug: string;
+  brand: string;
+  name: string;
+  category: keyof typeof BoardCategory;
+  boardType?: string | null;
+  camber?: string | null;
+  shape?: string | null;
+  flex?: number | null;
+  level?: string | null;
+  gender?: string | null;
+  sizesCm?: number[];
+  year?: number | null;
+  priceCents?: number | null;
+  priceFromCents?: number | null;
+  officialUrl?: string | null;
+  buyUrl?: string | null;
+  coverImageUrl?: string | null;
+  intro?: string | null;
+  highlights?: string[];
+}
+
+async function seedBoards() {
+  const file = join(seedsDir, "boards.json");
+  if (!existsSync(file)) {
+    console.log("boards.json not found, skipping boards");
+    return;
+  }
+  const boards: BoardSeed[] = JSON.parse(readFileSync(file, "utf8"));
+  for (const b of boards) {
+    const { slug, category, sizesCm, highlights, ...rest } = b;
+    const data = {
+      ...rest,
+      category: BoardCategory[category],
+      sizesCm: sizesCm ?? [],
+      highlights: highlights ?? [],
+    };
+    await prisma.board.upsert({
+      where: { slug },
+      create: { slug, ...data },
+      update: data,
+    });
+  }
+  console.log(`seeded ${boards.length} boards`);
+}
+
 async function main() {
   await seedResorts();
   await seedTickets();
   await seedLodgings();
+  await seedBoards();
 }
 
 main()

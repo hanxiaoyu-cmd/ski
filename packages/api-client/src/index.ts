@@ -5,11 +5,17 @@ import {
   resortWeatherSchema,
   ticketProductSchema,
   lodgingSchema,
+  boardSummarySchema,
+  boardDetailSchema,
+  boardBrandSchema,
   type ResortSummary,
   type ResortDetail,
   type ResortWeather,
   type TicketProduct,
   type LodgingInfo,
+  type BoardSummary,
+  type BoardDetail,
+  type BoardBrand,
 } from "@ski/shared";
 
 /**
@@ -89,6 +95,30 @@ export function createApiClient(opts: ApiClientOptions) {
     },
     getResortLodgings(slug: string): Promise<LodgingInfo[]> {
       return call(opts, `/api/v1/resorts/${slug}/lodgings`, z.array(lodgingSchema));
+    },
+    listBoards(filters?: {
+      category?: string;
+      brand?: string;
+      boardType?: string;
+      level?: string;
+    }): Promise<BoardSummary[]> {
+      const parts: string[] = [];
+      const add = (k: string, v?: string) => {
+        if (v) parts.push(`${k}=${encodeURIComponent(v)}`);
+      };
+      add("category", filters?.category);
+      add("brand", filters?.brand);
+      add("boardType", filters?.boardType);
+      add("level", filters?.level);
+      const suffix = parts.length ? `?${parts.join("&")}` : "";
+      return call(opts, `/api/v1/boards${suffix}`, z.array(boardSummarySchema));
+    },
+    getBoard(slug: string): Promise<BoardDetail> {
+      return call(opts, `/api/v1/boards/${slug}`, boardDetailSchema);
+    },
+    getBoardBrands(category?: string): Promise<BoardBrand[]> {
+      const suffix = category ? `?category=${encodeURIComponent(category)}` : "";
+      return call(opts, `/api/v1/boards/brands${suffix}`, z.array(boardBrandSchema));
     },
   };
 }

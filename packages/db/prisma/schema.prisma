@@ -124,6 +124,52 @@ enum CrawlRunStatus {
   @@map("crawl_run_status")
 }
 
+enum BoardCategory {
+  SNOWBOARD
+  SKI
+
+  @@map("board_category")
+}
+
+enum BoardStatus {
+  ACTIVE
+  DISCONTINUED
+
+  @@map("board_status")
+}
+
+// ---------- 雪板装备库 ----------
+
+model Board {
+  id             Int           @id @default(autoincrement())
+  slug           String        @unique
+  brand          String
+  name           String
+  category       BoardCategory
+  boardType      String?       @map("board_type")
+  camber         String?
+  shape          String?
+  flex           Int?
+  level          String?
+  gender         String?
+  sizesCm        Int[]         @map("sizes_cm")
+  year           Int?
+  priceCents     Int?          @map("price_cents")
+  priceFromCents Int?          @map("price_from_cents")
+  officialUrl    String?       @map("official_url")
+  buyUrl         String?       @map("buy_url")
+  coverImageUrl  String?       @map("cover_image_url")
+  intro          String?
+  highlights     String[]
+  status         BoardStatus   @default(ACTIVE)
+  createdAt      DateTime      @default(now()) @map("created_at")
+  updatedAt      DateTime      @updatedAt @map("updated_at")
+
+  @@index([brand])
+  @@index([category])
+  @@map("board")
+}
+
 // ---------- 静态基础数据 ----------
 
 model Resort {
