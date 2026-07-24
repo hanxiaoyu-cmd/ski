@@ -722,7 +722,7 @@
       "方向缩量"
     ],
     "officialUrl": null,
-    "coverImageUrl": null,
+    "coverImageUrl": "/images/boards/salomon-super-8-2025.jpg",
     "priceCents": null,
     "priceFromCents": null,
     "buyUrl": null
@@ -784,7 +784,7 @@
       "中硬有力"
     ],
     "officialUrl": "https://k2snow.com/en-us/p/manifest-unisex-snowboard-2526",
-    "coverImageUrl": null,
+    "coverImageUrl": "/images/boards/k2-manifest-2025.jpg",
     "priceCents": null,
     "priceFromCents": null,
     "buyUrl": null
@@ -1360,6 +1360,1314 @@
     ],
     "officialUrl": "https://factionskis.com/products/dancer-2-ski",
     "coverImageUrl": "/images/boards/faction-dancer-2-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "burton-deep-thinker-2025",
+    "brand": "Burton",
+    "name": "Deep Thinker",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "camber",
+    "shape": "directional",
+    "flex": 8,
+    "level": "expert",
+    "gender": "men",
+    "sizesCm": [
+      151,
+      154,
+      157,
+      160
+    ],
+    "intro": "Burton自由骑行硬核之作，正camber定向长鼻板，高速稳定强劲，穿林破雪与深雪浮力兼备的老手利器。",
+    "highlights": [
+      "freeride硬核",
+      "高速稳定",
+      "穿林利器"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": null,
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "burton-flight-attendant-2024",
+    "brand": "Burton",
+    "name": "Flight Attendant",
+    "category": "SNOWBOARD",
+    "year": 2024,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "directional",
+    "flex": 7,
+    "level": "advanced",
+    "gender": "men",
+    "sizesCm": [
+      156,
+      159,
+      162
+    ],
+    "intro": "Burton定向粉雪巡航板，收尾长鼻配hybrid板型，深雪冲浪浮力足，carving与破碎雪况通吃的全能猛板。",
+    "highlights": [
+      "粉雪冲浪",
+      "定向收尾",
+      "全山巡航"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": null,
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "burton-ripcord-2025",
+    "brand": "Burton",
+    "name": "Ripcord",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "flat",
+    "shape": "directional",
+    "flex": 3,
+    "level": "beginner",
+    "gender": "men",
+    "sizesCm": [
+      150,
+      154,
+      156,
+      158,
+      162
+    ],
+    "intro": "Burton入门进阶利器，Flat Top平板型定向设计，软弹易上手容错高，助初学者顺畅进阶全山地形。",
+    "highlights": [
+      "入门友好",
+      "平板易学",
+      "高容错"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": null,
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "burton-instigator-2025",
+    "brand": "Burton",
+    "name": "Instigator",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "flat",
+    "shape": "directional",
+    "flex": 3,
+    "level": "beginner",
+    "gender": "men",
+    "sizesCm": [
+      140,
+      145,
+      150,
+      155,
+      160
+    ],
+    "intro": "Burton平价全山入门板，Flat Top平板型配软弹调校，宽容好上手，练习转弯与基础动作的可靠伙伴。",
+    "highlights": [
+      "入门平价",
+      "软弹宽容",
+      "全山百搭"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": null,
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "burton-talent-scout-2025",
+    "brand": "Burton",
+    "name": "Talent Scout",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "freestyle",
+    "camber": "camber",
+    "shape": "twin",
+    "flex": 6,
+    "level": "intermediate",
+    "gender": "women",
+    "sizesCm": [
+      142,
+      146,
+      149,
+      152
+    ],
+    "intro": "Burton女款公园全能板，正camber真孪生对称，女性专属调校弹射有力，公园与全山自由式通吃。",
+    "highlights": [
+      "女款公园",
+      "真孪生对称",
+      "弹射有力"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": null,
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "capita-mega-death-2025",
+    "brand": "CAPiTA",
+    "name": "Mega Death",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "directional",
+    "flex": 7,
+    "level": "expert",
+    "gender": "men",
+    "sizesCm": [
+      156,
+      159,
+      162
+    ],
+    "intro": "CAPiTA高性能自由骑行猛兽，Alpine V1中置camber定向板，高速稳定弹射凶猛，深雪浮力与硬雪掌控兼得。",
+    "highlights": [
+      "freeride猛兽",
+      "高速弹射",
+      "深雪浮力"
+    ],
+    "officialUrl": "https://capitasnowboarding.com/products/mega-death-2026",
+    "coverImageUrl": "/images/boards/capita-mega-death-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "capita-super-doa-2025",
+    "brand": "CAPiTA",
+    "name": "Super DOA",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "directional_twin",
+    "flex": 6,
+    "level": "advanced",
+    "gender": "men",
+    "sizesCm": [
+      152,
+      154,
+      156,
+      158,
+      160
+    ],
+    "intro": "DOA的碳纤强化升级版，Resort V1混合板型加碳纤，更轻更快更凶，激进全山自由式玩家的加速利器。",
+    "highlights": [
+      "DOA升级",
+      "碳纤更快",
+      "激进全山"
+    ],
+    "officialUrl": "https://capitasnowboarding.com/products/super-doa-2026",
+    "coverImageUrl": "/images/boards/capita-super-doa-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "capita-pathfinder-2025",
+    "brand": "CAPiTA",
+    "name": "Pathfinder Camber",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "freestyle",
+    "camber": "camber",
+    "shape": "directional_twin",
+    "flex": 4,
+    "level": "intermediate",
+    "gender": "men",
+    "sizesCm": [
+      145,
+      147,
+      149,
+      151,
+      153,
+      155,
+      157
+    ],
+    "intro": "CAPiTA平价公园入门板，Park V1正camber定向对称，弹跳好又宽容，卡枪刷杆到刻滑雪道皆宜。",
+    "highlights": [
+      "公园入门",
+      "正camber弹跳",
+      "高性价比"
+    ],
+    "officialUrl": "https://capitasnowboarding.com/products/pathfinder-2026",
+    "coverImageUrl": "/images/boards/capita-pathfinder-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "capita-birds-of-a-feather-2025",
+    "brand": "CAPiTA",
+    "name": "Birds of a Feather",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "twin",
+    "flex": 5,
+    "level": "intermediate",
+    "gender": "women",
+    "sizesCm": [
+      138,
+      142,
+      146,
+      150,
+      154
+    ],
+    "intro": "DOA的女款演绎，Resort V1混合camber真孪生，中软弹性百搭，晨间刷道到公园跳台皆得心应手。",
+    "highlights": [
+      "DOA女款",
+      "真孪生百搭",
+      "中软好玩"
+    ],
+    "officialUrl": "https://capitasnowboarding.com/products/birds-of-a-feather-2026",
+    "coverImageUrl": "/images/boards/capita-birds-of-a-feather-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "jones-stratos-2025",
+    "brand": "Jones",
+    "name": "Stratos",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "tapered",
+    "flex": 7,
+    "level": "advanced",
+    "gender": "men",
+    "sizesCm": [
+      152,
+      156,
+      159,
+      162
+    ],
+    "intro": "Jones全能自由骑行利器，CamRock混合缩量定向板，硬雪持刃、碎雪破风、深雪浮力兼备，活泼又稳健。",
+    "highlights": [
+      "全能freeride",
+      "缩量定向",
+      "活泼稳健"
+    ],
+    "officialUrl": "https://www.jonessnowboards.com/products/men-stratos-snowboard-2026",
+    "coverImageUrl": null,
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "jones-ultra-mountain-twin-2024",
+    "brand": "Jones",
+    "name": "Ultra Mountain Twin",
+    "category": "SNOWBOARD",
+    "year": 2024,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "directional_twin",
+    "flex": 7,
+    "level": "advanced",
+    "gender": "men",
+    "sizesCm": [
+      154,
+      157,
+      160,
+      164
+    ],
+    "intro": "Mountain Twin的高性能强化版，CamRock定向孪生更硬更快更稳，适合在地形之外大胆抛跳的进阶高手。",
+    "highlights": [
+      "定向孪生",
+      "更硬更快",
+      "大跳台"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": null,
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "jones-dream-weaver-2025",
+    "brand": "Jones",
+    "name": "Dream Weaver",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "directional",
+    "flex": 4,
+    "level": "intermediate",
+    "gender": "women",
+    "sizesCm": [
+      142,
+      145,
+      148,
+      151,
+      154
+    ],
+    "intro": "Jones女款全山百搭板，定向rocker混合板型友好易压，巡航、carving与自由式兼顾，好上手又好玩。",
+    "highlights": [
+      "女款全山",
+      "友好易压",
+      "一板多用"
+    ],
+    "officialUrl": "https://www.jonessnowboards.com/products/women-dream-weaver-2-0-snowboard-2026",
+    "coverImageUrl": null,
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "nitro-prime-2025",
+    "brand": "Nitro",
+    "name": "Prime",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "directional_twin",
+    "flex": 4,
+    "level": "beginner",
+    "gender": "men",
+    "sizesCm": [
+      149,
+      152,
+      155,
+      158
+    ],
+    "intro": "Nitro高性价比入门板，Cam-Out混合camber定向孪生，catch-free宽容好上手，陪伴新手快速进阶的乐趣机器。",
+    "highlights": [
+      "入门乐趣",
+      "高性价比",
+      "catch-free宽容"
+    ],
+    "officialUrl": "https://www.nitrosnowboards.com/products/prime-raw-snowboard",
+    "coverImageUrl": null,
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "nitro-squash-2025",
+    "brand": "Nitro",
+    "name": "Squash",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "powder",
+    "camber": "camber",
+    "shape": "tapered",
+    "flex": 7,
+    "level": "advanced",
+    "gender": "men",
+    "sizesCm": [
+      156,
+      159,
+      163
+    ],
+    "intro": "Nitro燕尾粉雪多面手，Trüe camber配缩量燕尾与渐进侧切，深雪浮力足、雪道carving利落，一板走天下。",
+    "highlights": [
+      "燕尾粉雪",
+      "carving利落",
+      "一板通吃"
+    ],
+    "officialUrl": "https://www.nitrosnowboards.com/products/squash-snowboard",
+    "coverImageUrl": "/images/boards/nitro-squash-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "nitro-mystique-2025",
+    "brand": "Nitro",
+    "name": "Mystique",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "directional_twin",
+    "flex": 4,
+    "level": "intermediate",
+    "gender": "women",
+    "sizesCm": [
+      142,
+      146,
+      149,
+      152
+    ],
+    "intro": "Nitro女款全山百搭板，Gullwing混合弯定向孪生，软弹宽容易操控，粉雪浮力与公园压板兼得，进阶友好。",
+    "highlights": [
+      "女款全山",
+      "软弹宽容",
+      "粉雪公园兼顾"
+    ],
+    "officialUrl": "https://www.nitrosnowboards.com/products/mystique-womens-snowboard",
+    "coverImageUrl": "/images/boards/nitro-mystique-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "lib-tech-cold-brew-2026",
+    "brand": "Lib Tech",
+    "name": "Cold Brew",
+    "category": "SNOWBOARD",
+    "year": 2026,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "directional",
+    "flex": 6,
+    "level": "intermediate",
+    "gender": "men",
+    "sizesCm": [
+      149,
+      153,
+      157,
+      159,
+      161
+    ],
+    "intro": "Lib Tech环保全地形freeride板，C2混合弯配Magne-Traction锯齿刃，浮雪碎雪皆稳，能刻能跳的进阶多面手。",
+    "highlights": [
+      "全地形freeride",
+      "锯齿刃抓地",
+      "浮雪碎雪通吃"
+    ],
+    "officialUrl": "https://www.lib-tech.com/cold-brew",
+    "coverImageUrl": "/images/boards/lib-tech-cold-brew-2026.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "lib-tech-terrain-wrecker-2026",
+    "brand": "Lib Tech",
+    "name": "Terrain Wrecker",
+    "category": "SNOWBOARD",
+    "year": 2026,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "directional_twin",
+    "flex": 6,
+    "level": "intermediate",
+    "gender": "men",
+    "sizesCm": [
+      152,
+      154,
+      157,
+      160
+    ],
+    "intro": "Lib Tech全山自由式利器，C2X混合弯定向对称板，浮雪跳台侧跳皆能，中等弹性趣味十足的一板党之选。",
+    "highlights": [
+      "全山自由式",
+      "混合弯全能",
+      "趣味弹性"
+    ],
+    "officialUrl": "https://www.lib-tech.com/terrain-wrecker",
+    "coverImageUrl": "/images/boards/lib-tech-terrain-wrecker-2026.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "lib-tech-dynamo-2026",
+    "brand": "Lib Tech",
+    "name": "Dynamo",
+    "category": "SNOWBOARD",
+    "year": 2026,
+    "boardType": "all_mountain",
+    "camber": "camber",
+    "shape": "directional",
+    "flex": 6,
+    "level": "advanced",
+    "gender": "men",
+    "sizesCm": [
+      150,
+      153,
+      156,
+      159,
+      162
+    ],
+    "intro": "Lib Tech定向全山freeride板，C3正弯配放松船头，高速持刃稳定兼具自由式趣味，进阶骑手的日常猛板。",
+    "highlights": [
+      "定向freeride",
+      "C3强回弹",
+      "高速稳定"
+    ],
+    "officialUrl": "https://www.lib-tech.com/dynamo",
+    "coverImageUrl": "/images/boards/lib-tech-dynamo-2026.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "salomon-sight-2026",
+    "brand": "Salomon",
+    "name": "Sight",
+    "category": "SNOWBOARD",
+    "year": 2026,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "directional",
+    "flex": 4,
+    "level": "intermediate",
+    "gender": "men",
+    "sizesCm": [
+      150,
+      153,
+      156,
+      159
+    ],
+    "intro": "Salomon亲民全山板，Cross Profile混合弯配软木减震，柔弹易上手又稳定，freeride取向的进阶通勤好板。",
+    "highlights": [
+      "全山百搭",
+      "柔弹易上手",
+      "高性价比"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": "/images/boards/salomon-sight-2026.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "salomon-dancehaul-2026",
+    "brand": "Salomon",
+    "name": "Dancehaul",
+    "category": "SNOWBOARD",
+    "year": 2026,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "tapered",
+    "flex": 5,
+    "level": "intermediate",
+    "gender": "unisex",
+    "sizesCm": [
+      143,
+      147,
+      152,
+      154,
+      157
+    ],
+    "intro": "Salomon缩量宽体趣味板，Rock Out混合弯配收尾定向外形，浮雪顺滑、平花好压，短板灵活的surfy全山玩具。",
+    "highlights": [
+      "缩量宽体",
+      "surfy浮雪",
+      "平花好压"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": "/images/boards/salomon-dancehaul-2026.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "salomon-oh-yeah-2026",
+    "brand": "Salomon",
+    "name": "Oh Yeah",
+    "category": "SNOWBOARD",
+    "year": 2026,
+    "boardType": "freestyle",
+    "camber": "hybrid",
+    "shape": "twin",
+    "flex": 4,
+    "level": "intermediate",
+    "gender": "women",
+    "sizesCm": [
+      138,
+      143,
+      147,
+      151
+    ],
+    "intro": "Salomon女款自由式甜心板，Rock Out混合弯配Popster弹芯真孪生，中软弹性好压好跳，公园全山灵动百搭。",
+    "highlights": [
+      "女款自由式",
+      "真孪生好压",
+      "中软灵动"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": null,
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "gnu-money-2026",
+    "brand": "Gnu",
+    "name": "Money",
+    "category": "SNOWBOARD",
+    "year": 2026,
+    "boardType": "freestyle",
+    "camber": "hybrid",
+    "shape": "twin",
+    "flex": 5,
+    "level": "intermediate",
+    "gender": "men",
+    "sizesCm": [
+      148,
+      152,
+      154,
+      156,
+      159
+    ],
+    "intro": "Gnu高性价比公园板，C2混合弯配Magne-Traction锯齿刃真孪生，软弹好压平花刷杆，硬雪也稳的进阶利器。",
+    "highlights": [
+      "高性价比",
+      "公园平花",
+      "锯齿刃抓地"
+    ],
+    "officialUrl": "https://www.gnu.com/money",
+    "coverImageUrl": "/images/boards/gnu-money-2026.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "gnu-head-space-2026",
+    "brand": "Gnu",
+    "name": "Head Space",
+    "category": "SNOWBOARD",
+    "year": 2026,
+    "boardType": "freestyle",
+    "camber": "camber",
+    "shape": "twin",
+    "flex": 5,
+    "level": "intermediate",
+    "gender": "men",
+    "sizesCm": [
+      149,
+      152,
+      155,
+      158
+    ],
+    "intro": "Forest Bailey设计的Gnu自由式板，C3正弯配Magne-Traction锯齿刃真孪生，软尾好压中段稳弹，街道公园通吃。",
+    "highlights": [
+      "选手设计",
+      "C3精准弹射",
+      "公园平花"
+    ],
+    "officialUrl": "https://www.gnu.com/head-space",
+    "coverImageUrl": "/images/boards/gnu-head-space-2026.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "gnu-ladies-choice-2026",
+    "brand": "Gnu",
+    "name": "Ladies Choice",
+    "category": "SNOWBOARD",
+    "year": 2026,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "twin",
+    "flex": 5,
+    "level": "intermediate",
+    "gender": "women",
+    "sizesCm": [
+      140,
+      143,
+      146,
+      149,
+      152,
+      154
+    ],
+    "intro": "Jamie Anderson同款Gnu女款全山自由式板，C2X混合弯配非对称孪生与锯齿刃，浮雪、压雪、公园皆稳的全能之选。",
+    "highlights": [
+      "选手同款",
+      "非对称孪生",
+      "全山自由式"
+    ],
+    "officialUrl": "https://www.gnu.com/ladies-choice",
+    "coverImageUrl": "/images/boards/gnu-ladies-choice-2026.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "rossignol-jibsaw-2026",
+    "brand": "Rossignol",
+    "name": "Jibsaw",
+    "category": "SNOWBOARD",
+    "year": 2026,
+    "boardType": "freestyle",
+    "camber": "hybrid",
+    "shape": "twin",
+    "flex": 6,
+    "level": "intermediate",
+    "gender": "men",
+    "sizesCm": [
+      150,
+      153,
+      155,
+      157,
+      159
+    ],
+    "intro": "Rossignol全山自由式真孪生板，AmpTek Elite正弯为主配锯齿刃，爆发弹射、落地catch-free，公园大跳全山通杀。",
+    "highlights": [
+      "全山自由式",
+      "爆发弹射",
+      "真孪生"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": "/images/boards/rossignol-jibsaw-2026.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "rossignol-evader-2026",
+    "brand": "Rossignol",
+    "name": "Evader",
+    "category": "SNOWBOARD",
+    "year": 2026,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "directional",
+    "flex": 3,
+    "level": "beginner",
+    "gender": "men",
+    "sizesCm": [
+      144,
+      149,
+      154,
+      159,
+      164
+    ],
+    "intro": "Rossignol入门友好全山板，AmpTek Auto-Turn以摇摆为主的混合弯，超软容错、转向轻松，初学者建立信心的百搭板。",
+    "highlights": [
+      "入门友好",
+      "软弹高容错",
+      "全山百搭"
+    ],
+    "officialUrl": "https://www.rossignol.com/us-en/mens-rossignol-evader-snowboard-RELWP10000.html",
+    "coverImageUrl": "/images/boards/rossignol-evader-2026.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "ride-warpig-2026",
+    "brand": "Ride",
+    "name": "Warpig",
+    "category": "SNOWBOARD",
+    "year": 2026,
+    "boardType": "all_mountain",
+    "camber": "flat",
+    "shape": "directional",
+    "flex": 5,
+    "level": "intermediate",
+    "gender": "unisex",
+    "sizesCm": [
+      142,
+      148,
+      151,
+      154,
+      158
+    ],
+    "intro": "Ride缩量宽体全能王，Zero Camber近平底配收尾定向外形，浮雪碎雪稳如宽板，转向灵活刻滑到公园全能通吃。",
+    "highlights": [
+      "缩量宽体",
+      "全山全能",
+      "浮雪稳定"
+    ],
+    "officialUrl": "https://ridesnowboards.com/en-us/p/warpig-snowboard-rd261857",
+    "coverImageUrl": "/images/boards/ride-warpig-2026.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "ride-twinpig-2026",
+    "brand": "Ride",
+    "name": "Twinpig",
+    "category": "SNOWBOARD",
+    "year": 2026,
+    "boardType": "freestyle",
+    "camber": "camber",
+    "shape": "twin",
+    "flex": 5,
+    "level": "intermediate",
+    "gender": "men",
+    "sizesCm": [
+      142,
+      148,
+      151,
+      154
+    ],
+    "intro": "Ride缩量真孪生自由式板，非对称孪生外形配正弯，短宽好转向、双向对称好切换，平花黄油与全山撒欢皆灵动。",
+    "highlights": [
+      "缩量孪生",
+      "自由式灵动",
+      "双向好压"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": "/images/boards/ride-twinpig-2026.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "ride-berzerker-2026",
+    "brand": "Ride",
+    "name": "Berzerker",
+    "category": "SNOWBOARD",
+    "year": 2026,
+    "boardType": "all_mountain",
+    "camber": "camber",
+    "shape": "directional",
+    "flex": 8,
+    "level": "advanced",
+    "gender": "men",
+    "sizesCm": [
+      153,
+      156,
+      159,
+      162,
+      165
+    ],
+    "intro": "Ride激进定向freeride板，Directional Extra正弯配收尾外形与碳纤增强，硬雪陡坡强抓地、高速稳定，高手技术地形利器。",
+    "highlights": [
+      "激进freeride",
+      "碳纤高速稳定",
+      "陡坡强抓地"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": null,
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "never-summer-proto-synthesis-2025",
+    "brand": "Never Summer",
+    "name": "Proto Synthesis",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "twin",
+    "flex": 6,
+    "level": "advanced",
+    "gender": "men",
+    "sizesCm": [
+      152,
+      155,
+      158,
+      161
+    ],
+    "intro": "Never Summer人气全能自由式真孪生板，Shock Wave混合弯脚下强力弹射，阻尼顺滑又充满爆发力，进阶玩家全山通杀。",
+    "highlights": [
+      "真孪生全能",
+      "强力弹射",
+      "阻尼顺滑"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": "/images/boards/never-summer-proto-synthesis-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "never-summer-harpoon-2025",
+    "brand": "Never Summer",
+    "name": "Harpoon",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "directional",
+    "flex": 6,
+    "level": "intermediate",
+    "gender": "men",
+    "sizesCm": [
+      152,
+      156,
+      159
+    ],
+    "intro": "中软弹性定向全山板，Fusion混合弯配Vario多半径侧刃，转向轻快、粉雪浮力好，钻林穿树surfy顺滑。",
+    "highlights": [
+      "定向surfy",
+      "粉雪浮力",
+      "转向轻快"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": "/images/boards/never-summer-harpoon-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "never-summer-insta-gator-2025",
+    "brand": "Never Summer",
+    "name": "Insta/Gator",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "powder",
+    "camber": "hybrid",
+    "shape": "tapered",
+    "flex": 5,
+    "level": "intermediate",
+    "gender": "men",
+    "sizesCm": [
+      148,
+      151,
+      158
+    ],
+    "intro": "超宽缩量Shaper系列板，12mm大收尾配Fusion混合弯，可比常规板短滑3-5cm，粉雪与压雪道都带自由式脚感。",
+    "highlights": [
+      "超宽缩量",
+      "大收尾浮力",
+      "自由式脚感"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": null,
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "rome-agent-2025",
+    "brand": "Rome",
+    "name": "Agent",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "freestyle",
+    "camber": "hybrid",
+    "shape": "twin",
+    "flex": 5,
+    "level": "intermediate",
+    "gender": "men",
+    "sizesCm": [
+      147,
+      150,
+      153,
+      156,
+      159
+    ],
+    "intro": "Rome常青真孪生自由式板，Fusion Camber配竹HotRod与Double Kick翘头，弹射猛、压尾灵，公园全山两开花。",
+    "highlights": [
+      "真孪生自由式",
+      "强弹射",
+      "竹芯高弹"
+    ],
+    "officialUrl": "https://romesnowboards.com/products/rome-agent-2526-mens-snowboard",
+    "coverImageUrl": "/images/boards/rome-agent-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "rome-stale-crewzer-2025",
+    "brand": "Rome",
+    "name": "Stale Crewzer",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "directional_twin",
+    "flex": 6,
+    "level": "advanced",
+    "gender": "men",
+    "sizesCm": [
+      151,
+      154,
+      157,
+      160
+    ],
+    "intro": "Ståle Sandbech一板走天下之选，Fusion Camber方向孪生板，快弹活泼又稳定，公园陡坡侧跳全能日常driver。",
+    "highlights": [
+      "方向孪生全能",
+      "快弹活泼",
+      "日常一板"
+    ],
+    "officialUrl": "https://romesnowboards.com/products/rome-stale-crewzer-2526-mens-snowboard",
+    "coverImageUrl": "/images/boards/rome-stale-crewzer-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "rome-warden-2025",
+    "brand": "Rome",
+    "name": "Warden",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "directional_twin",
+    "flex": 5,
+    "level": "intermediate",
+    "gender": "men",
+    "sizesCm": [
+      151,
+      154,
+      157,
+      160
+    ],
+    "intro": "Rome中软方向孪生全山板，三竹HotRod配Fusion Camber，转向轻松容错高，正反脚都顺的进阶百搭板。",
+    "highlights": [
+      "方向孪生",
+      "轻松容错",
+      "进阶百搭"
+    ],
+    "officialUrl": "https://romesnowboards.com/products/rome-warden-2526-mens-snowboard",
+    "coverImageUrl": "/images/boards/rome-warden-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "arbor-coda-2025",
+    "brand": "Arbor",
+    "name": "Coda",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "camber",
+    "shape": "directional_twin",
+    "flex": 7,
+    "level": "advanced",
+    "gender": "men",
+    "sizesCm": [
+      155,
+      158,
+      161
+    ],
+    "intro": "Pat Moore联名全山利器，正camber配Grip Tech抓地点与1cm收尾，宽头宽尾高速刻滑稳，硬派全能之选。",
+    "highlights": [
+      "正camber刻滑",
+      "Grip Tech抓地",
+      "全山硬派"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": "/images/boards/arbor-coda-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "arbor-westmark-2025",
+    "brand": "Arbor",
+    "name": "Westmark",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "jib",
+    "camber": "rocker",
+    "shape": "twin",
+    "flex": 5,
+    "level": "intermediate",
+    "gender": "men",
+    "sizesCm": [
+      151,
+      154,
+      157
+    ],
+    "intro": "Arbor高阶公园街式板，Parabolic Rocker配Grip Tech与Flip Tips真孪生，软弹好压不卡刃，刷杆平花利器。",
+    "highlights": [
+      "公园街式",
+      "摇摆好压",
+      "真孪生"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": "/images/boards/arbor-westmark-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "arbor-cadence-2025",
+    "brand": "Arbor",
+    "name": "Cadence",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "freestyle",
+    "camber": "camber",
+    "shape": "twin",
+    "flex": 4,
+    "level": "intermediate",
+    "gender": "women",
+    "sizesCm": [
+      140,
+      144,
+      148,
+      152
+    ],
+    "intro": "Arbor女款公园进阶板，System Camber真孪生配Grip Tech，软弹回弹足，刷杆转体轻松进阶的趣味之选。",
+    "highlights": [
+      "女款公园",
+      "软弹易压",
+      "真孪生"
+    ],
+    "officialUrl": null,
+    "coverImageUrl": "/images/boards/arbor-cadence-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "yes-typo-2025",
+    "brand": "YES",
+    "name": "Typo",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "freestyle",
+    "camber": "hybrid",
+    "shape": "directional_twin",
+    "flex": 6,
+    "level": "intermediate",
+    "gender": "men",
+    "sizesCm": [
+      152,
+      155,
+      158,
+      161
+    ],
+    "intro": "YES经典公园度假板，CamRock混合弯配UnderBite咬边，基板更快、弹性更脆，纯自由式玩家的趁手利器。",
+    "highlights": [
+      "公园自由式",
+      "咬边抓地",
+      "快脆弹性"
+    ],
+    "officialUrl": "https://yessnowboards.com/products/typo-2025",
+    "coverImageUrl": "/images/boards/yes-typo-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "yes-greats-uninc-2025",
+    "brand": "YES",
+    "name": "Greats Uninc",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "hybrid",
+    "shape": "twin",
+    "flex": 7,
+    "level": "advanced",
+    "gender": "men",
+    "sizesCm": [
+      149,
+      151,
+      154,
+      156,
+      159
+    ],
+    "intro": "YES顶级非对称刻滑孪生板，CamRock 2-4-2配Midbite与碳纤，抓地稳、回弹猛，全山刻滑与大跳落地皆稳。",
+    "highlights": [
+      "非对称刻滑",
+      "强抓地",
+      "碳纤高弹"
+    ],
+    "officialUrl": "https://yessnowboards.com/products/greats-uninc-2025",
+    "coverImageUrl": "/images/boards/yes-greats-uninc-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "public-research-2025",
+    "brand": "Public",
+    "name": "Research",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "camber",
+    "shape": "tapered",
+    "flex": 7,
+    "level": "advanced",
+    "gender": "men",
+    "sizesCm": [
+      154,
+      157,
+      160
+    ],
+    "intro": "Public线中最偏freeride的定向板，Alert Camber满弯配8mm收尾，硬雪刻滑利落、粉雪浮力足，兼顾自由式基因。",
+    "highlights": [
+      "定向freeride",
+      "满弯刻滑",
+      "粉雪浮力"
+    ],
+    "officialUrl": "https://www.publicsnowboards.com/products/public-research-157-2025",
+    "coverImageUrl": "/images/boards/public-research-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "endeavor-scout-2025",
+    "brand": "Endeavor",
+    "name": "Scout",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "powder",
+    "camber": "hybrid",
+    "shape": "tapered",
+    "flex": 5,
+    "level": "intermediate",
+    "gender": "men",
+    "sizesCm": [
+      148,
+      152,
+      154,
+      156,
+      158,
+      160
+    ],
+    "intro": "Endeavor短肥燕尾灵感粉雪板，Hover Camber配3mm收尾与碳纤，宽台缩量穿林灵活，深雪浮力与全山可玩兼得。",
+    "highlights": [
+      "短肥缩量",
+      "深雪浮力",
+      "穿林灵活"
+    ],
+    "officialUrl": "https://endeavordesigninc.com/products/scout-pro-snowboard",
+    "coverImageUrl": "/images/boards/endeavor-scout-2025.jpg",
+    "priceCents": null,
+    "priceFromCents": null,
+    "buyUrl": null
+  },
+  {
+    "slug": "nobaday-black-board-pro-5-2025",
+    "brand": "Nobaday",
+    "name": "Black Board Pro 5.0",
+    "category": "SNOWBOARD",
+    "year": 2025,
+    "boardType": "all_mountain",
+    "camber": "camber",
+    "shape": "twin",
+    "flex": 5,
+    "level": "intermediate",
+    "gender": "unisex",
+    "sizesCm": [
+      142,
+      145,
+      148,
+      151,
+      153,
+      155,
+      157,
+      161
+    ],
+    "intro": "国产零夏小黑板Pro升级款，14根碳纤配杨木芯与IS7500烧结底，中等硬度全地形通用，性价比高的进阶之选。",
+    "highlights": [
+      "国产高性价比",
+      "碳纤增强",
+      "全地形通用"
+    ],
+    "officialUrl": "https://nobaday.com/products/nbd-camber-snowboard",
+    "coverImageUrl": "/images/boards/nobaday-black-board-pro-5-2025.jpg",
     "priceCents": null,
     "priceFromCents": null,
     "buyUrl": null
